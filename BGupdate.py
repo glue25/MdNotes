@@ -3,6 +3,9 @@ from datetime import datetime
 import subprocess
 
 def job():
+    #git add -A
+    subprocess.call('git add -A')
+    subprocess.call('git commit -m "daily update"')
     subprocess.call('git push MDNotes master')
     s = ''.join((datetime.now().strftime("%Y-%m-%d %H:%M:%S"),'--Updated!'))
     print(s)

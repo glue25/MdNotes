@@ -1,6 +1,23 @@
+# 内容概览
 
+这里介绍了：
 
-# 概述
+- 函数对象的基本特性，最重要的两点就是能作参数，能作结果。
+- `all(iterable)`和`any(iterable)`两个归约函数看起来好用。
+- 匿名函数不被推荐使用，看起来很多时候可以通过`operator`库里的函数替换?
+- 是够可调用取决于是否实现了`__call__`，可以用`callable()`判断对象能否调用。
+- 探知对象属性的方法：`dir()`。
+- 书中提醒了`__dict__`属性，虽然常常是用不上的。
+- 提到了很多函数特有的属性，很多与函数中的参数，变量有关。
+- 这里[从定位参数到仅限关键字参数](#从定位参数到仅限关键字参数)可以了解到传参的一些细节应用问题。
+- 获取参数、函数注释信息比较优雅的方法`inspect.signature()`。
+- `operator `库中有很多“操作”的函数，可以代替很多场景下的`lambda`
+- 介绍了`operator `库中的`itemgetter`（对应`[]`）、`attrgetter`（对应`.`，并且是可嵌套的）和`methodcaller`（自行创建函数，它创建的函数会在对象上调用参数指定的方法）。
+- 介绍了冻结参数。
+- 字符串的函数`ljust()`，看起来可以调节字符串长度。
+- 有`collections.namedtuple`应用的例子。
+
+# 概念
 
 Python中函数是一等对象。包含的特点有：
 
@@ -63,7 +80,7 @@ upper_case_name.short_description = 'Customer name'
 
 `['__annotations__', '__call__', '__closure__', '__code__', '__defaults__', '__get__', '__globals__', '__kwdefaults__', '__name__', '__qualname__']`
 
-![image-20200623144240288](E:%5CMDNotes%5CFLUENT%20PYTHON%5Cimage-20200623144240288.png)![image-20200623144306853](E:%5CMDNotes%5CFLUENT%20PYTHON%5Cimage-20200623144306853.png)
+![](E:%5CMDNotes%5CFLUENT%20PYTHON%5CCH5.assets%5Cimage-20200623144240288.png)![image-20200623144306853](E:%5CMDNotes%5CFLUENT%20PYTHON%5CCH5.assets%5Cimage-20200623144306853.png)
 
 知道这些方法的存在就行，可以用的时候再来看。
 
@@ -174,8 +191,6 @@ inspect.signature 函数返回一个 inspect.Signature 对象，它有一个 par
 **书中还介绍了`inspect.Signature`对象的`bind`方法，不过作为非框架开发者，暂时看起来感觉没什么用**
 
 
-
-
 # 函数注释
 
 P3支持新的注释方式：
@@ -198,13 +213,12 @@ def clip(text:str, max_len:'int > 0'=80) -> str:
 
 提取注解可以使用`inspect.signature()`
 
-![image-20200623155138978](E:%5CMDNotes%5CFLUENT%20PYTHON%5Cimage-20200623155138978.png) 
+![image-20200623155138978](E:%5CMDNotes%5CFLUENT%20PYTHON%5CCH5.assets%5Cimage-20200623155138978.png) 
 这个示例展示了如何提取注释，用的时候再看。
 
 
 
-
-**<u>发现</u>**了一个有趣的针对字符串的函数`ljust()`，看起来可以调节字符串长度。
+**<u>==发现==</u>**了一个有趣的针对字符串的函数`ljust()`，看起来可以调节字符串长度。
 
 # 支持函数式编程的包
 
@@ -229,6 +243,35 @@ def fact(n):
     return reduce(mul, range(1, n+1))
 ```
 
+
+
+**<u>==发现==</u>**
+
+`collections.namedtuple`还是很好用的
+
+`Metropolis = namedtuple('Metropolis', 'name cc pop coord')`这里第一项是名字，后面的参数表示`Metropolis `中的四个元素的名称。
+
+**<u>==发现==</u>**
+
+`itemgetter`可以实现取下标的操作，即配合`[]`运算符。
+
+<u>*临时想到的，这个函数配合reduce是不是可以实现在List实现的链表上的跳转？*</u>
+
+`attrgetter`对应于`.`，并且是可嵌套的。
+
+用起来可以是`sorted(metro_areas, key=attrgetter('coord.lat'))`，用的时候再查就好。
+
+`methodcaller`会自行创建函数，它创建的函数会在对象上调用参数指定的方法。
+
+![image-20200623230741448](E:%5CMDNotes%5CFLUENT%20PYTHON%5CCH5.assets%5Cimage-20200623230741448.png) 
+
+示例 5-25 中的第二个测试表明，`methodcaller `还可以冻结某些参数，也就是部分应用（partial application），这与 `functools.partial` 函数的作用类似。
+
+**`functools.partial`可以冻结参数**
+
+把原函数的某些参数固定
+
+**<u>具体的固定规则还是不知道的</u>**
 
 
 
