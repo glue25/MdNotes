@@ -1,0 +1,36 @@
+provably        可验证性的
+modular         分单元的,模块化的
+showcase        展示，展示场所，橱窗
+nontrivial      不平凡的，无效的
+nonlinearity    非线性
+proxy           代理人，代表，代理权
+agnostic        不可知论的，不可知论者
+trail           跟踪，追踪
+scalar          标量
+canonical       经典的，规范的，典型
+anneal          退火
+sanity          理智，精神健全
+shed            摆脱，工棚
+quadratic       平方的，二次项
+nonnegligible   不可忽视的
+negligible      微不足道的，不重要的，不值一提的
+neuron          神经元
+infimum         下界
+monotonic       单调性
+hinge           铰链，合叶
+alignment       对齐，对准
+contrastive     对比的，对比性的
+
+
+
+
+
+
+
+
+
+
+
+
+
+
