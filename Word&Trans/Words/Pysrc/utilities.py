@@ -1,21 +1,30 @@
 import chardet
-
+from Pysrc.parameters import Phase
 __ElementsNums = 3
-def setOutputFileName(InputFileName) : 
+def setOutputFileName(InputFileName, OutputPhase) : 
     '''
     Get the output file's default name referred to a certain input file.
     '''
     Suffixes = ['.txt', '.md']
     for i in Suffixes :
-        if InputFileName.endwith(i) : 
+        # print(InputFileName.__dir__())
+        # for in InputFileName.__dir__() :
+        if InputFileName.endswith(i) : 
             OutputFileName = ''.join((InputFileName[:-4], '-Output', i ))
-    
+    if Phase.IsLegalMDOutputPhase(OutputPhase) :
+        OutputFileName = OutputFileName.replace('.txt','.md')
+        OutputFileName = OutputFileName.replace('RawWords','MdWords')
+    else : 
+        OutputFileName.replace('.md','.txt')
+
     return OutputFileName
 
 def __getFilelinesGenerator(FileName, encoding = 'utf8') : 
     with open(FileName, 'r', encoding=encoding) as f :
         for i in f :
-            yield i
+            # print(len(i))
+            if len(i.replace('\n',''))>0:
+                yield i
 
 def __ProcessRawLine(line, SplitSigns) : 
     #暂时假设不处理单词与翻译中有空格的情况。
@@ -23,7 +32,7 @@ def __ProcessRawLine(line, SplitSigns) :
     SplitSigns = list(SplitSigns)
     for i in SplitSigns[1:] : 
         line = line.replace(i, SplitSigns[0])
-    elements = [x for x in line.split(SplitSigns[0]) if len(x) > 0]
+    elements = [x.strip() for x in line.split(SplitSigns[0]) if len(x) > 0]
     if len(elements) < __ElementsNums :
         elements.append('')
     return elements
@@ -34,12 +43,12 @@ def __ProcessMDLine(line) :
 
 def RawFile2Triad(FileName, CommentSigns = None, SplitSigns = None) : 
     '''
-    Transform 'Raw' file to Triad List.
+    Transform 'Raw' file to Triad Generator.
     '''
     if CommentSigns is None :
         CommentSigns = set()
     if SplitSigns is None :
-        SplitSigns = ('\t', ' ')
+        SplitSigns = ('\t', '  ')
     with open(FileName, 'rb') as f :
         SampleData = f.read(500)
         f.seek(0)
@@ -51,7 +60,7 @@ def RawFile2Triad(FileName, CommentSigns = None, SplitSigns = None) :
 
 def MDFile2Triad(FileName, CommentSigns = None, SplitSigns = None) :
     '''
-    Transform Markdown file to Triad List.
+    Transform Markdown file to Triad Generator.
     '''
     if CommentSigns is None :
         CommentSigns = set()
@@ -65,5 +74,18 @@ def MDFile2Triad(FileName, CommentSigns = None, SplitSigns = None) :
     TriadGenerator = (__ProcessMDLine(line, SplitSigns) for line in FilelinesGenerator)
 
     return TriadGenerator
+
+def Triad2MDFile(FileName, TriadGenerator) :
+    '''
+    Transform Generator List to Markdown file.
+    '''
+    with open(FileName, 'w', encoding='utf8') as f :
+        f.write('| | | |')
+        f.write('\n')
+        f.write('|---|---|---|')
+        f.write('\n')
+        for i in TriadGenerator :
+            f.write('|'.join(['']+i+['']))
+            f.write('\n')
 
 

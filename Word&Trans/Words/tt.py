@@ -1,40 +1,34 @@
-# import sys
-# import time
-# from concurrent import futures
-# def p(i) :
-#     time.sleep(10-i)
-#     print('in p=====')
-#     print(i)
-#     return(i)
+# """
+# 先不考虑命令行传参的事情，先按照手动设计参数进行设计
+# """
 
-# # print(res)
+# from Pysrc.utilities import setOutputFileName, RawFile2Triad, MDFile2Triad
+# from Pysrc.parameters import Phase
 
-# if __name__ == '__main__':
-#     with futures.ProcessPoolExecutor(10) as executor : 
-#         todo = []
-#         for i in range(10) :
-#             future = executor.submit(p, i)
-#             todo.append(future)
-#         results = []
-#         print('af submit')
-#         for future in futures.as_completed(todo) : 
-#             res = future.result()
-#             print('res', res)
-#             results.append(res)
-#         print('='*50)
-#         for future in futures.as_completed(todo) : 
-#             res = future.result()
-#             print('res', res)
-#             results.append(res)
-           
-a = [1,2,3,(4,5),[6,7,8]]
-b = a[:]
-print(id(a))
-print(id(b))
-print(id(a[3]))
-print(id(b[3]))
-b[3]+=(1,2)
-print(id(b[3]))
+# InputFileName = 'RawWords\\Jimple生词.txt'
+
+# OutputFileName = setOutputFileName(InputFileName)
+# InputPhase = 'R'
+# OutputPhase = 'Rn'
+
+# # Check parameters
+# assert Phase.IsLegalInputPhase(InputPhase)
+# assert Phase.IsLegalOutputPhase(OutputPhase)
+# #To be continued ...
+
+# #分单文件多文件情况处理，True对应单文件，条件慢慢补
+# if True :
+#     # 将文件内容转化成三元组
+#     if Phase.IsLegalRawInputPhase(InputFileName) :
+#         FileTriad = RawFile2Triad(InputFileName)
+#     else :
+#         FileTriad = MDFile2Triad(InputFileName)
+# else :
+#     pass
 
 
+# s = '      x   t f       '
+# print(s.strip())
+l = ['a','b','c']
+print('|'.join(['']+l+['']))
 
