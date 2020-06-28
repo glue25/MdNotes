@@ -31,24 +31,25 @@
 # print(s.strip()) 
 # import re
 # print(re.sub('[ ,]','','a b , sd '))   # abcwrt22666
-
+class B:
+    def __init__(self,l):
+        super().__init__()
+        self.l = l
+        self.n=0
+    def __next__(self) :
+        if self.n<self.l :
+            self.n += 1
+            return self.n
+        else : 
+            self.n = 0
+            raise StopIteration()
+    def __iter__(self):
+        return 0
 class A:
-    L = []
-    l=None
+    def __iter__(self):
+        return B(10)
 
-a = A()
-print(a.L is A.L) # 可变对象，实例属性和类属性一致
-print(a.l is A.l) # 不可变对象，实例属性和类属性一致
-a.l=30
-print(a.l is A.l) # 修改不可变对象后，实例属性和类属性不一致
-a.L.append('123')
-print(a.L is A.L) # 修改可变对象后，实例属性和类属性一致
-
-a.ll=3
-print(a.ll)       # 为不存在的实例属性赋值，会新建实例属性
-print('='*10)
-
-b = A()
-print(b.L is a.L) #两个实例共享可变对象属性
-print(b.l == a.l)
-print(b.l is A.l) #没修改的情况下，没有建新对象
+a=A()
+print(a)
+for i in a :
+    print(i)
