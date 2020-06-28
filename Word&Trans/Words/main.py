@@ -21,10 +21,11 @@ def main() :
     arg = process_args()
     # print(arg.indir)
     InputFileName = 'RawWords/Jimple生词.txt'
-    InputPhase = 'R'
+    InputFileName = 'E:\MDNotes\Word&Trans\Words\MdWords\Jimple生词-Output.md'
+    InputPhase = 'M'
     OutputPhase = 'Rn'
 
-    OutputFileName = setOutputFileName(InputFileName,'Mc')
+    OutputFileName = setOutputFileName(InputFileName,'Rc')
     print(OutputFileName)
     # Check parameters
     assert Phase.IsLegalInputPhase(InputPhase)
@@ -44,8 +45,8 @@ def main() :
     # print(FileTriad)
     # for i in FileTriad :
     #     print(i)
-    
-    Triad2MDFile(OutputFileName, FileTriad)
+    Triad2RawFile(OutputFileName, FileTriad)
+    # Triad2MDFile(OutputFileName, FileTriad)
 
 # filename = os.path.abspath(__file__)
 # dir = os.path.split(filename)[0]

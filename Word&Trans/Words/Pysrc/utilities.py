@@ -1,4 +1,7 @@
 import chardet
+import re
+import copy
+
 from Pysrc.parameters import Phase
 __ElementsNums = 3
 def setOutputFileName(InputFileName, OutputPhase) : 
@@ -38,7 +41,7 @@ def __ProcessRawLine(line, SplitSigns) :
     return elements
 
 def __ProcessMDLine(line) : 
-    elements = [x.replace('\t', '').strip() for x in line.split('|')]
+    elements = [x.replace('\t', '').strip() for x in line.split('|')][1:-1]
     return elements
 
 def RawFile2Triad(FileName, CommentSigns = None, SplitSigns = None) : 
@@ -70,8 +73,12 @@ def MDFile2Triad(FileName, CommentSigns = None, SplitSigns = None) :
         SampleData = f.read(500)
         f.seek(0)
         encoding = chardet.detect(SampleData)['encoding']
+    
     FilelinesGenerator = __getFilelinesGenerator(FileName, encoding)
-    TriadGenerator = (__ProcessMDLine(line, SplitSigns) for line in FilelinesGenerator)
+
+    # filter the header
+    FilelinesGenerator = (x for x in FilelinesGenerator if len(re.sub('[ |\t\-\n]','',x))>0)
+    TriadGenerator = (__ProcessMDLine(line) for line in FilelinesGenerator)
 
     return TriadGenerator
 
@@ -88,4 +95,22 @@ def Triad2MDFile(FileName, TriadGenerator) :
             f.write('|'.join(['']+i+['']))
             f.write('\n')
 
+def Triad2RawFile(FileName, TriadGenerator) :
+    '''
+    Transform Generator List to Raw file.
+    '''
+    def getGenerator(G) : 
+        return ()
+    TriadGeneratorO = copy.copy(TriadGenerator)
+    Length0 = max([len(x[0] for x in TriadGeneratorO)])
+    TriadGeneratorO = copy.copy(TriadGenerator)
+    Length1 = max([len(x[1] for x in TriadGeneratorO)])
+
+    Length0 += 2
+    Length1 += 2
+
+    with open(FileName, 'w', encoding='utf8') as f :
+        for i in TriadGenerator :
+            f.write(''.join(i[0].ljust(Length0), i[1].ljust(Length1),i[2]))
+            f.write('\n')
 
