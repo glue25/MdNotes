@@ -31,25 +31,36 @@
 # print(s.strip()) 
 # import re
 # print(re.sub('[ ,]','','a b , sd '))   # abcwrt22666
-class B:
-    def __init__(self,l):
-        super().__init__()
-        self.l = l
-        self.n=0
-    def __next__(self) :
-        if self.n<self.l :
-            self.n += 1
-            return self.n
-        else : 
-            self.n = 0
-            raise StopIteration()
-    def __iter__(self):
-        return 0
-class A:
-    def __iter__(self):
-        return B(10)
+# class B:
+#     def __init__(self,l):
+#         super().__init__()
+#         self.l = l
+#         self.n=0
+#     def __next__(self) :
+#         if self.n<self.l :
+#             self.n += 1
+#             return self.n
+#         else : 
+#             self.n = 0
+#             raise StopIteration()
+#     def __iter__(self):
+#         return 0
+# class A:
+#     def __iter__(self):
+#         return B(10)
 
-a=A()
-print(a)
+# a=A()
+# print(a)
+# for i in a :
+#     print(i)
+
+filename = 'RawWords/Jimple生词.txt'
+def fc(filename) :
+    with open(filename,'r') as f :
+        for i in f :
+            yield i
+
+a = fc(filename)
+b = fc(filename)
 for i in a :
     print(i)
