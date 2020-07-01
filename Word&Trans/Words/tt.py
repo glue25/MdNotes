@@ -56,11 +56,15 @@
 
 filename = 'RawWords/Jimple生词.txt'
 def fc(filename) :
-    with open(filename,'r') as f :
+    with open(filename,'r',encoding='utf8') as f :
         for i in f :
             yield i
 
-a = fc(filename)
-b = fc(filename)
+c = fc(filename)
+from itertools import tee
+a,b = tee(c)
 for i in a :
+    print(i)
+print('=================')
+for i in b :
     print(i)

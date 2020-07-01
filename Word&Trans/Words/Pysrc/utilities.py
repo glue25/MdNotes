@@ -1,6 +1,7 @@
 import chardet
 import re
 import copy
+from itertools import tee
 
 from Pysrc.parameters import Phase
 __ElementsNums = 3
@@ -99,18 +100,23 @@ def Triad2RawFile(FileName, TriadGenerator) :
     '''
     Transform Generator List to Raw file.
     '''
-    def getGenerator(G) : 
-        return ()
-    TriadGeneratorO = copy.copy(TriadGenerator)
-    Length0 = max([len(x[0] for x in TriadGeneratorO)])
-    TriadGeneratorO = copy.copy(TriadGenerator)
-    Length1 = max([len(x[1] for x in TriadGeneratorO)])
+    
+    TriadGenerator, TriadGeneratorO = tee(TriadGenerator)
 
-    Length0 += 2
-    Length1 += 2
+    Length = [0 for x in range(__ElementsNums-1)]
+    for i in TriadGeneratorO :
+        for j in range(__ElementsNums-1) :
+            if len(i[j])>Length[j] : 
+                Length[j] = len(i[j])
+    # Length0 = max([len(x[0] for x in TriadGeneratorO)])
+    # Length1 = max([len(x[1] for x in TriadGeneratorO)])
+
+    Length0 = Length[0] + 2
+    Length1 = int(Length[1]*9/5) + 2
+    print(Length1)
 
     with open(FileName, 'w', encoding='utf8') as f :
         for i in TriadGenerator :
-            f.write(''.join(i[0].ljust(Length0), i[1].ljust(Length1),i[2]))
+            f.write(''.join((i[0].ljust(Length0), i[1].ljust(Length1),i[2])))
             f.write('\n')
 
