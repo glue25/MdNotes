@@ -1,6 +1,7 @@
 import argparse
 
 from Pysrc.parameters import Phase
+from Pysrc.File_utilities import *
 from Pysrc.utilities import *
 
 def process_args() :
@@ -12,6 +13,9 @@ def process_args() :
 
     parser.add_argument('-inp', help='input phase', choices=Phase.LegalInputPhase)
     parser.add_argument('-outp', help='output phase', choices=Phase.LegalOutputPhase)
+    
+    parser.add_argument('-mod', help='output mod', choices=Phase.LegalSortMod)
+    
     args = parser.parse_args()
     return args
 
@@ -19,7 +23,9 @@ def process_args() :
 
 def main() : 
     arg = process_args()
-    # print(arg.indir)
+    print(arg.mod)
+
+    assert 1==0
     InputFileName = 'RawWords/Jimple生词.txt'
     InputFileName = 'E:\MDNotes\Word&Trans\Words\MdWords\Jimple生词-Output.md'
     InputPhase = 'M'
@@ -42,10 +48,12 @@ def main() :
     else :
         pass
 
-    # print(FileTriad)
-    # for i in FileTriad :
-    #     print(i)
-    Triad2RawFile(OutputFileName, FileTriad)
+    FileTriad = SortbyImportance(FileTriad)
+
+    if Phase.IsLegalMDOutputPhase(OutputPhase) : 
+        Triad2MDFile(OutputFileName, FileTriad)
+    else : 
+        Triad2RawFile(OutputFileName, FileTriad)
     # Triad2MDFile(OutputFileName, FileTriad)
 
 # filename = os.path.abspath(__file__)

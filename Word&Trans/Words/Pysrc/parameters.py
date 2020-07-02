@@ -1,4 +1,8 @@
 
+ELEMENTS_NUM = 3
+IMPORTANCE = ['*','=','']
+
+
 # Define Legal Phases.
 class Phase() :
     _Phases = {}
@@ -12,6 +16,13 @@ class Phase() :
     _Phases['LegalOutputPhase'] = _Phases['LegalRawOutputPhase'] + _Phases['LegalMDOutputPhase'] 
     LegalInputPhase = _Phases['LegalRawInputPhase'] + _Phases['LegalMDInputPhase']
     LegalOutputPhase = _Phases['LegalRawOutputPhase'] + _Phases['LegalMDOutputPhase'] 
+    
+    LegalSortMod = ['character', 'importance', 'ignore']
+    
+
+    @staticmethod
+    def IsLegalInputPhase(phase) :
+        return phase in Phase.LegalSortMod
 
     @staticmethod
     def IsLegalInputPhase(phase) :

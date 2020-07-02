@@ -53,18 +53,6 @@
 # print(a)
 # for i in a :
 #     print(i)
-
-filename = 'RawWords/Jimple生词.txt'
-def fc(filename) :
-    with open(filename,'r',encoding='utf8') as f :
-        for i in f :
-            yield i
-
-c = fc(filename)
-from itertools import tee
-a,b = tee(c)
-for i in a :
-    print(i)
-print('=================')
-for i in b :
-    print(i)
+from operator import itemgetter, indexOf
+__Importance = ['*','=','']
+print(__Importance(indexOf('=')))
