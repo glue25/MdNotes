@@ -53,6 +53,8 @@
 # print(a)
 # for i in a :
 #     print(i)
-from operator import itemgetter, indexOf
-__Importance = ['*','=','']
-print(__Importance(indexOf('=')))
+# from operator import itemgetter, indexOf
+# __Importance = ['*','=','']
+# print(__Importance(indexOf('=')))
+if '' and '':
+    print(asd)

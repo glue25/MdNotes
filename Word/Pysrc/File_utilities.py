@@ -4,14 +4,12 @@ import copy
 from itertools import tee
 
 from Pysrc.parameters import * 
-def setOutputFileName(InputFileName, OutputPhase) : 
+def setOutputFileName(InputFileName, OutputPhase,*,Dir=None) : 
     '''
     Get the output file's default name referred to a certain input file.
     '''
     Suffixes = ['.txt', '.md']
     for i in Suffixes :
-        # print(InputFileName.__dir__())
-        # for in InputFileName.__dir__() :
         if InputFileName.endswith(i) : 
             OutputFileName = ''.join((InputFileName[:-4], '-Output', i ))
     if Phase.IsLegalMDOutputPhase(OutputPhase) :
@@ -19,6 +17,7 @@ def setOutputFileName(InputFileName, OutputPhase) :
         OutputFileName = OutputFileName.replace('RawWords','MdWords')
     else : 
         OutputFileName.replace('.md','.txt')
+        OutputFileName = OutputFileName.replace('MdWords','RawWords')
 
     return OutputFileName
 
