@@ -22,8 +22,8 @@ def process_args() :
 
 def ProcessParas() :
     arg = process_args()
-    print('arg.inf',arg.inf)
-    print('arg.outf',arg.outf)
+    # print('arg.inf',arg.inf)
+    # print('arg.outf',arg.outf)
     # get input/output phase
     InputPhase = arg.inp
     OutputPhase = arg.outp
@@ -35,6 +35,7 @@ def ProcessParas() :
         SortMode = 'character'
     else :
         SortMode = 'ignore'
+    print(SortMode)
 
     # get input/output filename
     
@@ -57,13 +58,13 @@ def ProcessParas() :
     else :
         OutputFileName = '\\'.join((arg.outdir, arg.outf))
     OutputFileName = OutputFileName.lstrip('\\')
-    print(OutputFileName)
+    # print(OutputFileName)
     return SortMode, InputPhase, OutputPhase, InputFileName, OutputFileName
 
 
 def main() : 
     SortMode, InputPhase, OutputPhase, InputFileName, OutputFileName = ProcessParas()
-    print(OutputFileName)
+    print(SortMode)
     
 
     # assert 1==0
@@ -84,7 +85,7 @@ def main() :
     else :
         FileTriad = MDFile2Triad(InputFileName)
 
-    FileTriad = SortbyImportance(FileTriad)
+    FileTriad = SortFuncs[SortMode](FileTriad)
 
     if Phase.IsLegalMDOutputPhase(OutputPhase) : 
         Triad2MDFile(OutputFileName, FileTriad)

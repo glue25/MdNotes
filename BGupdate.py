@@ -16,7 +16,7 @@ scheduler.add_job(job, 'interval', hours=6)#, hours=2
 
 print(datetime.now().strftime("%Y-%m-%d %H:%M:%S"), end = '--')
 print('Begin!!!')
-
+job()
 scheduler.start()
 
 print(datetime.now().strftime("%Y-%m-%d %H:%M:%S"), end = '--')
