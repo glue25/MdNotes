@@ -56,5 +56,9 @@
 # from operator import itemgetter, indexOf
 # __Importance = ['*','=','']
 # print(__Importance(indexOf('=')))
-if '' and '':
-    print(asd)
+class A :
+    def __init__(self) :
+        pass
+    @property
+    def b(self) :
+        print('in property')
