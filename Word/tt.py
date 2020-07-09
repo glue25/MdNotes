@@ -59,6 +59,22 @@
 class A :
     def __init__(self) :
         pass
+        self._b = 3
+        
     @property
     def b(self) :
         print('in property')
+        return self._b
+    @b.setter
+    def b(self,b) : 
+        print('in b.setter')
+        self._b = b
+    def t(self) :
+        print('in t')
+        print(self.b)
+        self.b=5
+        print(self.b)
+        print('t over')
+
+a = A()
+a.t()
