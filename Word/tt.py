@@ -28,7 +28,7 @@
 
 
 # s = '      x   t f       '
-# print(s.strip()) 
+# print(s.strip())
 # import re
 # print(re.sub('[ ,]','','a b , sd '))   # abcwrt22666
 # class B:
@@ -40,7 +40,7 @@
 #         if self.n<self.l :
 #             self.n += 1
 #             return self.n
-#         else : 
+#         else :
 #             self.n = 0
 #             raise StopIteration()
 #     def __iter__(self):
@@ -55,26 +55,51 @@
 #     print(i)
 # from operator import itemgetter, indexOf
 # __Importance = ['*','=','']
-# print(__Importance(indexOf('=')))
-class A :
-    def __init__(self) :
-        pass
-        self._b = 3
-        
-    @property
-    def b(self) :
-        print('in property')
-        return self._b
-    @b.setter
-    def b(self,b) : 
-        print('in b.setter')
-        self._b = b
-    def t(self) :
-        print('in t')
-        print(self.b)
-        self.b=5
-        print(self.b)
-        print('t over')
+# # print(__Importance(indexOf('=')))
+# class Grade(object):
+#     def __init__(self) :
+#         self._values = {}
+#     def __get__(self, instance, instance_type) :
+#         print('#'*15)
+#         print('in __get__')
+#         print('#'*15)
+#         if instance is None: return self
+#         return self#self._values.get(instance, 0)
+#     def __set__(self, instance, value) :
+#         print('#'*15)
+#         print('in __set__')
+#         print('#'*15)
+#         if not (0 <= value <= 100):
+#             raise ValueError('Grade must be between 0 and 100')
+#         self._values[instance] = value
 
-a = A()
-a.t()
+# # a = Grade()
+# class Exam :
+#     m = Grade()
+#     def __init__(self):
+#         super().__init__()
+#         self.k = Grade()
+#         self.sign = '=*-sign-*='
+
+# e = Exam()
+# print(e.m)
+# print(e.k)
+# print(e.m == e.k, e.m is e.k)
+# assert e.m == 0
+
+class A:
+    def __init__(self):
+        super().__init__()
+        self.s = 10
+la = [A(), A(), A()]
+for i in la :
+    print(i)
+for i in la:
+    i.s = 20
+for i in la :
+    print(i)
+
+
+
+
+
