@@ -86,20 +86,7 @@
 # print(e.k)
 # print(e.m == e.k, e.m is e.k)
 # assert e.m == 0
-
-class A:
-    def __init__(self):
-        super().__init__()
-        self.s = 10
-la = [A(), A(), A()]
-for i in la :
-    print(i)
-for i in la:
-    i.s = 20
-for i in la :
-    print(i)
-
-
-
-
-
+import os
+s = '123.txt'
+print(os.path.split(s))
+print('# %s\n'%'12345')
