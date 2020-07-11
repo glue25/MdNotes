@@ -5,20 +5,27 @@ import os
 from itertools import tee
 
 from Pysrc.parameters import * 
-def setOutputFileName(InputFileName, OutputPhase,*,Dir=None) : 
+def setOutputFileName(InputFileName, OutputPhase, Dir=None) :#OutputPhase 
     '''
     Get the output file's default name referred to a certain input file.
     '''
-    Suffixes = ['.txt', '.md']
-    for i in Suffixes :
-        if InputFileName.endswith(i) : 
-            OutputFileName = ''.join((InputFileName[:-4], '-Output', i ))
+    if Dir is None :
+        #应对没有路径的情况
+        if Phase.IsLegalMDOutputPhase(OutputPhase) :
+            Dir = DefaultMdOutputDir
+        else : 
+            Dir = DefaultROutputDir
+    # Suffixes = ['.txt', '.md']
+    # for i in Suffixes :
+    #     if InputFileName.endswith(i) : 
+    #         OutputFileName = ''.join((InputFileName[:-len(i)], '-Output', i ))
+
     if Phase.IsLegalMDOutputPhase(OutputPhase) :
         OutputFileName = OutputFileName.replace('.txt','.md')
-        OutputFileName = OutputFileName.replace('RawWords','MdWords')
     else : 
         OutputFileName.replace('.md','.txt')
-        OutputFileName = OutputFileName.replace('MdWords','RawWords')
+    
+    OutputFileName = os.path.join(Dir, os.path.split(InputFileName)[0])
 
     return OutputFileName
 
@@ -116,6 +123,24 @@ def _WriteMDFile(f, TriadGenerator) :
         f.write('|'.join(['']+i+['']))
         f.write('\n')
 
+def _WriteRawFile(f, TriadGenerator) :
+    '''
+    Write TriadGenerator to f.
+    '''
+    TriadGenerator, TriadGeneratorO = tee(TriadGenerator)
+
+    Length = [0 for x in range(ELEMENTS_NUM-1)]
+    for i in TriadGeneratorO :
+        for j in range(ELEMENTS_NUM-1) :
+            if len(i[j])>Length[j] : 
+                Length[j] = len(i[j])
+
+    Length0 = Length[0] + 2
+    Length1 = int(Length[1]*9/5) + 2
+
+    for i in TriadGenerator :
+        f.write(''.join((i[0].ljust(Length0), i[1].ljust(Length1-int(len(i[1])*4/5)),i[2])))
+        f.write('\n')
 
 def Triad2MDFile(FileName, TriadGenerator) :
     '''
@@ -129,24 +154,8 @@ def Triad2RawFile(FileName, TriadGenerator) :
     Transform Generator List to Raw file.
     '''
     
-    TriadGenerator, TriadGeneratorO = tee(TriadGenerator)
-
-    Length = [0 for x in range(ELEMENTS_NUM-1)]
-    for i in TriadGeneratorO :
-        for j in range(ELEMENTS_NUM-1) :
-            if len(i[j])>Length[j] : 
-                Length[j] = len(i[j])
-    # Length0 = max([len(x[0] for x in TriadGeneratorO)])
-    # Length1 = max([len(x[1] for x in TriadGeneratorO)])
-
-    Length0 = Length[0] + 2
-    Length1 = int(Length[1]*9/5) + 2
-    # print(Length1)
-
     with open(FileName, 'w', encoding='utf8') as f :
-        for i in TriadGenerator :
-            f.write(''.join((i[0].ljust(Length0), i[1].ljust(Length1-int(len(i[1])*4/5)),i[2])))
-            f.write('\n')
+        _WriteRawFile(f, TriadGenerator)
 
 def _getMdModeName(FileName) :
     return os.path.split(FileName)[-1].split('.')[0]
@@ -168,6 +177,13 @@ def Triads2MDFile(FileName, TriadGeneratorDict) :
             f.write('\n')
 
 
+def Triads2RawFile(FileName, TriadGeneratorDict) : 
+    with open(FileName, 'w', encoding='utf8') as f :
+        #key是文件名/路径，value是生成器
+        for key, value in TriadGeneratorDict.items() :
+            f.write('# %s ==========\n\n'%_getMdModeName(key))
+            _WriteRawFile(f, value)
+            f.write('\n')
 
 # def RawFile2Triad(FileName, CommentSigns = None, SplitSigns = None) : 
 #     '''

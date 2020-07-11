@@ -1,6 +1,11 @@
 
 ELEMENTS_NUM = 3
 IMPORTANCE = ['*','=','']
+DefaultDir = {
+    ''
+}
+DefaultROutputDir = 'E:\MDNotes\Word\RawWords'
+DefaultMdOutputDir = 'E:\MDNotes\Word\MdWords'
 
 
 # Define Legal Phases.

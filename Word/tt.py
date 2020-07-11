@@ -86,7 +86,12 @@
 # print(e.k)
 # print(e.m == e.k, e.m is e.k)
 # assert e.m == 0
-import os
-s = '123.txt'
-print(os.path.split(s))
-print('# %s\n'%'12345')
+def R():
+    for i in range(10) :
+        yield i
+s = 'assdgh'
+print(iter(s) is s)
+# r = range(10)
+r = (x for x in range(10))
+print(iter(r) is r)
+print(next(r))
