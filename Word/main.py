@@ -33,7 +33,7 @@ def ProcessParas() :
         SortMode = 'character'
     else :
         SortMode = 'ignore'
-    print(SortMode)
+    # print(SortMode)
 
     # get input/output dir
 
@@ -111,7 +111,7 @@ def main() :
     print('OutputPhase', OutputPhase)
     print('InputFileName',OutputFileName)
     print('OutputFileName',OutputFileName)
-    if 
+    # if 
     assert 1==0
     if iter(InputFileName) is InputFileName :
         if iter(OutputFileName) is OutputFileName :

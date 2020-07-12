@@ -15,6 +15,8 @@ def setOutputFileName(InputFileName, OutputPhase, Dir=None) :#OutputPhase
             Dir = DefaultMdOutputDir
         else : 
             Dir = DefaultROutputDir
+    if (not os.path.isfile(Dir)) and (not os.path.exists(Dir)) :
+        os.makedirs(Dir)
     # Suffixes = ['.txt', '.md']
     # for i in Suffixes :
     #     if InputFileName.endswith(i) : 
