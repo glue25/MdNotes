@@ -29,16 +29,6 @@ def setOutputFileName(InputFileName, OutputPhase, Dir=None) :#OutputPhase
 
     return OutputFileName
 
-# def getfilemod(filename) :
-#     score = 0
-#     if filename.endswith('.txt') :
-#         score += 1
-#     elif filename.endswith('.md') :
-#         score -= 1
-#     else : 
-#         pass
-
-#     with open
 
 def _getFilelinesGenerator(FileName, encoding = 'utf8', CommentSigns = None) : 
     if CommentSigns is None :

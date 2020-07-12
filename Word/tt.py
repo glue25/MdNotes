@@ -1,7 +1,7 @@
 # """
 # 先不考虑命令行传参的事情，先按照手动设计参数进行设计
 # """
-
+import os
 # from Pysrc.utilities import setOutputFileName, RawFile2Triad, MDFile2Triad
 # from Pysrc.parameters import Phase
 
@@ -73,25 +73,13 @@
 #             raise ValueError('Grade must be between 0 and 100')
 #         self._values[instance] = value
 
-# # a = Grade()
-# class Exam :
-#     m = Grade()
-#     def __init__(self):
-#         super().__init__()
-#         self.k = Grade()
-#         self.sign = '=*-sign-*='
-
-# e = Exam()
-# print(e.m)
-# print(e.k)
-# print(e.m == e.k, e.m is e.k)
-# assert e.m == 0
-def R():
-    for i in range(10) :
-        yield i
-s = 'assdgh'
-print(iter(s) is s)
+# def R():
+#     for i in range(10) :
+#         yield i
+# s = 'assdgh'
 # r = range(10)
-r = (x for x in range(10))
-print(iter(r) is r)
-print(next(r))
+# for i,j in zip(s, r) :
+#     print(i,'-',j)
+os.makedirs('ttt')
+
+

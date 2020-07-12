@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://www.cnblogs.com/LFeather/p/10128325.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="never">
+    <meta property="og:description" content="[TOC] 3 项目结构 经过前面一系列学习，差不多对Java的开发过程有了一定的了解，为了能保持一个良好的项目结构，考虑到接下来要进行开发，还需要学习一下Java的项目结构 下面以两个项目结构为参照">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Java开发学习心得（三）：项目结构 - 奶酪魔像 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="https://common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon">
+    
+    <link rel="stylesheet" href="./Java开发学习心得（三）：项目结构 - 奶酪魔像 - 博客园_files/blog-common.min.css">
+    <link id="MainCss" rel="stylesheet" href="./Java开发学习心得（三）：项目结构 - 奶酪魔像 - 博客园_files/bundle-lessismoreright.min.css">
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="./Java开发学习心得（三）：项目结构 - 奶酪魔像 - 博客园_files/bundle-lessismoreright-mobile.min.css">
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/LFeather/rss">
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/LFeather/rsd.xml">
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/LFeather/wlwmanifest.xml">
+    <script async="" src="./Java开发学习心得（三）：项目结构 - 奶酪魔像 - 博客园_files/analytics.js.下载"></script><script src="./Java开发学习心得（三）：项目结构 - 奶酪魔像 - 博客园_files/jquery-2.2.0.min.js.下载"></script>
+    <script src="./Java开发学习心得（三）：项目结构 - 奶酪魔像 - 博客园_files/blog-common.min.js.下载"></script>
+    <script>
+        var currentBlogId = 370056;
+        var currentBlogApp = 'LFeather';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var skinName = 'LessIsMoreRight';
+    </script>
+    
+    
+    
+</head>
+<body>
+    <a name="top"></a>
+    
+    <div id="home">
+    <div id="header">
+        <div id="blogTitle">
+            
+<div class="title"><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/LFeather/">奶酪魔像</a>
+</div>
+<div class="subtitle">
+我想知道这一切是如何运转的
+</div>
+
+        </div>
+        <div id="navigator">
+            
+<ul id="navList">
+    <li id="nav_sitehome"><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+    <li id="nav_myhome">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/LFeather/">
+首页</a>
+</li>
+    <li id="nav_newpost">
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+    <li id="nav_contact">
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E5%A5%B6%E9%85%AA%E9%AD%94%E5%83%8F">
+联系</a></li>
+    <li id="nav_rss">
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/LFeather/rss/">
+订阅</a></li>
+    <li id="nav_admin">
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+            <div class="blogStats">
+                
+<span id="stats_post_count">随笔 - 
+39&nbsp;</span>
+<span id="stats_article_count">文章 - 
+1&nbsp;</span>
+<!-- <span id="stats-comment_count"></span> -->
+<span id="stats_comment_count">评论 - 
+14</span>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="mainContent">
+            <div class="forFlow">
+                <div id="post_detail">
+    <div id="topics">
+        <div class="post">
+            <h1 class="postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/LFeather/p/10128325.html">
+    <span>Java开发学习心得（三）：项目结构</span>
+    
+
+
+</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body cnblogs-markdown">
+    <p></p><div class="toc"><div class="toc-container-header">目录</div><ul><li><a href="https://www.cnblogs.com/LFeather/p/10128325.html#3-%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84">3 项目结构</a><ul><li><a href="https://www.cnblogs.com/LFeather/p/10128325.html#31-src">3.1 src</a><ul><li><a href="https://www.cnblogs.com/LFeather/p/10128325.html#311-main">3.1.1 main</a><ul><li><a href="https://www.cnblogs.com/LFeather/p/10128325.html#3111-java">3.1.1.1 java</a></li><li><a href="https://www.cnblogs.com/LFeather/p/10128325.html#3112-resources">3.1.1.2 resources</a></li></ul></li><li><a href="https://www.cnblogs.com/LFeather/p/10128325.html#312-test">3.1.2 test</a></li></ul></li><li><a href="https://www.cnblogs.com/LFeather/p/10128325.html#32-target">3.2 target</a></li></ul></li><li><a href="https://www.cnblogs.com/LFeather/p/10128325.html#4-java%E7%9A%84%E5%B7%A5%E7%A8%8B%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84">4 Java的工程文件结构</a><ul><li><a href="https://www.cnblogs.com/LFeather/p/10128325.html#41-%E5%87%A0%E7%A7%8D%E5%AF%B9%E8%B1%A1%E7%9A%84%E8%A7%A3%E9%87%8A">4.1 几种对象的解释</a></li><li><a href="https://www.cnblogs.com/LFeather/p/10128325.html#42-%E5%AE%9E%E9%99%85%E7%9A%84%E9%A1%B9%E7%9B%AE%E6%96%87%E4%BB%B6%E5%BA%94%E8%AF%A5%E5%A6%82%E4%BD%95%E8%AE%BE%E8%AE%A1">4.2 实际的项目文件应该如何设计</a></li></ul></li></ul></div><p></p>
+<h2 id="3-项目结构">3 项目结构</h2>
+<p>经过前面一系列学习，差不多对Java的开发过程有了一定的了解，为了能保持一个良好的项目结构，考虑到接下来要进行开发，还需要学习一下Java的项目结构</p>
+<p>下面以两个项目结构为参照</p>
+<p>图1</p>
+<p><img src="./Java开发学习心得（三）：项目结构 - 奶酪魔像 - 博客园_files/aa003451gy1fy375m0y8aj207p0jzweu.jpg" alt="" loading="lazy"></p>
+<p>图2</p>
+<p><img src="./Java开发学习心得（三）：项目结构 - 奶酪魔像 - 博客园_files/2502346953-595f054721e34" alt="" loading="lazy"></p>
+<p>第一个是我自己学习时的Demo，一边学一边建文件，应该有些错误的地方，第二张是从网上看到的一个结构比较清晰的图片</p>
+<p>图1的结构完整一点，就以图1为主一点点讲起</p>
+<h3 id="31-src">3.1 src</h3>
+<p>因为我用的是Maven，大方向上项目两大文件夹分别是src和target，以及一个pom.xml配置文件，src目录里是项目工程的源码文件，配置文件和资源文件等，其下一级是main和test这两个文件夹</p>
+<h4 id="311-main">3.1.1 main</h4>
+<p>main文件夹下是主要的工程源文件，然后下面又是两个文件夹：java和resources,其实上面也讲了，而且顾名思义，java里面是源码文件，resources里面是资源文件</p>
+<h5 id="3111-java">3.1.1.1 java</h5>
+<p>这之下的文件结构可以参考上面的图2了，大体上就是model-mapper-service-controller，其他还有公共类和表现层等，这里在下面单独分一个章节来说</p>
+<h5 id="3112-resources">3.1.1.2 resources</h5>
+<p><img src="./Java开发学习心得（三）：项目结构 - 奶酪魔像 - 博客园_files/aa003451gy1fy37tuu317j205x02lt8i.jpg" alt="" loading="lazy"></p>
+<p>资源文件夹默认就是这个样子，application.properties是用来填写各种配置的，比如数据库连接的配置信息、日志组件的配置信息等，有些人会改成yml后缀名，里面的格式就不尽相同了，在前面也讲过，这里就不再赘述。</p>
+<p>除此之外，各种组件的配置文件也在这个文件夹下</p>
+<p>还有一个主要的作用是存放静态文件资源，包括需要访问的jsp、html、css、js、图片等，还有代码模板</p>
+<ol>
+<li>项目配置文件：resources/application.yml</li>
+<li>静态资源目录：resources/static/<br>
+&nbsp; &nbsp; ——用于存放html、css、js、图片等资源</li>
+<li>视图模板目录：resources/templates/<br>
+&nbsp; &nbsp; ——用于存放jsp、thymeleaf等模板文件</li>
+<li>mybatis映射文件：resources/mapper/（mybatis项目）</li>
+<li>mybatis配置文件：resources/mapper/config/（mybatis项目）</li>
+</ol>
+<h4 id="312-test">3.1.2 test</h4>
+<p>如题所述，单元测试用的</p>
+<h3 id="32-target">3.2 target</h3>
+<p>target是有存放项目构建后的文件和目录，jar包、war包、编译的class文件等</p>
+<p>target里的所有内容都是maven构建的时候生成的</p>
+<p>jar 包就是 java archive file java 的一种文档格式。jar文件非常类似zip</p>
+<p>WAR是Sun提出的一种Web应用程序格式，与JAR类似，也是许多文件的一个压缩包。这个包中的文件按一定目录结构来组织：<br>
+通常其根目录下包含有Html和Jsp文件或者包含这两种文件的目录，另外还会有一个WEB-INF目录，这个目录很重要。通常在WEB-INF目录下有一个web.xml文件和一个classes目录，web.xml是这个应用的配置文件，而classes目录下则包含编译好的Servlet类和Jsp或Servlet所依赖的其它类（如JavaBean）。</p>
+<p>通常这些所依赖的类也可以打包成JAR放到WEB-INF下的lib目录下，当然也可以放到系统的CLASSPATH中，但那样移植和管理起来不方便</p>
+<p>target里的所有内容都是maven构建的时候生成的</p>
+<h2 id="4-java的工程文件结构">4 Java的工程文件结构</h2>
+<p>传统的三层不用再解释了，在Java里对应数据访问层的是DAO，进行数据交互，对应业务逻辑层的是Service层，这里写逻辑代码，然后就是UI层</p>
+<h3 id="41-几种对象的解释">4.1 几种对象的解释</h3>
+<p>上面提到DAO，这里简单说说一些相关的简写，在一些源码里看到了，初学时有点懵</p>
+<ol>
+<li>PO(persistant object): 持久对象，可以看成是与数据库中的表相映射的java对象。最简单的PO就是对应数据库中某个表中的一条记录，多个记录可以用PO的集合。PO中应该不包含任何对数据库的操作。实体</li>
+<li>VO(value object):值对象，通常用于业务层之间的数据传递，和PO一样也是仅仅包含数据而已。但应是抽象出的业务对象,可以和表对应,也可以不,这根据业务的需要。可能就是Get/Set？</li>
+<li>DAO(Data Access Object)：数据访问对象，用于访问数据库，里面包含对数据库的各种操作，配合VO进行CRUD</li>
+<li>DTO(Data Transfer Object)：数据传输对象，是一组需要跨进程或网络边界传输的聚合数据的简单容器。它不应该包含业务逻辑，并将其行为限制为诸如内部一致性检查和基本验证之类的活动。我一开始以为是业务实体，但是看说明不是一个东西，那个是BO。</li>
+</ol>
+<p>DTO的用法：<br>
+比如我们一张表有100个字段，那么对应的PO就有100个属性。但是我们界面上只要显示10个字段，客户端用WEB service来获取数据，没有必要把整个PO对象传递到客户端，这时我们就可以用只有这10个属性的DTO来传递结果到客户端，这样也不会暴露服务端表结构.到达客户端以后，如果用这个对象来对应界面显示，那此时它的身份就转为VO。DTO还有减少请求的次数、简化传输对象、避免代码重复等作用。<br>
+5. ORM(O/R Mapping,Object Relational Mapping)：对象关系映射</p>
+<h3 id="42-实际的项目文件应该如何设计">4.2 实际的项目文件应该如何设计</h3>
+<p>可以参考图2</p>
+<ol>
+<li>bean也就是实体了，对应数据库的字段</li>
+<li>DAO，前面也说过了，不过里面写法可以细分很多种，使用Mybatis就是Mapper接口文件或者是xml的写法，如果还使用了JPA，还会有个repository类文件</li>
+<li>Service，这块好像写法的争议比较多，可以看看这篇文章<a href="https://my.oschina.net/HuQingmiao/blog/636161">有多少人在滥用 service+serviceImpl，又有多少人在误用myBatis</a><br>
+我在很多地方都看到了一个ServiceImpl接口，一个service类的写法，一直不理解为什么要多次一举，但还是照着做了，上面那篇文章里说到这是一种过时的写法，使用接口文件是为了解决可能连接各种数据库而有多个数据访问层的问题，这样只需要实现对应的结构就行了，而有了Mybatis之后这种问题就不存在了，所以不需要再写impl接口文件，使用 <strong>service+dao+mapper.xml</strong> 是一种更好的选择</li>
+<li>Controller，这里只讨论MVC了，普通java web的写法还不会，然后从controller应该就直接到资源文件里的HTML页面了</li>
+<li>上面是按顺序自下而上的，除此之外一些公共层：工具类库（utils）、配置类（config）、数据传输对象（dto）、视图包装对象（vo）</li>
+</ol>
+<p>还可以看看这篇<a href="https://blog.csdn.net/Auntvt/article/details/80381756">spring boot 项目开发常用目录结构</a></p>
+
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+
+
+    <div id="blog_post_info">
+<div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(10128325,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+        <a id="green_channel_follow" onclick="follow(&#39;d5de82db-c17b-410f-4618-08d49c352df3&#39;);" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./Java开发学习心得（三）：项目结构 - 奶酪魔像 - 博客园_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./Java开发学习心得（三）：项目结构 - 奶酪魔像 - 博客园_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/LFeather/" target="_blank"><img src="./Java开发学习心得（三）：项目结构 - 奶酪魔像 - 博客园_files/20170728215407.png" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/LFeather/">奶酪魔像</a><br>
+            <a href="https://home.cnblogs.com/u/LFeather/followees/">关注 - 7</a><br>
+            <a href="https://home.cnblogs.com/u/LFeather/followers/">粉丝 - 11</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow(&#39;d5de82db-c17b-410f-4618-08d49c352df3&#39;);return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(10128325,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">0</span>
+    </div>
+    <div class="buryit" onclick="votePost(10128325,&#39;Bury&#39;)">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+
+<script type="text/javascript">
+    currentDiggType = 0;
+</script></div>
+    <div class="clear"></div>
+    <div id="post_next_prev">
+
+    <a href="https://www.cnblogs.com/LFeather/p/10094196.html" class="p_n_p_prefix">« </a> 上一篇：    <a href="https://www.cnblogs.com/LFeather/p/10094196.html" title="发布于 2018-12-09 23:52">.NET Core跨平台部署</a>
+    <br>
+    <a href="https://www.cnblogs.com/LFeather/p/10165543.html" class="p_n_p_prefix">» </a> 下一篇：    <a href="https://www.cnblogs.com/LFeather/p/10165543.html" title="发布于 2018-12-23 20:44">Docker的使用初探（一）：常用指令说明</a>
+
+</div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2018-12-16 21:54</span>&nbsp;
+<a href="https://www.cnblogs.com/LFeather/">奶酪魔像</a>&nbsp;
+阅读(<span id="post_view_count">1370</span>)&nbsp;
+评论(<span id="post_comment_count">0</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10128325" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(10128325);return false;">收藏</a></div>
+        </div>
+<script src="./Java开发学习心得（三）：项目结构 - 奶酪魔像 - 博客园_files/highlight.min.js.下载"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 370056, cb_blogApp = 'LFeather', cb_blogUserGuid = 'd5de82db-c17b-410f-4618-08d49c352df3';
+    var cb_entryId = 10128325, cb_entryCreatedDate = '2018-12-16 21:54', cb_postType = 1; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="https://www.cnblogs.com/LFeather/p/10128325.html#" onclick="return RefreshPage();">刷新页面</a><a href="https://www.cnblogs.com/LFeather/p/10128325.html#top">返回顶部</a></div>
+    <div id="comment_form_container" style="visibility: visible;"><div class="login_tips">
+    注册用户登录后才能发表评论，请 
+    <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a>
+     或 
+    <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，
+    <a href="https://www.cnblogs.com/">访问</a> 网站首页。
+</div></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"><a href="https://www.wenjuan.com/s/3uIjeq0/" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-博客园问卷调查&#39;)">【推荐】了解你才能更懂你，博客园首发问卷调查，助力社区新升级</a><br><a href="http://www.ucancode.com/index.htm" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-ucancode&#39;)">【推荐】超50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="https://developer.aliyun.com/article/762866?utm_content=g_1000133217" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-阿里云开发者社区&#39;)">【推荐】如何打造一支战斗力爆棚的技术团队？</a><br></div>
+    <div id="opt_under_post"></div>
+    <div id="cnblogs_c1" class="c_ad_block"><a href="https://ai.youdao.com/third-anniversary.s?keyfrom=cnblogs" target="_blank"><img width="300" height="250" src="./Java开发学习心得（三）：项目结构 - 奶酪魔像 - 博客园_files/2016690-20200705083742466-1511628293.png" alt="有道智云周年庆" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;C1-网易有道&#39;);"></a></div>
+    <div id="under_post_news"><div class="recomm-block"><b>相关博文：</b><br>·  <a title="java的几种对象(PO,VO,DAO,BO,POJO，DTO)解释" href="https://www.cnblogs.com/firstdream/archive/2012/04/13/2445582.html" target="_blank" onclick="clickRecomItmem(2445582)">java的几种对象(PO,VO,DAO,BO,POJO，DTO)解释</a><br>·  <a title="java术语（PO/POJO/VO/BO/DAO/DTO）" href="https://www.cnblogs.com/sunwei2012/archive/2009/12/31/1636771.html" target="_blank" onclick="clickRecomItmem(1636771)">java术语（PO/POJO/VO/BO/DAO/DTO）</a><br>·  <a title="工程结构-常用包名" href="https://www.cnblogs.com/jinxiaohang/p/8465107.html" target="_blank" onclick="clickRecomItmem(8465107)">工程结构-常用包名</a><br>·  <a title="java中的vo 、dto 、dao--转" href="https://www.cnblogs.com/davidwang456/p/5417851.html" target="_blank" onclick="clickRecomItmem(5417851)">java中的vo 、dto 、dao--转</a><br>·  <a title="Java的常见术语（PO/POJO/VO/BO/DAO/DTO）" href="https://www.cnblogs.com/wjn563/p/3967235.html" target="_blank" onclick="clickRecomItmem(3967235)">Java的常见术语（PO/POJO/VO/BO/DAO/DTO）</a><br>»  <a target="_blank" href="https://recomm.cnblogs.com/blogpost/10128325">更多推荐...</a></div></div>
+    <div id="cnblogs_c2" class="c_ad_block" style="display: none;">
+        <div id="div-gpt-ad-1592366332455-0" style="width: 468px; height: 60px;"></div>
+    </div>
+    <div id="under_post_kb">
+<div class="itnews c_ad_block">
+    <b>最新 IT 新闻</b>:
+    <br>
+ ·              <a href="https://news.cnblogs.com/n/667005/" target="_blank">王兴救了李想：没有那8亿，就没有现在的冲击IPO</a>
+            <br>
+ ·              <a href="https://news.cnblogs.com/n/667021/" target="_blank">华为鸿蒙系统2.0曝光：9月发布 打通PC、手表、车机等</a>
+            <br>
+ ·              <a href="https://news.cnblogs.com/n/667032/" target="_blank">谷歌为何背弃亲手“扶植”的 CNCF ？                                                                                                    原</a>
+            <br>
+ ·              <a href="https://news.cnblogs.com/n/667031/" target="_blank">Visual Studio Code 1.47 发布</a>
+            <br>
+ ·              <a href="https://news.cnblogs.com/n/667030/" target="_blank">Android 11 发布日期意外曝光？谷歌回应来了</a>
+            <br>
+    » <a href="https://news.cnblogs.com/" title="IT 新闻" target="_blank">更多新闻...</a>
+</div></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverT2();
+        deliverC1C2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>    </div>
+</div>
+            </div>
+        </div>
+
+        <div id="sideBar">
+            <div id="sideBarMain">
+                
+<div id="sidebar_news" class="newsItem">
+<h3 class="catListTitle">公告</h3>
+
+<div id="blog-news">
+    
+    <div id="profile_block">
+        昵称：
+        <a href="https://home.cnblogs.com/u/LFeather/">
+            奶酪魔像
+        </a>
+        <br>
+        园龄：
+        <a href="https://home.cnblogs.com/u/LFeather/" title="入园时间：2017-07-27">
+            2年11个月
+        </a>
+        <br>
+        粉丝：
+        <a href="https://home.cnblogs.com/u/LFeather/followers/">
+            11
+        </a>
+        <br>
+        关注：
+        <a href="https://home.cnblogs.com/u/LFeather/followees/">
+            7
+        </a>
+        <div id="p_b_follow">
+<a href="javascript:void(0)" onclick="follow(&#39;d5de82db-c17b-410f-4618-08d49c352df3&#39;)">+加关注</a></div>
+        <script>getFollowStatus('d5de82db-c17b-410f-4618-08d49c352df3');</script>
+    </div>
+</div></div>
+
+<div id="sidebar_ad"></div>
+                <div id="calendar"><div id="blog-calendar" style="">
+
+<table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar" border="0">
+    <tbody>
+        <tr>
+            <td colspan="7">
+                <table class="CalTitle" cellspacing="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2020/06/12&#39;); return false;">&lt;</a>
+                            </td>
+                            <td align="center">2020年7月</td>
+                            <td align="right" class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2020/08/12&#39;); return false;">&gt;</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+                    <th class="CalDayHeader" align="center" abbr="日" scope="col">日</th>
+                    <th class="CalDayHeader" align="center" abbr="一" scope="col">一</th>
+                    <th class="CalDayHeader" align="center" abbr="二" scope="col">二</th>
+                    <th class="CalDayHeader" align="center" abbr="三" scope="col">三</th>
+                    <th class="CalDayHeader" align="center" abbr="四" scope="col">四</th>
+                    <th class="CalDayHeader" align="center" abbr="五" scope="col">五</th>
+                    <th class="CalDayHeader" align="center" abbr="六" scope="col">六</th>
+        </tr>
+            <tr>
+                            <td class="CalOtherMonthDay" align="center">28</td>
+                            <td class="CalOtherMonthDay" align="center">29</td>
+                            <td class="CalOtherMonthDay" align="center">30</td>
+                        <td class="" align="center">
+                            1
+                        </td>
+                        <td class="" align="center">
+                            2
+                        </td>
+                        <td class="" align="center">
+                            3
+                        </td>
+                    <td class="CalWeekendDay" align="center">
+                        4
+                    </td>
+            </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            5
+                        </td>
+                            <td class="" align="center">
+                                6
+                            </td>
+                            <td class="" align="center">
+                                7
+                            </td>
+                            <td class="" align="center">
+                                8
+                            </td>
+                            <td class="" align="center">
+                                9
+                            </td>
+                            <td class="" align="center">
+                                10
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            11
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalTodayDay" align="center">
+                            12
+                        </td>
+                            <td class="" align="center">
+                                13
+                            </td>
+                            <td class="" align="center">
+                                14
+                            </td>
+                            <td class="" align="center">
+                                15
+                            </td>
+                            <td class="" align="center">
+                                16
+                            </td>
+                            <td class="" align="center">
+                                17
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            18
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            19
+                        </td>
+                            <td class="" align="center">
+                                20
+                            </td>
+                            <td class="" align="center">
+                                21
+                            </td>
+                            <td class="" align="center">
+                                22
+                            </td>
+                            <td class="" align="center">
+                                23
+                            </td>
+                            <td class="" align="center">
+                                24
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            25
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            26
+                        </td>
+                            <td class="" align="center">
+                                27
+                            </td>
+                            <td class="" align="center">
+                                28
+                            </td>
+                            <td class="" align="center">
+                                29
+                            </td>
+                            <td class="" align="center">
+                                30
+                            </td>
+                            <td class="" align="center">
+                                31
+                            </td>
+                        <td class="CalOtherMonthDay" align="center">
+                            1
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalOtherMonthDay" align="center">
+                            2
+                        </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                3
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                4
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                5
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                6
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                7
+                            </td>
+                        <td class="CalOtherMonthDay" align="center">
+                            8
+                        </td>
+                </tr>
+    </tbody>
+</table></div></div>                
+                <script>loadBlogDefaultCalendar();</script>
+                <div id="leftcontentcontainer">
+                    <!-- begin:SingleColumn -->
+                    <div id="blog-sidecolumn">
+<!-- 搜索 -->
+<div id="sidebar_search" class="sidebar-block">
+    <div id="sidebar_search" class="mySearch">
+        <h3 class="catListTitle">搜索</h3>
+        <div id="sidebar_search_box">
+            <div id="widget_my_zzk" class="div_my_zzk">
+                <input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk">
+            </div>
+            <div id="widget_my_google" class="div_my_zzk">
+                <input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 常用链接 -->
+<div id="sidebar_shortcut" class="sidebar-block">
+    
+<h3 class="catListTitle">
+常用链接
+</h3>
+<ul>
+        <li>
+
+<a href="https://www.cnblogs.com/LFeather/p/" title="我的博客的随笔列表">我的随笔</a>
+</li>
+        <li>
+
+<a href="https://www.cnblogs.com/LFeather/MyComments.html" title="我的发表过的评论列表">我的评论</a>
+</li>
+        <li>
+
+<a href="https://www.cnblogs.com/LFeather/OtherPosts.html" title="我评论过的随笔列表">我的参与</a>
+</li>
+        <li>
+
+<a href="https://www.cnblogs.com/LFeather/RecentComments.html" title="我的博客的评论列表">最新评论</a>
+</li>
+        <li>
+
+<a href="https://www.cnblogs.com/LFeather/tag/" title="我的博客的标签列表">我的标签</a>
+</li>
+</ul>
+
+<!-- TODO: 检查是否有使用这一部分的控件，如果没有则应该删除。 -->
+<div id="itemListLin_con" style="display:none">
+    <ul>
+
+    </ul>
+</div>
+
+</div>
+
+<!-- 最新随笔 -->
+
+
+
+<!-- 我的标签 -->
+<div id="sidebar_toptags" class="sidebar-block">
+    
+</div>
+
+<!-- 积分与排名 -->
+
+
+<!-- 随笔分类、随笔档案、文章分类、新闻分类、相册、链接 -->
+<div id="sidebar_categories">
+    
+        <div class="catListPostArchive">
+            <h3 class="catListTitle">
+                
+
+随笔档案
+
+
+
+            </h3>
+            <ul>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/LFeather/archive/2019/11.html" rel="" target="">
+    2019年11月(1)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/LFeather/archive/2019/10.html" rel="" target="">
+    2019年10月(1)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/LFeather/archive/2019/08.html" rel="" target="">
+    2019年8月(1)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/LFeather/archive/2019/06.html" rel="" target="">
+    2019年6月(2)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/LFeather/archive/2019/05.html" rel="" target="">
+    2019年5月(1)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/LFeather/archive/2019/04.html" rel="" target="">
+    2019年4月(1)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/LFeather/archive/2019/03.html" rel="" target="">
+    2019年3月(2)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/LFeather/archive/2019/01.html" rel="" target="">
+    2019年1月(1)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/LFeather/archive/2018/12.html" rel="" target="">
+    2018年12月(5)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/LFeather/archive/2018/11.html" rel="" target="">
+    2018年11月(1)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/LFeather/archive/2018/08.html" rel="" target="">
+    2018年8月(1)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/LFeather/archive/2017/12.html" rel="" target="">
+    2017年12月(3)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/LFeather/archive/2017/11.html" rel="" target="">
+    2017年11月(5)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/LFeather/archive/2017/08.html" rel="" target="">
+    2017年8月(9)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/LFeather/archive/2017/07.html" rel="" target="">
+    2017年7月(5)
+</a>
+
+                            
+
+                        </li>
+                        
+            </ul>
+        </div>
+
+</div>
+
+<!-- 最新评论 -->
+<div id="sidebar_recentcomments" class="sidebar-block">
+    <div id="recent_comments_wrap" class="RecentComment">
+    <h3 class="catListTitle">最新评论</h3>
+    <div class="RecentCommentBlock">
+        <ul>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/LFeather/p/10632643.html">1. Re:.NET MVC全局异常处理（二）</a></li>
+                    <li class="recent_comment_body"><div class="cnblogs_Highlighter sh-gutter"><div><div id="highlighter_726690" class="syntaxhighlighter  csharp"><div class="toolbar"><span><a href="https://www.cnblogs.com/LFeather/p/10128325.html#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="csharp plain">111</code></div></div></td></tr></tbody></table></div></div></div></li>
+                    <li class="recent_comment_author">--椛七</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/LFeather/p/10632643.html">2. Re:.NET MVC全局异常处理（二）</a></li>
+                    <li class="recent_comment_body">222</li>
+                    <li class="recent_comment_author">--椛七</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/LFeather/p/10632643.html">3. Re:.NET MVC全局异常处理（二）</a></li>
+                    <li class="recent_comment_body">1111</li>
+                    <li class="recent_comment_author">--椛七</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/LFeather/p/10667240.html">4. Re:C#默认参数原理探究</a></li>
+                    <li class="recent_comment_body">厉害，用到IL</li>
+                    <li class="recent_comment_author">--ksh.xy</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/LFeather/p/10548505.html">5. Re:NET MVC全局异常处理（一）</a></li>
+                    <li class="recent_comment_body">支持 支持</li>
+                    <li class="recent_comment_author">--ksh.xy</li>
+        </ul>
+    </div>
+</div>
+</div>
+
+
+
+<!-- 阅读排行榜 -->
+<div id="sidebar_topviewedposts" class="sidebar-block">
+    
+<div id="topview_posts_wrap">
+    <h3 class="catListTitle">阅读排行榜</h3>
+    <div id="TopViewPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/LFeather/p/8052249.html">
+                            1. 在模态框（Modal）中使用UEditor全屏显示的一个坑(2334)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/LFeather/p/10128325.html">
+                            2. Java开发学习心得（三）：项目结构(1370)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/LFeather/p/10548505.html">
+                            3. .NET MVC全局异常处理（一）(887)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/LFeather/p/10018011.html">
+                            4. Java开发学习心得（一）：SSM环境搭建(646)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/LFeather/p/10667240.html">
+                            5. C#默认参数原理探究(586)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<!-- 评论排行榜 -->
+<div id="sidebar_topcommentedposts" class="sidebar-block">
+    
+<div id="topfeedback_posts_wrap">
+    <h3 class="catListTitle">评论排行榜</h3>
+    <div id="TopFeedbackPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/LFeather/p/10203531.html">
+                            1. 年度总结一下(4)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/LFeather/p/10632643.html">
+                            2. .NET MVC全局异常处理（二）(3)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/LFeather/p/10548505.html">
+                            3. .NET MVC全局异常处理（一）(2)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/LFeather/p/10094196.html">
+                            4. .NET Core跨平台部署(2)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/LFeather/p/10165543.html">
+                            5. Docker的使用初探（一）：常用指令说明(2)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<!-- 推荐排行榜 -->
+<div id="sidebar_topdiggedposts" class="sidebar-block">
+    
+<div id="topdigg_posts_wrap">
+    <div class="catListView">
+        <h3 class="catListTitle">推荐排行榜</h3>
+        <div id="TopDiggPostsBlock">
+            <ul style="word-break: break-all">
+                        <li>
+                            <a href="https://www.cnblogs.com/LFeather/p/10203531.html">
+                                1. 年度总结一下(4)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/LFeather/p/10548505.html">
+                                2. .NET MVC全局异常处理（一）(4)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/LFeather/p/10667240.html">
+                                3. C#默认参数原理探究(3)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/LFeather/p/10992200.html">
+                                4. 微信公众号硬件开发杂谈（一）(3)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/LFeather/p/11708875.html">
+                                5. 关于padding在width中的计算——box-sizing(2)
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div></div>
+                    <script>loadBlogSideColumn();</script>
+                    <!-- end:  SingleColumn -->
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <div id="footer">
+        <!--done-->
+Copyright © 2020 奶酪魔像
+<br><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+    </div>
+</div>
+
+    
+
+
+</body></html>

@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)https://www.cnblogs.com/yudis/articles/9790035.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="never">
+    <meta property="og:description" content="一、循环sleep 缺点：sleep是一个阻塞函数，只能执行固定间隔时间的任务，无法完成定时任务（在sleep的这一段时间，啥都不能做） 二、threading模块中的Timer Timer函数：第一">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="https://common.cnblogs.com/favicon.ico?v=20200522" type="image/x-icon">
+    
+    <link rel="stylesheet" href="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/blog-common.min.css">
+    <link id="MainCss" rel="stylesheet" href="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/bundle-darkgreentrip.min.css">
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/bundle-darkgreentrip-mobile.min.css">
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/yudis/rss">
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/yudis/rsd.xml">
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/yudis/wlwmanifest.xml">
+    <script async="" src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/analytics.js.下载"></script><script type="text/javascript" src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/encoder.js.下载"></script><script src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/jquery-2.2.0.min.js.下载"></script>
+    <script src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/blog-common.min.js.下载"></script>
+    <script>
+        var currentBlogId = 36405;
+        var currentBlogApp = 'yudis';
+        var cb_enable_mathjax = true;
+        var isLogined = false;
+        var skinName = 'darkgreentrip';
+    </script>
+    <script type="text/x-mathjax-config;executed=true">
+        MathJax.Hub.Config({
+        tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']], processClass: 'math', processEscapes: true },
+        TeX: {
+        equationNumbers: { autoNumber: ['AMS'], useLabelIds: true },
+        extensions: ['extpfeil.js', 'mediawiki-texvc.js'],
+        Macros: {bm: "\\boldsymbol"}
+        },
+        'HTML-CSS': { linebreaks: { automatic: true } },
+        SVG: { linebreaks: { automatic: true } }
+        });
+    </script>
+    <script src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/MathJax.js.下载"></script>
+    
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><link rel="preload" href="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/f.txt" as="script"><script type="text/javascript" src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/f.txt"></script><script src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/pubads_impl_2020070901.js.下载" async=""></script><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><link rel="prefetch" href="https://ba2ae6771c3389e39595304a39f9a0a0.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html"><link rel="prefetch" href="https://tpc.googlesyndication.com/safeframe/1-0-37/html/container.html"></head>
+<body><div id="MathJax_Message" style="display: none;"></div>
+    <a name="top"></a>
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/yudis/"><img id="blogLogo" src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/logo.gif" alt="返回主页"></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/yudis/">自留记</a>
+</h1>
+<h2>
+累并努力着
+</h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/yudis/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/yudis">
+联系</a></li>
+<li>
+
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			
+			<span id="stats_post_count">随笔 - 
+52&nbsp; </span>
+<span id="stats_article_count">文章 - 
+67&nbsp; </span>
+<span id="stats-comment_count">评论 - 
+2</span>
+
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class="postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/yudis/articles/9790035.html">
+    <span>Python 实现定时任务（sleep、Timer 、sched、APScheduler）</span>
+    
+
+
+</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body ">
+    <p><strong>一、循环sleep</strong></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">from</span> datetime <span style="color: #0000ff;">import</span><span style="color: #000000;"> datetime
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> time
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> 每n秒执行一次</span>
+<span style="color: #0000ff;">def</span><span style="color: #000000;"> timer(n):
+    </span><span style="color: #0000ff;">while</span><span style="color: #000000;"> True:
+        </span><span style="color: #0000ff;">print</span>(datetime.now().strftime(<span style="color: #800000;">"</span><span style="color: #800000;">%Y-%m-%d %H:%M:%S</span><span style="color: #800000;">"</span><span style="color: #000000;">))
+        time.sleep(n)
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> 2s</span>
+timer(2)</pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><span style="color: #ff0000;">缺点</span>：sleep是一个阻塞函数，只能执行固定间隔时间的任务，无法完成定时任务（在sleep的这一段时间，啥都不能做）</p>
+<p>&nbsp;</p>
+<p><strong>二、threading模块中的Timer</strong></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">from</span> datetime <span style="color: #0000ff;">import</span><span style="color: #000000;"> datetime
+</span><span style="color: #0000ff;">from</span> threading <span style="color: #0000ff;">import</span><span style="color: #000000;"> Timer
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> 打印时间函数</span>
+<span style="color: #0000ff;">def</span><span style="color: #000000;"> printTime(inc):
+    </span><span style="color: #0000ff;">print</span>(datetime.now().strftime(<span style="color: #800000;">"</span><span style="color: #800000;">%Y-%m-%d %H:%M:%S</span><span style="color: #800000;">"</span><span style="color: #000000;">))
+    t </span>=<span style="color: #000000;"> Timer(inc, printTime, (inc,))
+    t.start()
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> 2s</span>
+printTime(2)</pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;</p>
+<p>Timer函数：第一个参数是时间间隔（单位是秒），第二个参数是要调用的函数名，第三个参数是调用函数的参数(tuple)</p>
+<p><span style="color: #ff0000;">缺点</span>：threading 模块中的 Timer 是一个非阻塞函数，无法完成定时任务</p>
+<p>&nbsp;</p>
+<p><strong>三、使用sched内置模块</strong></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">import</span><span style="color: #000000;"> sched
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> time
+</span><span style="color: #0000ff;">from</span> datetime <span style="color: #0000ff;">import</span><span style="color: #000000;"> datetime
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> 初始化sched模块的 scheduler 类</span><span style="color: #008000;">
+#</span><span style="color: #008000;"> 第一个参数是一个可以返回时间戳的函数，第二个参数可以在定时未到达之前阻塞。</span>
+schedule =<span style="color: #000000;"> sched.scheduler(time.time, time.sleep)
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> 被周期性调度触发的函数</span>
+<span style="color: #0000ff;">def</span><span style="color: #000000;"> printTime(inc):
+    </span><span style="color: #0000ff;">print</span>(datetime.now().strftime(<span style="color: #800000;">"</span><span style="color: #800000;">%Y-%m-%d %H:%M:%S</span><span style="color: #800000;">"</span><span style="color: #000000;">))
+    schedule.enter(inc, 0, printTime, (inc,))
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> 默认参数60s</span>
+<span style="color: #0000ff;">def</span> main(inc=60<span style="color: #000000;">):
+    </span><span style="color: #008000;">#</span><span style="color: #008000;"> enter四个参数分别为：间隔事件、优先级（用于同时间到达的两个事件同时执行时定序）、被调用触发的函数，</span>
+    <span style="color: #008000;">#</span><span style="color: #008000;"> 给该触发函数的参数（tuple形式）</span>
+<span style="color: #000000;">    schedule.enter(0, 0, printTime, (inc,))
+    schedule.run()
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> 10s 输出一次</span>
+main(10)</pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>sched 模块是 Python 内置的模块，它是一个调度（延时处理机制），每次想要定时执行某任务都必须写入一个调度。</p>
+<p>sched 使用步骤如下：</p>
+<p>1）生成调度器：<br>s = sched.scheduler(time.time,time.sleep)<br>第一个参数是一个可以返回时间戳的函数，第二个参数可以在定时未到达之前阻塞。</p>
+<p>（2）加入调度事件<br>其实有 enter、enterabs 等等，我们以 enter 为例子。<br>s.enter(x1,x2,x3,x4)<br>四个参数分别为：间隔事件、优先级（用于同时间到达的两个事件同时执行时定序）、被调用触发的函数，给触发函数的参数（注意：一定要以 tuple 给，如果只有一个参数就(xx,)）</p>
+<p>（3）运行<br>s.run()<br><span style="color: #ff0000;">注意 sched 模块不是循环的，一次调度被执行后就 Over 了，如果想再执行，请再次 enter</span></p>
+<p><strong>&nbsp;四、APScheduler定时框架(<a href="https://apscheduler.readthedocs.io/en/latest/userguide.html" target="_blank">原文链接</a>)</strong></p>
+<p>APScheduler是一个 Python 定时任务框架，提供了基于日期、固定时间间隔以及 crontab 类型的任务，并且可以持久化任务、并以 daemon 方式运行应用。</p>
+<p>安装：</p>
+<div class="cnblogs_code">
+<pre>$ pip install apscheduler</pre>
+</div>
+<p>&nbsp;案例：周一到周五每天早上6点半执行任务</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">from</span> apscheduler.schedulers.blocking <span style="color: #0000ff;">import</span><span style="color: #000000;"> BlockingScheduler
+</span><span style="color: #0000ff;">from</span> datetime <span style="color: #0000ff;">import</span><span style="color: #000000;"> datetime
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> 输出时间</span>
+<span style="color: #0000ff;">def</span><span style="color: #000000;"> job():
+    </span><span style="color: #0000ff;">print</span>(datetime.now().strftime(<span style="color: #800000;">"</span><span style="color: #800000;">%Y-%m-%d %H:%M:%S</span><span style="color: #800000;">"</span><span style="color: #000000;">))
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> BlockingScheduler</span>
+scheduler =<span style="color: #000000;"> BlockingScheduler()
+scheduler.add_job(job, </span><span style="color: #800000;">'</span><span style="color: #800000;">cron</span><span style="color: #800000;">'</span>, day_of_week=<span style="color: #800000;">'</span><span style="color: #800000;">1-5</span><span style="color: #800000;">'</span>, hour=6, minute=30<span style="color: #000000;">)
+scheduler.start()</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>BlockingScheduler 是 APScheduler 中的调度器，APScheduler 中有两种常用的调度器，BlockingScheduler 和 BackgroundScheduler，<span style="color: #800080;">当调度器是应用中唯一要运行的任务时，使用 BlockingSchedule</span>，<span style="color: #ff0000;">如果希望调度器在后台执行，使用 BackgroundScheduler</span>。</p>
+<p>BlockingSchedule：当调度器是应用中唯一要运行的任务时</p>
+<p>BackgroundScheduler：如果希望调度器在后台执行，使用 BackgroundScheduler</p>
+<p>APScheduler 四个组件分别为：<strong>触发器(trigger)，作业存储(job store)，执行器(executor)，调度器(scheduler)</strong>。</p>
+<p><strong>触发器(trigger)</strong>：包含调度逻辑，每一个作业有它自己的触发器，用于决定接下来哪一个作业会运行。</p>
+<p><strong>APScheduler 有三种内建的 trigger:</strong><br><span style="color: #ff0000;"><strong>date:</strong> </span>特定的时间点触发：</p>
+<p>最基本的一种调度，作业只会执行一次。它的参数如下：</p>
+<ul>
+<li>run_date: 在某天执行任务</li>
+<li>timezone: 在某段时间执行任务</li>
+
+
+</ul>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">from</span> datetime <span style="color: #0000ff;">import</span><span style="color: #000000;"> date
+</span><span style="color: #0000ff;">from</span> apscheduler.schedulers.blocking <span style="color: #0000ff;">import</span><span style="color: #000000;"> BlockingScheduler
+sched </span>=<span style="color: #000000;"> BlockingScheduler()
+</span><span style="color: #0000ff;">def</span><span style="color: #000000;"> my_job(text):
+    </span><span style="color: #0000ff;">print</span><span style="color: #000000;">(text)
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> The job will be executed on November 6th, 2009</span>
+sched.add_job(my_job, <span style="color: #800000;">'</span><span style="color: #800000;">date</span><span style="color: #800000;">'</span>, run_date=date(2009, 11, 6), args=[<span style="color: #800000;">'</span><span style="color: #800000;">text</span><span style="color: #800000;">'</span><span style="color: #000000;">])
+sched.add_job(my_job, </span><span style="color: #800000;">'</span><span style="color: #800000;">date</span><span style="color: #800000;">'</span>, run_date=datetime(2009, 11, 6, 16, 30, 5), args=[<span style="color: #800000;">'</span><span style="color: #800000;">text</span><span style="color: #800000;">'</span><span style="color: #000000;">])
+sched.add_job(my_job, </span><span style="color: #800000;">'</span><span style="color: #800000;">date</span><span style="color: #800000;">'</span>, run_date=<span style="color: #800000;">'</span><span style="color: #800000;">2009-11-06 16:30:05</span><span style="color: #800000;">'</span>, args=[<span style="color: #800000;">'</span><span style="color: #800000;">text</span><span style="color: #800000;">'</span><span style="color: #000000;">])
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> The 'date' trigger and datetime.now() as run_date are implicit</span>
+sched.add_job(my_job, args=[<span style="color: #800000;">'</span><span style="color: #800000;">text</span><span style="color: #800000;">'</span><span style="color: #000000;">])
+sched.start()</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><span style="color: #ff0000;">interval:</span> 固定时间间隔触发：</p>
+<ul>
+<li>weeks: 每隔几周执行一次 |　weeks=0</li>
+<li>days: 每隔几天执行一次 | days=0</li>
+<li>hours: 每隔几小时执行一次 | hours=0</li>
+<li>minutes: 每隔几分执行一次 | minutes=0</li>
+<li>seconds: 每隔几秒执行一次 | seconds=0</li>
+<li>start_date: 最早执行时间&nbsp;|&nbsp;start_date=None</li>
+<li>end_date: 最晚执行时间&nbsp;|&nbsp;end_date=None</li>
+<li>timezone: 执行时间区间&nbsp;|&nbsp;timezone=None</li>
+</ul>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">from</span> datetime <span style="color: #0000ff;">import</span><span style="color: #000000;"> datetime
+</span><span style="color: #0000ff;">from</span> apscheduler.schedulers.blocking <span style="color: #0000ff;">import</span><span style="color: #000000;"> BlockingScheduler
+
+</span><span style="color: #0000ff;">def</span><span style="color: #000000;"> job_function():
+    </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">"</span><span style="color: #800000;">Hello World</span><span style="color: #800000;">"</span><span style="color: #000000;">)
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> BlockingScheduler</span>
+sched =<span style="color: #000000;"> BlockingScheduler()
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> Schedule job_function to be called every two hours</span>
+sched.add_job(job_function, <span style="color: #800000;">'</span><span style="color: #800000;">interval</span><span style="color: #800000;">'</span>, hours=2<span style="color: #000000;">)
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> The same as before, but starts on 2010-10-10 at 9:30 and stops on 2014-06-15 at 11:00</span>
+sched.add_job(job_function, <span style="color: #800000;">'</span><span style="color: #800000;">interval</span><span style="color: #800000;">'</span>, hours=2, start_date=<span style="color: #800000;">'</span><span style="color: #800000;">2010-10-10 09:30:00</span><span style="color: #800000;">'</span>, end_date=<span style="color: #800000;">'</span><span style="color: #800000;">2014-06-15 11:00:00</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+sched.start()</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><br><span style="color: #ff0000;">cron:</span> 在特定时间周期性地触发：</p>
+<ul>
+<li>year: 4位数字</li>
+<li>month: 月 (1-12)</li>
+<li>day: 天 (1-31)</li>
+<li>week: 标准周 (1-53)</li>
+<li>day_of_week: 周中某天 (0-6 or mon,tue,wed,thu,fri,sat,sun)</li>
+<li>hour: 小时 (0-23)</li>
+<li>minute:分钟 (0-59)</li>
+<li>second: 秒 (0-59)</li>
+<li>start_date: 最早执行时间</li>
+<li>end_date: 最晚执行时间</li>
+<li>timezone: 执行时间区间</li>
+
+
+</ul>
+<p>表达式:</p>
+<p><img src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/python_timer_expression.png" alt="python 定时任务"></p>
+<p>&nbsp;</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">from</span> apscheduler.schedulers.blocking <span style="color: #0000ff;">import</span><span style="color: #000000;"> BlockingScheduler
+
+</span><span style="color: #0000ff;">def</span><span style="color: #000000;"> job_function():
+    </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">"</span><span style="color: #800000;">Hello World</span><span style="color: #800000;">"</span><span style="color: #000000;">)
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> BlockingScheduler</span>
+sched =<span style="color: #000000;"> BlockingScheduler()
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> Schedules job_function to be run on the third Friday</span><span style="color: #008000;">
+#</span><span style="color: #008000;"> of June, July, August, November and December at 00:00, 01:00, 02:00 and 03:00</span>
+sched.add_job(job_function, <span style="color: #800000;">'</span><span style="color: #800000;">cron</span><span style="color: #800000;">'</span>, month=<span style="color: #800000;">'</span><span style="color: #800000;">6-8,11-12</span><span style="color: #800000;">'</span>, day=<span style="color: #800000;">'</span><span style="color: #800000;">3rd fri</span><span style="color: #800000;">'</span>, hour=<span style="color: #800000;">'</span><span style="color: #800000;">0-3</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> Runs from Monday to Friday at 5:30 (am) until 2014-05-30 00:00:00</span>
+sched.add_job(job_function, <span style="color: #800000;">'</span><span style="color: #800000;">cron</span><span style="color: #800000;">'</span>, day_of_week=<span style="color: #800000;">'</span><span style="color: #800000;">mon-fri</span><span style="color: #800000;">'</span>, hour=5, minute=30, end_date=<span style="color: #800000;">'</span><span style="color: #800000;">2014-05-30</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+sched.start()</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;</p>
+<p><strong>作业存储(job store)：</strong><br>存储被调度的作业，默认的作业存储是简单地把作业保存在内存中，其他的作业存储是将作业保存在数据库中。一个作业的数据讲在保存在持久化作业存储时被序列化，并在加载时被反序列化。调度器不能分享同一个作业存储。<br>APScheduler 默认使用 MemoryJobStore，可以修改使用 DB 存储方案</p>
+<p><strong>执行器(executor)：</strong></p>
+<p>处理作业的运行，他们通常通过在作业中提交制定的可调用对象到一个线程或者进程池来进行。当作业完成时，执行器将会通知调度器。<br>最常用的 executor 有两种：<br>ProcessPoolExecutor（进程池）<br>ThreadPoolExecutor（线程池，max:10）</p>
+<p><strong>调度器(scheduler)：</strong><br>通常在应用中只有一个调度器，应用的开发者通常不会直接处理作业存储、调度器和触发器，相反，调度器提供了处理这些的合适的接口。配置作业存储和执行器可以在调度器中完成，例如添加、修改和移除作业。</p>
+<p><span style="color: #ff0000;">配置调度器：</span><br>APScheduler提供了许多不同的方式来配置调度器，你可以使用一个配置字典或者作为参数关键字的方式传入。</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">from</span> apscheduler.schedulers.blocking <span style="color: #0000ff;">import</span><span style="color: #000000;"> BlockingScheduler
+</span><span style="color: #0000ff;">from</span> datetime <span style="color: #0000ff;">import</span><span style="color: #000000;"> datetime
+
+</span><span style="color: #0000ff;">def</span><span style="color: #000000;"> job():
+    </span><span style="color: #0000ff;">print</span>(datetime.now().strftime(<span style="color: #800000;">"</span><span style="color: #800000;">%Y-%m-%d %H:%M:%S</span><span style="color: #800000;">"</span><span style="color: #000000;">))
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> 定义BlockingScheduler</span>
+sched =<span style="color: #000000;"> BlockingScheduler()
+sched.add_job(job, </span><span style="color: #800000;">'</span><span style="color: #800000;">interval</span><span style="color: #800000;">'</span>, seconds=5<span style="color: #000000;">)
+sched.start()</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p># 设置 job store(使用mongo存储)和 executor</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">from</span> datetime <span style="color: #0000ff;">import</span><span style="color: #000000;"> datetime
+</span><span style="color: #0000ff;">from</span> pymongo <span style="color: #0000ff;">import</span><span style="color: #000000;"> MongoClient
+</span><span style="color: #0000ff;">from</span> apscheduler.schedulers.blocking <span style="color: #0000ff;">import</span><span style="color: #000000;"> BlockingScheduler
+</span><span style="color: #0000ff;">from</span> apscheduler.jobstores.memory <span style="color: #0000ff;">import</span><span style="color: #000000;"> MemoryJobStore
+</span><span style="color: #0000ff;">from</span> apscheduler.jobstores.mongodb <span style="color: #0000ff;">import</span><span style="color: #000000;"> MongoDBJobStore
+</span><span style="color: #0000ff;">from</span> apscheduler.executors.pool <span style="color: #0000ff;">import</span><span style="color: #000000;"> ThreadPoolExecutor, ProcessPoolExecutor
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> MongoDB 参数</span>
+host = <span style="color: #800000;">'</span><span style="color: #800000;">127.0.0.1</span><span style="color: #800000;">'</span><span style="color: #000000;">
+port </span>= 27017<span style="color: #000000;">
+client </span>=<span style="color: #000000;"> MongoClient(host, port)
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> 输出时间</span>
+<span style="color: #0000ff;">def</span><span style="color: #000000;"> job():
+    </span><span style="color: #0000ff;">print</span>(datetime.now().strftime(<span style="color: #800000;">"</span><span style="color: #800000;">%Y-%m-%d %H:%M:%S</span><span style="color: #800000;">"</span><span style="color: #000000;">))
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> 存储方式</span>
+jobstores =<span style="color: #000000;"> {
+    </span><span style="color: #800000;">'</span><span style="color: #800000;">mongo</span><span style="color: #800000;">'</span>: MongoDBJobStore(collection=<span style="color: #800000;">'</span><span style="color: #800000;">job</span><span style="color: #800000;">'</span>, database=<span style="color: #800000;">'</span><span style="color: #800000;">test</span><span style="color: #800000;">'</span>, client=<span style="color: #000000;">client),
+    </span><span style="color: #800000;">'</span><span style="color: #800000;">default</span><span style="color: #800000;">'</span><span style="color: #000000;">: MemoryJobStore()
+}
+executors </span>=<span style="color: #000000;"> {
+    </span><span style="color: #800000;">'</span><span style="color: #800000;">default</span><span style="color: #800000;">'</span>: ThreadPoolExecutor(10<span style="color: #000000;">),
+    </span><span style="color: #800000;">'</span><span style="color: #800000;">processpool</span><span style="color: #800000;">'</span>: ProcessPoolExecutor(3<span style="color: #000000;">)
+}
+job_defaults </span>=<span style="color: #000000;"> {
+    </span><span style="color: #800000;">'</span><span style="color: #800000;">coalesce</span><span style="color: #800000;">'</span><span style="color: #000000;">: False,
+    </span><span style="color: #800000;">'</span><span style="color: #800000;">max_instances</span><span style="color: #800000;">'</span>: 3<span style="color: #000000;">
+}
+scheduler </span>= BlockingScheduler(jobstores=jobstores, executors=executors, job_defaults=<span style="color: #000000;">job_defaults)
+scheduler.add_job(job, </span><span style="color: #800000;">'</span><span style="color: #800000;">interval</span><span style="color: #800000;">'</span>, seconds=5, jobstore=<span style="color: #800000;">'</span><span style="color: #800000;">mongo</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+scheduler.start()</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><strong>添加job：</strong><br>add_job()<br>scheduled_job()<br>第一种方法返回一个apscheduler.job.Job 的实例，可以用来改变或者移除 job，第二种方法只适用于应用运行期间不会改变的 job。</p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">from</span> apscheduler.schedulers.blocking <span style="color: #0000ff;">import</span><span style="color: #000000;"> BlockingScheduler
+sched </span>=<span style="color: #000000;"> BlockingScheduler()
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> 装饰器</span>
+@sched.scheduled_job(<span style="color: #800000;">'</span><span style="color: #800000;">interval</span><span style="color: #800000;">'</span>, id=<span style="color: #800000;">'</span><span style="color: #800000;">my_job_id</span><span style="color: #800000;">'</span>, seconds=5<span style="color: #000000;">)
+</span><span style="color: #0000ff;">def</span><span style="color: #000000;"> job_function():
+    </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">"</span><span style="color: #800000;">Hello World</span><span style="color: #800000;">"</span><span style="color: #000000;">)
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> 开始</span>
+sched.start()</pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;</p>
+<p><strong>移除 job：</strong><br>remove_job 使用 jobID 移除<br>job.remove() 使用 add_job() 返回的实例</p>
+<div class="cnblogs_code">
+<pre>job = scheduler.add_job(myfunc, <span style="color: #800000;">'</span><span style="color: #800000;">interval</span><span style="color: #800000;">'</span>, minutes=2<span style="color: #000000;">)
+job.remove()
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> id</span>
+scheduler.add_job(myfunc, <span style="color: #800000;">'</span><span style="color: #800000;">interval</span><span style="color: #800000;">'</span>, minutes=2, id=<span style="color: #800000;">'</span><span style="color: #800000;">my_job_id</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+scheduler.remove_job(</span><span style="color: #800000;">'</span><span style="color: #800000;">my_job_id</span><span style="color: #800000;">'</span>)</pre>
+</div>
+<p><strong>暂停一个 job：</strong></p>
+<div class="cnblogs_code">
+<pre><span style="color: #000000;">apscheduler.job.Job.pause()
+apscheduler.schedulers.base.BaseScheduler.pause_job()</span></pre>
+</div>
+<p><strong>恢复一个 job：</strong></p>
+<div class="cnblogs_code">
+<pre><span style="color: #000000;">apscheduler.job.Job.resume()
+apscheduler.schedulers.base.BaseScheduler.resume_job()</span></pre>
+</div>
+<p><strong>获取 job 列表：</strong></p>
+<div class="cnblogs_code">
+<pre>apscheduler.get_jobs()</pre>
+</div>
+<p><strong>修改job：</strong></p>
+<p>&nbsp;apscheduler.job.Job.modify() 或者 modify_job() 修改一个 job 的属性</p>
+<div class="cnblogs_code">
+<pre>job.modify(max_instances=6, name=<span style="color: #800000;">'</span><span style="color: #800000;">Alternate name</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+modify_job(</span><span style="color: #800000;">'</span><span style="color: #800000;">my_job_id</span><span style="color: #800000;">'</span>, trigger=<span style="color: #800000;">'</span><span style="color: #800000;">cron</span><span style="color: #800000;">'</span>, minute=<span style="color: #800000;">'</span><span style="color: #800000;">*/5</span><span style="color: #800000;">'</span>)</pre>
+</div>
+<p><strong>关闭job:</strong></p>
+<p>默认情况下调度器会等待所有的 job 完成后，关闭所有的调度器和作业存储。将 wait 选项设置为 False 可以立即关闭。</p>
+<div class="cnblogs_code">
+<pre><span style="color: #000000;">scheduler.shutdown()
+scheduler.shutdown(wait</span>=False)</pre>
+</div>
+<p><span style="color: #ff0000;">scheduler 可以添加事件监听器，并在特殊的时间触发</span></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #0000ff;">def</span><span style="color: #000000;"> my_listener(event):
+    </span><span style="color: #0000ff;">if</span><span style="color: #000000;"> event.exception:
+        </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span style="color: #800000;">The job crashed :(</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+    </span><span style="color: #0000ff;">else</span><span style="color: #000000;">:
+        </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span style="color: #800000;">The job worked :)</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+</span><span style="color: #008000;">#</span><span style="color: #008000;"> 添加监听器</span>
+scheduler.add_listener(my_listener, EVENT_JOB_EXECUTED | EVENT_JOB_ERROR)</pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/copycode.gif" alt="复制代码"></a></span></div></div>
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2018-10-15 11:30</span>&nbsp;
+<a href="https://www.cnblogs.com/yudis/">yudis</a>&nbsp;
+阅读(<span id="post_view_count">5912</span>)&nbsp;
+评论(<span id="post_comment_count">0</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditArticles.aspx?postid=9790035" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(9790035);return false;">收藏</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+<script src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/highlight.min.js.下载"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 36405, cb_blogApp = 'yudis', cb_blogUserGuid = 'af37420b-63cf-dd11-9e4d-001cf0cd104b';
+    var cb_entryId = 9790035, cb_entryCreatedDate = '2018-10-15 11:30', cb_postType = 2; 
+    loadViewCount(cb_entryId);
+    loadSideColumnAd();
+</script><a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<script>
+    var commentManager = new blogCommentManager();
+    commentManager.renderComments(0);
+</script>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="https://www.cnblogs.com/yudis/articles/9790035.html#" onclick="return RefreshPage();">刷新页面</a><a href="https://www.cnblogs.com/yudis/articles/9790035.html#top">返回顶部</a></div>
+    <div id="comment_form_container" style="visibility: visible;"><div class="login_tips">
+    注册用户登录后才能发表评论，请 
+    <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a>
+     或 
+    <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，
+    <a href="https://www.cnblogs.com/">访问</a> 网站首页。
+</div></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <script async="" src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/gpt.js.下载"></script>
+    <script>
+        var mobileVisit = screen.width < 500;
+        window.googletag = window.googletag || { cmd: [] };
+        googletag.cmd.push(function () {
+            googletag.defineSlot('/1090369/C1', [300, 250], 'div-gpt-ad-1592365906576-0').addService(googletag.pubads());
+            if (!mobileVisit) {
+                googletag.defineSlot('/1090369/C2', [468, 60], 'div-gpt-ad-1592366332455-0').addService(googletag.pubads());
+            }
+            googletag.pubads().enableSingleRequest();
+            googletag.enableServices();
+        });
+    </script>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1592365906576-0" style="width: 300px; height: 250px;" data-google-query-id="CNyQ-LGIx-oCFcJ_vQodk5gIuw">
+            
+        <div id="google_ads_iframe_/1090369/C1_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/1090369/C1_0" title="3rd party ad content" name="google_ads_iframe_/1090369/C1_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border: 0px; vertical-align: bottom;" data-google-container-id="1" data-load-complete="true" src="./Python 实现定时任务（sleep、Timer 、sched、APScheduler） - yudis - 博客园_files/saved_resource.html"></iframe></div></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1592366332455-0" style="width: 468px; height: 60px;" data-google-query-id="CPer97GIx-oCFcJ_vQodk5gIuw">
+            <script>
+                if (!mobileVisit) {
+                    if (canShowAdsense()) {
+                        googletag.cmd.push(function () { googletag.display('div-gpt-ad-1592366332455-0'); });
+                    } else {
+                        $('#cnblogs_c2').hide();
+                    }
+                }
+            </script>
+        <div id="google_ads_iframe_/1090369/C2_0__container__" style="border: 0pt none; width: 468px; height: 60px;"></div></div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+        fixPostBody();
+        deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);        deliverAdT2();
+        deliverAdC1();
+        deliverAdC2();
+        loadNewsAndKb();
+        loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+        GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+        loadOptUnderPost();
+        GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<div id="sidebar_news" class="newsItem"><!--done-->
+<h3 class="catListTitle">公告</h3>
+
+<div id="blog-news">
+    
+    <div id="profile_block">
+        昵称：
+        <a href="https://home.cnblogs.com/u/yudis/">
+            yudis
+        </a>
+        <br>
+        园龄：
+        <a href="https://home.cnblogs.com/u/yudis/" title="入园时间：2008-04-23">
+            12年2个月
+        </a>
+        <br>
+        粉丝：
+        <a href="https://home.cnblogs.com/u/yudis/followers/">
+            3
+        </a>
+        <br>
+        关注：
+        <a href="https://home.cnblogs.com/u/yudis/followees/">
+            9
+        </a>
+        <div id="p_b_follow">
+<a href="javascript:void(0)" onclick="follow(&#39;af37420b-63cf-dd11-9e4d-001cf0cd104b&#39;)">+加关注</a></div>
+        <script>getFollowStatus('af37420b-63cf-dd11-9e4d-001cf0cd104b');</script>
+    </div>
+</div>
+
+</div>
+
+<div id="sidebar_ad"></div>
+			<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn">
+<!-- 搜索 -->
+<div id="sidebar_search" class="sidebar-block">
+    
+</div>
+
+<!-- 常用链接 -->
+
+
+<!-- 最新随笔 -->
+
+
+
+<!-- 我的标签 -->
+
+
+<!-- 积分与排名 -->
+
+
+<!-- 随笔分类、随笔档案、文章分类、新闻分类、相册、链接 -->
+<div id="sidebar_categories">
+    
+        <div id="sidebar_articlecategory" class="catListArticleCategory sidebar-block">
+            <h3 class="catListTitle">
+                
+
+文章分类
+<span style="font-size:11px;font-weight:normal">(80)</span>
+
+
+            </h3>
+
+
+            <ul>
+
+                        <li>
+                            
+<a href="https://www.cnblogs.com/yudis/category/891137.html" rel="" target="">
+    CentOS(12)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/yudis/category/883531.html" rel="" target="">
+    JavaScript(12)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/yudis/category/927194.html" rel="" target="">
+    Mac OS X(2)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/yudis/category/1158417.html" rel="" target="">
+    MongoDB(11)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/yudis/category/896949.html" rel="" target="">
+    Mysql(3)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/yudis/category/979893.html" rel="" target="">
+    Nginx(7)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/yudis/category/979894.html" rel="" target="">
+    Nodejs(11)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/yudis/category/842809.html" rel="" target="">
+    PHP(9)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/yudis/category/1299238.html" rel="" target="">
+    Python(12)
+</a>
+ 
+
+                        </li>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/yudis/category/866609.html" rel="" target="">
+    Redis(1)
+</a>
+ 
+
+                        </li>
+
+            </ul>
+
+
+        </div>
+
+</div>
+
+<!-- 最新评论 -->
+<div id="sidebar_recentcomments" class="sidebar-block">
+    <div class="catListComment">
+<h3 class="catListTitle">最新评论</h3>
+
+	<div class="RecentCommentBlock">
+        <ul>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/yudis/p/6206635.html">1. Re:php中switch语句case后表达式写法记录一</a></li>
+                    <li class="recent_comment_body">@ chnyang只是写了个大概的结构，勿怪〜...</li>
+                    <li class="recent_comment_author">--yudis</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/yudis/p/6206635.html">2. Re:php中switch语句case后表达式写法记录一</a></li>
+                    <li class="recent_comment_body">老哥你再看看你的switch语句就是$var=0 也是level1啊</li>
+                    <li class="recent_comment_author">--chnyang</li>
+        </ul>
+    </div>
+</div>
+
+
+</div>
+
+
+
+<!-- 阅读排行榜 -->
+<div id="sidebar_topviewedposts" class="sidebar-block">
+    <div class="catListView">
+<h3 class="catListTitle">阅读排行榜</h3>
+	<div id="TopViewPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/yudis/p/9317742.html">
+                            1. JS数字转字符串的方法(number to string)(40839)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/yudis/p/7065745.html">
+                            2. Nodejs base64编码与解码(13787)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/yudis/p/5612500.html">
+                            3. PHP中try{}catch{}的具体用法详解(9715)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/yudis/p/6206635.html">
+                            4. php中switch语句case后表达式写法记录一(9565)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/yudis/p/5655499.html">
+                            5. 一句话实现Mysql查询结果带行号(8820)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div>
+
+
+</div>
+
+<!-- 评论排行榜 -->
+
+
+<!-- 推荐排行榜 -->
+</div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright © 2020 yudis
+<br><span id="poweredby">Powered by .NET Core on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+
+
+</body></html>

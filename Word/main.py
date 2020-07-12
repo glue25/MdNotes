@@ -8,9 +8,9 @@ from Pysrc.utilities import *
 
 def process_args() :
     parser = argparse.ArgumentParser(description='Transform words.')
-    parser.add_argument('-indir',help='input file dir', default='')
+    parser.add_argument('-indir',help='input file dir')#, default='')
     # parser.add_argument('-inf', help='input file', default='')
-    parser.add_argument('-outdir', help='output file dir', default='')
+    parser.add_argument('-outdir', help='output file dir')#, default='')
     # parser.add_argument('-outf', help='output file', default='')
 
     # parser.add_argument('-inp', help='input phase', choices=Phase.LegalInputPhase)
@@ -36,14 +36,20 @@ def ProcessParas() :
     print(SortMode)
 
     # get input/output dir
-    Inputdir = arg.indir#, Inputfilename = os.path.split(arg.indir)
-    Outputdir = arg.outdir#, Outputfilename = os.path.split(arg.outdir)
+
+    Inputdir = arg.indir
+    Outputdir = arg.outdir
     
     # check dir
     if not os.path.exists(Inputdir) :
         raise ValueError('Inputdir not exists')
     # if not os.path.exists(Outputdir) :
     #     Outputdir = DefaultOutputDir
+    if not os.path.exists(Outputdir) :
+        if (Outputdir is None) or (Outputdir=='') : 
+            pass
+        else :
+            os.makedirs(Outputdir)
 
     InputdirIsFile = os.path.isfile(Inputdir)
     OutputdirIsFile = os.path.isfile(Outputdir)
@@ -65,8 +71,8 @@ def ProcessParas() :
            if not OutputdirIsFile :
                 OutputFileNameGenerator = (setOutputFileName(x, OutputPhase,Outputdir) for x in tmpG)
                 return SortMode, OutputPhase, InputFileNameGenerator, OutputFileNameGenerator
-            else :
-                return SortMode, OutputPhase, InputFileNameGenerator, Outputdir
+           else :
+               return SortMode, OutputPhase, InputFileNameGenerator, Outputdir
 
 
     # if not(arg.indir or arg.inf) :
@@ -89,43 +95,44 @@ def ProcessParas() :
 
     # return SortMode, OutputPhase, InputFileName, OutputFileName
 
+def ProcessOvO(SortMode, OutputPhase, InputFileName, OutputFileName) :
+    FileTriad = File2Triad(InputFileName)
+    FileTriad = SortFuncs[SortMode](FileTriad)
+
+    if Phase.IsLegalMDOutputPhase(OutputPhase) : 
+        Triad2MDFile(OutputFileName, FileTriad)
+    else : 
+        Triad2RawFile(OutputFileName, FileTriad)
 
 def main() : 
     SortMode, OutputPhase, InputFileName, OutputFileName = ProcessParas()
+
+    print('SortMode', SortMode)
+    print('OutputPhase', OutputPhase)
+    print('InputFileName',OutputFileName)
+    print('OutputFileName',OutputFileName)
+    if 
+    assert 1==0
     if iter(InputFileName) is InputFileName :
         if iter(OutputFileName) is OutputFileName :
             #多对多
-            pass
+            for inFile, OutFile in zip(InputFileName, OutputFileName) : 
+                ProcessOvO(SortMode, OutputPhase, inFile, OutFile)
         else :
             #多对一
-            pass
+            TriadGeneratorDict = {}
+            for inFile in InputFileName : 
+                TriadGeneratorDict[inFile] = File2Triad(inFile)
+            if Phase.IsLegalMDOutputPhase(OutputPhase) : 
+                Triads2MDFile(OutputFileName, TriadGeneratorDict)
+            else :
+                Triads2RawFile(OutputFileName, TriadGeneratorDict)
+
     else :
         #一对一
         assert os.path.exists(InputFileName)
-        FileTriad = File2Triad(InputFileName)
+        ProcessOvO(SortMode, OutputPhase, InputFileName, OutputFileName)
 
-    FileTriad = SortFuncs[SortMode](FileTriad)
-
-    if Phase.IsLegalMDOutputPhase(OutputPhase) : 
-        Triad2MDFile(OutputFileName, FileTriad)
-    else : 
-        Triad2RawFile(OutputFileName, FileTriad)
-
-
-    print(SortMode)
-    
-
-    #To be continued ...
-
-    # 将文件内容转化成三元组
-    FileTriad = File2Triad(InputFileName)
-
-    FileTriad = SortFuncs[SortMode](FileTriad)
-
-    if Phase.IsLegalMDOutputPhase(OutputPhase) : 
-        Triad2MDFile(OutputFileName, FileTriad)
-    else : 
-        Triad2RawFile(OutputFileName, FileTriad)
 
 if __name__ == '__main__' : 
     main()
