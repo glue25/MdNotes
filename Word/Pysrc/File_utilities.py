@@ -9,7 +9,7 @@ def setOutputFileName(InputFileName, OutputPhase, Dir=None) :#OutputPhase
     '''
     Get the output file's default name referred to a certain input file.
     '''
-    if Dir is None :
+    if (Dir is None) or (Dir == '') :
         #应对没有路径的情况
         if Phase.IsLegalMDOutputPhase(OutputPhase) :
             Dir = DefaultMdOutputDir
@@ -21,14 +21,20 @@ def setOutputFileName(InputFileName, OutputPhase, Dir=None) :#OutputPhase
     # for i in Suffixes :
     #     if InputFileName.endswith(i) : 
     #         OutputFileName = ''.join((InputFileName[:-len(i)], '-Output', i ))
+    # print('# s')
+    # print(Dir, os.path.exists(Dir))
+    OutputFileName = InputFileName
 
     if Phase.IsLegalMDOutputPhase(OutputPhase) :
+        # print('111111111111111')
         OutputFileName = OutputFileName.replace('.txt','.md')
     else : 
-        OutputFileName.replace('.md','.txt')
-    
-    OutputFileName = os.path.join(Dir, os.path.split(InputFileName)[0])
-
+        # print('1222222222222211111')
+        OutputFileName = OutputFileName.replace('.md','.txt')
+    # print(os.path.split(InputFileName)[1])
+    OutputFileName = os.path.join(Dir, os.path.split(OutputFileName)[1])
+    # print(OutputFileName)
+    # print('# e')
     return OutputFileName
 
 

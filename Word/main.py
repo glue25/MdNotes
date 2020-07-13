@@ -10,7 +10,7 @@ def process_args() :
     parser = argparse.ArgumentParser(description='Transform words.')
     parser.add_argument('-indir',help='input file dir')#, default='')
     # parser.add_argument('-inf', help='input file', default='')
-    parser.add_argument('-outdir', help='output file dir')#, default='')
+    parser.add_argument('-outdir', help='output file dir', default='')
     # parser.add_argument('-outf', help='output file', default='')
 
     # parser.add_argument('-inp', help='input phase', choices=Phase.LegalInputPhase)
@@ -75,26 +75,6 @@ def ProcessParas() :
                return SortMode, OutputPhase, InputFileNameGenerator, Outputdir
 
 
-    # if not(arg.indir or arg.inf) :
-    #     raise ValueError("No useable input file address")
-    # if (arg.indir == '') and (not(os.path.exists(arg.inf))) :
-    #     arg.indir = 'E:\MDNotes\Word\RawWords' 
-    # if arg.indir == '' and os.path.exists(arg.inf): 
-    #     InputFileName = arg.inf
-    # elif os.path.exists(arg.inf):
-    #     InputFileName = '\\'.join((arg.indir, arg.inf))
-    # else :
-    #     raise ValueError('InputFile does not exist')
-    
-    # if not(arg.outdir or arg.outf) :
-    #     OutputFileName = setOutputFileName(InputFileName,arg.outp)
-    # else :
-    #     OutputFileName = '\\'.join((arg.outdir, arg.outf))
-    # OutputFileName = OutputFileName.lstrip('\\')
-    # print(OutputFileName)
-
-    # return SortMode, OutputPhase, InputFileName, OutputFileName
-
 def ProcessOvO(SortMode, OutputPhase, InputFileName, OutputFileName) :
     FileTriad = File2Triad(InputFileName)
     FileTriad = SortFuncs[SortMode](FileTriad)
@@ -136,3 +116,26 @@ def main() :
 
 if __name__ == '__main__' : 
     main()
+
+
+
+
+    # if not(arg.indir or arg.inf) :
+    #     raise ValueError("No useable input file address")
+    # if (arg.indir == '') and (not(os.path.exists(arg.inf))) :
+    #     arg.indir = 'E:\MDNotes\Word\RawWords' 
+    # if arg.indir == '' and os.path.exists(arg.inf): 
+    #     InputFileName = arg.inf
+    # elif os.path.exists(arg.inf):
+    #     InputFileName = '\\'.join((arg.indir, arg.inf))
+    # else :
+    #     raise ValueError('InputFile does not exist')
+    
+    # if not(arg.outdir or arg.outf) :
+    #     OutputFileName = setOutputFileName(InputFileName,arg.outp)
+    # else :
+    #     OutputFileName = '\\'.join((arg.outdir, arg.outf))
+    # OutputFileName = OutputFileName.lstrip('\\')
+    # print(OutputFileName)
+
+    # return SortMode, OutputPhase, InputFileName, OutputFileName
