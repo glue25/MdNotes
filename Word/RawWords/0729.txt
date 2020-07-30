@@ -12,6 +12,9 @@ implication   含义，可能
 align         校准，对齐
 profound      巨大的，深远的
 incur         招致，惹起，承担
+deviate       背离，脱离常轨的人
+anomaly       异常
+erroneous     错误的
 
 
 
