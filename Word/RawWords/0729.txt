@@ -17,8 +17,15 @@ anomaly        异常
 erroneous      错误的
 prone          易于遭受，有倾向的
 relieve        缓和，解救
-miscellaneous  
-cater              
+miscellaneous  混合的
+cater          迎合，满足，承办餐宴
+
+
+
+
+
+
+
 
 
 
