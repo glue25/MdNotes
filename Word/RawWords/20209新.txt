@@ -73,6 +73,10 @@ arithmetic          算术，四则运算
 mitigate            减轻；缓解；平息
 constraint          约束；限制；约束条件
 derivable           可推论出的，可引申出的
+formulate           制定，准备，规划
+pitfall             陷阱
+self-evident        不言而喻的
+multilingual        多种语言的
 
 
 
