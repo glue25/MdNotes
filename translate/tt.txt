@@ -1,17 +1,17 @@
-Code obfuscation is widely used by software developers to
-protect intellectual property, and malware writers to hamper
-program analysis. However, there seems to be little work on
-systematic evaluations of effectiveness of obfuscation techniques against automated program analysis. The result is
-that we have no methodical way of knowing what kinds of
-automated analyses an obfuscation method can withstand.
-This paper addresses the problem of characterizing the
-resilience of code obfuscation transformations against automated symbolic execution attacks, complementing existing
-works that measure the potency of obfuscation transformations against human-assisted attacks through user studies.
-We evaluated our approach over 5000 different C programs,
-which have each been obfuscated using existing implementations of obfuscation transformations. The results show
-that many existing obfuscation transformations, such as virtualization, stand little chance of withstanding symbolicexecution based deobfuscation. A crucial and perhaps surprising observation we make is that symbolic-execution based
-deobfuscators can easily deobfuscate transformations that
-preserve program semantics. On the other hand, we present
-new obfuscation transformations that change program behavior in subtle yet acceptable ways, and show that they
-can render symbolic-execution based deobfuscation analysis
-ineffective in practice.
+In function entry identification, two major
+heuristics are used. The first heuristic searches function entries
+using common prologues/data-mining models. We summarize
+the contribution and accuracy of the heuristic in Table XIX in
+Appendix D. Without counting functions recursively reachable
+from the matched ones, this heuristic recovers 17.36% more
+functions with an average precision of 77.53%. Also observ￾able is that utility of this heuristic varies across optimization
+levels and architectures. Moreover, existing tools use different
+patterns or data-mining models, competing for a coverage￾accuracy trade-off. Comparing to GHIDRA-NE and RADARE2,
+ANGR-NS and DYNINST use more aggressive patterns/models,
+producing higher coverage (21.3%/24.02 v.s. 18.24%/7.93%) but
+lower precision (56.61%/85.37% v.s. 98.42%/87.29%).
+The other heuristic, used by ANGR, takes the begin of
+each code region detected by linear scan as a function entry.
+The heuristic recovers 23% more functions but reduces the
+precision by 26.96% because it often considers the begin of
+padding or data-in-code as a function entry.
