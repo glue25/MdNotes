@@ -1,0 +1,23 @@
+interpretation          解释，说明，演绎
+aggregate               合计，总数的
+impetus                 动力，促进
+prominent               著名的，杰出的
+horn                    角，号角
+clause                  从句，子句
+predicate               断言，表明，谓语
+entailment              导出
+negate                  否定，抹杀
+disjunctive             分离的，反意的
+semicolon               分号
+declarative             声明式的，陈述性的
+
+
+
+
+
+
+
+
+
+
+
