@@ -341,6 +341,8 @@ main:
 
 某些ARM处理器版本支持“ IT”指令，该指令最多可在Thumb状态下有条件地执行4条指令。
 
+*<u>从目前阅读情况来看，不能简单地将这一状态视为THUMB状态，THUMB是这一状态的超集</u>*
+
 语法：
 
 ```
@@ -371,6 +373,68 @@ IT{x{y{z}}} cond
 
 
 
+# BRANCHES
+
+跳转，这是一类指令，目前见过的有b,bx。此外有blt这种带条件的跳转，这种就很有if语句的感觉
+
+```
+.global main
+
+main:
+    mov     r1, #2     /* setting up initial variable a */
+    mov     r2, #3     /* setting up initial variable b */
+    cmp     r1, r2     /* comparing variables to determine which is bigger */
+    blt     r1_lower   /* jump to r1_lower in case r2 is bigger (N==1) */
+    mov     r0, r1     /* if branching/jumping did not occur, r1 is bigger (or the same) so store r1 into r0 */
+    b       end        /* proceed to the end */
+r1_lower:
+    mov r0, r2         /* We ended up here because r1 was smaller than r2, so move r2 into r0 */
+    b end              /* proceed to the end */
+end:
+    bx lr              /* THE END */
+```
+
+
+
+条件跳转+无条件跳转（b）就构成了循环
+
+```
+.global main
+
+main:
+    mov     r0, #0     /* setting up initial variable a */
+loop:
+    cmp     r0, #4     /* checking if a==4 */
+    beq     end        /* proceeding to the end if a==4 */
+    add     r0, r0, #1 /* increasing a by 1 if the jump to the end did not occur */
+    b loop             /* repeating the loop */
+end:
+    bx lr              /* THE END */
+```
+
+分支指令分三种：无条件跳转、跳转链接（自己翻译的，有点渣）、分支交换和分支链接交换。
+
+![image-20200914203031264](E:%5CMDNotes%5CARM%E7%AC%94%E8%AE%B0.assets%5Cimage-20200914203031264.png) 
+
+BX/BLX is used to exchange the instruction set from ARM to Thumb.寄存器的bit[0]为0时，目标地址处的指令为ARM指令；当目标寄存器的bit[0]为1时，目标地址处的指令为Thumb指令。有一个疑惑，就是既然最低位是1，显然最低位不是2字节对齐的，这样真的不要紧吗？不对齐之后的指令暂时先不纠结了，还是先
+
+![image-20200914203341497](E:%5CMDNotes%5CARM%E7%AC%94%E8%AE%B0.assets%5Cimage-20200914203341497.png) 
+
+![img](https://azeria-labs.com/wp-content/uploads/2017/03/branch-thumb-gif.gif.pagespeed.ce.AQGjIxAnHK.gif) 
+
+
+
+其实这里还是有些地方没看懂，能看明白的点包括`mov r8 r8`这句实际上是nop,指针指向start+9的时候，start+8还是被执行了，因为可以看到r0变成了1
+
+
+
+THUMB有很多细节，这里不展开了https://baike.baidu.com/item/Thumb/63166
+
+![image-20200914204628666](E:%5CMDNotes%5CARM%E7%AC%94%E8%AE%B0.assets%5Cimage-20200914204628666.png) 
+
+条件跳转就容易理解的多。
+
+![image-20200914213234565](E:%5CMDNotes%5CARM%E7%AC%94%E8%AE%B0.assets%5Cimage-20200914213234565.png)
 
 
 
@@ -378,40 +442,52 @@ IT{x{y{z}}} cond
 
 
 
+# 堆栈与函数
+
+## 堆栈
+
+出于简化考虑，常常使用PUSH和POP
+
+这部分还是挺常规的，不记了
 
 
 
+## 函数
+
+函数的开始
+
+```
+push   {r11, lr}    /* Start of the prologue. Saving Frame Pointer and LR onto the stack */
+add    r11, sp, #0  /* Setting up the bottom of the stack frame */
+sub    sp, sp, #16  /* End of the prologue. Allocating some buffer on the stack. This also allocates space for the Stack Frame */
+```
 
 
 
+ In some cases, when there are more than 4 parameters to be passed, we would additionally use the Stack to store the remaining parameters. It is also worth mentioning, that a result of a function is returned via the register R0.  In that case we can use R0 combined with R1 to return a 64 bit result.
 
 
 
+函数的结束
+
+```
+sub    sp, r11, #0  /* Start of the epilogue. Readjusting the Stack Pointer */
+pop    {r11, pc}    /* End of the epilogue. Restoring Frame Pointer from the Stack, jumping to previously saved LR via direct load into PC. The Stack Frame of a function is finally destroyed at this step. */
+```
+
+传参时用到的寄存器估计也要进栈/出栈的，如果手写汇编，还是手动调整指针（而不是全部指望push,pop）要好一些。
 
 
 
+1. Prologue sets up the environment for the function;
+2. Body implements the function’s logic and stores result to R0;
+3. Epilogue restores the state so that the program can resume from where it left of before calling the function.
 
 
 
+最后教程提到了叶子函数，叶子函数不会调用其他函数。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+进入叶子函数使用bl，离开叶子函数使用bx
 
 
 
