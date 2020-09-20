@@ -160,7 +160,7 @@ trivial		不重要的
 trivially	十分地，琐碎地
 trustee		受托人
 tune		调整，调音，调谐
-ubiquious	无处不在的
+ubiquitous	无处不在的
 ubiquitous	无处不在的，十分普遍的
 undermine	逐渐削弱，从根基暗中破坏
 underpin	支援

@@ -1,6 +1,7 @@
 import argparse
 import os
 from itertools import tee
+from itertools import chain
 
 from Pysrc.parameters import *
 from Pysrc.File_utilities import *
@@ -15,8 +16,8 @@ def process_args() :
 
     # parser.add_argument('-inp', help='input phase', choices=Phase.LegalInputPhase)
     parser.add_argument('-outp', help='output phase', choices=Phase.LegalOutputPhase)
-    
-    # parser.add_argument('-mod', help='output mod', choices=Phase.LegalSortMod, default='character')
+    parser.add_argument('-Onefile', help='output is a single file', default=True)
+    parser.add_argument('-NTOnefile', help='output is a single non-title file', default=False)
     
     args = parser.parse_args()
     return args
@@ -33,51 +34,66 @@ def ProcessParas() :
         SortMode = 'character'
     else :
         SortMode = 'ignore'
-    # print(SortMode)
 
     # get input/output dir
 
     Inputdir = arg.indir
     Outputdir = arg.outdir
+    IsOnefile = arg.Onefile
+    IsNTOnefile = arg.NTOnefile
     
     # check dir
+    # check input dir
     if not os.path.exists(Inputdir) :
         raise ValueError('Inputdir not exists')
-    # if not os.path.exists(Outputdir) :
-    #     Outputdir = DefaultOutputDir
-    if not os.path.exists(Outputdir) :
-        if (Outputdir is None) or (Outputdir=='') : 
+
+    #check output dir
+    if IsOnefile:
+        #only one file
+        if os.path.exists(Outputdir):
             pass
         else :
-            os.makedirs(Outputdir)
+            f=open(Outputdir,'w')
+            f.close()
+    else :
+        if os.path.exists(Outputdir):
+            pass
+        else :
+            if (Outputdir is None) or (Outputdir=='') : 
+                pass #set as fault
+            else :
+                os.makedirs(Outputdir)
+
 
     InputdirIsFile = os.path.isfile(Inputdir)
-    OutputdirIsFile = os.path.isfile(Outputdir)
+    OutputdirIsFile = IsOnefile
     OutputdirExist = os.path.exists(Outputdir)
 
-    if InputdirIsFile : 
+    if InputdirIsFile :
+        assert OutputdirIsFile
         if not OutputdirExist :
             Outputdir = setOutputFileName(Inputdir, OutputPhase)
-        return SortMode, OutputPhase, Inputdir, Outputdir
+        return SortMode, OutputPhase, Inputdir, Outputdir, IsNTOnefile
     else :
         #get filename generator
+
         InputFileName_ = next(os.walk(Inputdir))
         InputFileNameGenerator = (os.path.join(InputFileName_[0],x) for x in InputFileName_[2])
         InputFileNameGenerator, tmpG = tee(InputFileNameGenerator)
         if not OutputdirExist :
             OutputFileNameGenerator = (setOutputFileName(x, OutputPhase) for x in tmpG)
-            return SortMode, OutputPhase, InputFileNameGenerator, OutputFileNameGenerator
+            return SortMode, OutputPhase, InputFileNameGenerator, OutputFileNameGenerator, IsNTOnefile
         else :
            if not OutputdirIsFile :
                 OutputFileNameGenerator = (setOutputFileName(x, OutputPhase,Outputdir) for x in tmpG)
-                return SortMode, OutputPhase, InputFileNameGenerator, OutputFileNameGenerator
+                return SortMode, OutputPhase, InputFileNameGenerator, OutputFileNameGenerator, IsNTOnefile
            else :
-               return SortMode, OutputPhase, InputFileNameGenerator, Outputdir
+               return SortMode, OutputPhase, InputFileNameGenerator, Outputdir, IsNTOnefile
 
 
 def ProcessOvO(SortMode, OutputPhase, InputFileName, OutputFileName) :
-    FileTriad = File2Triad(InputFileName)
-    FileTriad = SortFuncs[SortMode](FileTriad)
+    FileTriad = File2Triad(InputFileName, SortMode)
+    # FileTriad = SortFuncs[SortMode](FileTriad)
 
     if Phase.IsLegalMDOutputPhase(OutputPhase) : 
         Triad2MDFile(OutputFileName, FileTriad)
@@ -85,14 +101,15 @@ def ProcessOvO(SortMode, OutputPhase, InputFileName, OutputFileName) :
         Triad2RawFile(OutputFileName, FileTriad)
 
 def main() : 
-    SortMode, OutputPhase, InputFileName, OutputFileName = ProcessParas()
+    SortMode, OutputPhase, InputFileName, OutputFileName, IsNTOnefile = ProcessParas()
 
     print('SortMode', SortMode)
     print('OutputPhase', OutputPhase)
     print('InputFileName',OutputFileName)
     print('OutputFileName',OutputFileName)
     # if 
-    assert 1==0
+    # assert 1==0
+    # InputFileName_2, InputFileName_3, InputFileName = tee(InputFileName)
     if iter(InputFileName) is InputFileName :
         if iter(OutputFileName) is OutputFileName :
             #多对多
@@ -100,13 +117,28 @@ def main() :
                 ProcessOvO(SortMode, OutputPhase, inFile, OutFile)
         else :
             #多对一
-            TriadGeneratorDict = {}
-            for inFile in InputFileName : 
-                TriadGeneratorDict[inFile] = File2Triad(inFile)
-            if Phase.IsLegalMDOutputPhase(OutputPhase) : 
-                Triads2MDFile(OutputFileName, TriadGeneratorDict)
-            else :
-                Triads2RawFile(OutputFileName, TriadGeneratorDict)
+            if not IsNTOnefile:
+                TriadGeneratorDict = {}
+                for inFile in InputFileName : 
+                    TriadGeneratorDict[inFile] = File2Triad(inFile, SortMode)
+                    # print(type)
+                if Phase.IsLegalMDOutputPhase(OutputPhase) : 
+
+                    Triads2MDFile(OutputFileName, TriadGeneratorDict)
+                else :
+                    Triads2RawFile(OutputFileName, TriadGeneratorDict)
+            else:
+            #多对一
+                TriadGeneratorDict = {}
+                Triads= chain.from_iterable([File2Triad(inFile, SortMode) for inFile in InputFileName])
+                # for inFile in InputFileName : 
+                #     TriadGeneratorDict[inFile] = File2Triad(inFile, SortMode)
+                    # print(type)
+                FileTriad = SortFuncs[SortMode](Triads)
+                if Phase.IsLegalMDOutputPhase(OutputPhase) : 
+                    Triad2MDFile(OutputFileName, FileTriad)
+                else : 
+                    Triad2RawFile(OutputFileName, FileTriad)
 
     else :
         #一对一

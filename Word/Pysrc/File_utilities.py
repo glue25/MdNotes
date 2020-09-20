@@ -5,6 +5,7 @@ import os
 from itertools import tee
 
 from Pysrc.parameters import * 
+from Pysrc.utilities import SortFuncs
 def setOutputFileName(InputFileName, OutputPhase, Dir=None) :#OutputPhase 
     '''
     Get the output file's default name referred to a certain input file.
@@ -15,8 +16,8 @@ def setOutputFileName(InputFileName, OutputPhase, Dir=None) :#OutputPhase
             Dir = DefaultMdOutputDir
         else : 
             Dir = DefaultROutputDir
-    if (not os.path.isfile(Dir)) and (not os.path.exists(Dir)) :
-        os.makedirs(Dir)
+    # if (not os.path.isfile(Dir)) and (not os.path.exists(Dir)) :
+    #     os.makedirs(Dir)
     # Suffixes = ['.txt', '.md']
     # for i in Suffixes :
     #     if InputFileName.endswith(i) : 
@@ -78,7 +79,11 @@ def _DetectEncodingandMode(filename) :
         score -= 1
     else : 
         pass
-    s = SampleData.decode(encoding)
+    try:
+        s = SampleData.decode(encoding)
+    except UnicodeDecodeError:
+        pass
+        s = SampleData.decode('unicode_escape')
     s = re.sub('[ \n]','',s)
     if '||' in s :
         score -= 0.5
@@ -93,7 +98,7 @@ def _DetectEncodingandMode(filename) :
         IsMd = False
     return encoding, IsMd
 
-def File2Triad(FileName, CommentSigns = None, SplitSigns = None) :
+def File2Triad(FileName, SortMode, CommentSigns = None, SplitSigns = None) :
     encoding, IsMd = _DetectEncodingandMode(FileName)
 
     if CommentSigns is None :
@@ -108,6 +113,9 @@ def File2Triad(FileName, CommentSigns = None, SplitSigns = None) :
         TriadGenerator = (_ProcessMDLine(line) for line in FilelinesGenerator)
     else :
         TriadGenerator = (_ProcessRawLine(line, SplitSigns) for line in FilelinesGenerator)
+    
+    TriadGenerator = SortFuncs[SortMode](TriadGenerator)
+    return TriadGenerator
 
 def _WriteMDFile(f, TriadGenerator) :
     '''
@@ -117,7 +125,9 @@ def _WriteMDFile(f, TriadGenerator) :
     f.write('\n')
     f.write('|---|---|---|')
     f.write('\n')
+    # print(TriadGenerator)
     for i in TriadGenerator :
+        # print(i)
         f.write('|'.join(['']+i+['']))
         f.write('\n')
 
@@ -158,30 +168,34 @@ def Triad2RawFile(FileName, TriadGenerator) :
 def _getMdModeName(FileName) :
     return os.path.split(FileName)[-1].split('.')[0]
 
-def Triads2MDFile(FileName, TriadGeneratorDict) : 
+def Triads2MDFile(FileName, TriadGeneratorDict, withTitle=False) : 
     with open(FileName, 'w', encoding='utf8') as f :
         #key是文件名/路径，value是生成器
         for key, value in TriadGeneratorDict.items() :
             f.write('# %s\n'%_getMdModeName(key))
             _WriteMDFile(f, value)
             f.write('\n')
-
-def Triads2MDFile(FileName, TriadGeneratorDict) : 
-    with open(FileName, 'w', encoding='utf8') as f :
-        #key是文件名/路径，value是生成器
-        for key, value in TriadGeneratorDict.items() :
-            f.write('# %s\n'%_getMdModeName(key))
-            _WriteMDFile(f, value)
             f.write('\n')
 
+# def Triads2MDFile(FileName, TriadGeneratorDict) : 
+#     with open(FileName, 'w', encoding='utf8') as f :
+#         #key是文件名/路径，value是生成器
+#         for key, value in TriadGeneratorDict.items() :
+#             # print(value)
+#             # assert 0
+#             f.write('# %s\n'%_getMdModeName(key))
+#             _WriteMDFile(f, value)
+#             f.write('\n')
 
-def Triads2RawFile(FileName, TriadGeneratorDict) : 
+
+def Triads2RawFile(FileName, TriadGeneratorDict, withTitle=False) : 
     with open(FileName, 'w', encoding='utf8') as f :
         #key是文件名/路径，value是生成器
         for key, value in TriadGeneratorDict.items() :
+            
             f.write('# %s ==========\n\n'%_getMdModeName(key))
             _WriteRawFile(f, value)
-            f.write('\n')
+            f.write('\n\n')
 
 # def RawFile2Triad(FileName, CommentSigns = None, SplitSigns = None) : 
 #     '''
