@@ -1,7 +1,8 @@
 plow            犁，耕种
 saliency        显著性；特色；凸出
 reason about    推断
-
+Quadratically   二次地【貌似是数学术语】
+disparity       差异
 
 
 

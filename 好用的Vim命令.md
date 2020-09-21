@@ -1,6 +1,6 @@
 //不熟的指令我会用色块标记 =====
 
-
+https://vimhelp.org/usr_toc.txt.html
 
 # 光标的移动
 

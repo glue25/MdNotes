@@ -112,7 +112,6 @@ endemic           地方病
 endorse           赞同                                                   
 endow             资助，赋予                                             
 entailment        导出                                                   
-entry             记录，登录，入口                                        
 envision          想象；展望                                             
 epilogue          尾声                                                   
 erroneous         错误的                                                 
