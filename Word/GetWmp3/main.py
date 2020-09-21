@@ -5,6 +5,7 @@ import multiprocessing
 import Mp3Task
 import CatchWordHTML
 import multiprocessing
+import os
 def GetWordMp3(L, Filename, Dir = '') :
     # for word in L :
     #     CatchWordHTML.DownloadMp3(word,'DownloadMp3\\')
@@ -42,8 +43,15 @@ def GetAllWordList(Filename):
     L = [word for word in L if word != '']
     CatchWordHTML.DownloadMp3List(L,'DownloadMp3\\',NoRenewMod = True)
 
-Filename = 'C:\\Users\\admin\\Desktop\\D35.txt'
-# GetAllWordList(Filename)
-GetWordList(Filename)
+# Filename = 'C:\\Users\\admin\\Desktop\\D35.txt'
+# # GetAllWordList(Filename)
+# GetWordList(Filename)
 
-def DownloadMp3List
+def main():
+    L=['hello', 'apple']
+    Dir='DC'
+    if not os.path.exists(Dir):
+        os.mkdir(Dir)
+    CatchWordHTML.DownloadMp3List(L,'Dir',NoRenewMod = True)
+
+main()

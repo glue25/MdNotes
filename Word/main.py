@@ -95,9 +95,11 @@ def ProcessOvO(SortMode, OutputPhase, InputFileName, OutputFileName) :
     FileTriad = File2Triad(InputFileName, SortMode)
     # FileTriad = SortFuncs[SortMode](FileTriad)
 
-    if Phase.IsLegalMDOutputPhase(OutputPhase) : 
+    if ('M' in OutputPhase) or ('m' in OutputPhase) :#Phase.IsLegalMDOutputPhase(OutputPhase) : 
         Triad2MDFile(OutputFileName, FileTriad)
+        # print(1)
     else : 
+        # print(2)
         Triad2RawFile(OutputFileName, FileTriad)
 
 def main() : 
@@ -105,7 +107,7 @@ def main() :
 
     print('SortMode', SortMode)
     print('OutputPhase', OutputPhase)
-    print('InputFileName',OutputFileName)
+    print('InputFileName',InputFileName)
     print('OutputFileName',OutputFileName)
     # if 
     # assert 1==0

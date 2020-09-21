@@ -1,7 +1,7 @@
-import pydub
+# import pydub
 import os
 
-from pydub import AudioSegment
+# from pydub import AudioSegment
 def GetMp3(Dir) :
     '''
     Dir : param Dir: Target Dir Name

@@ -106,6 +106,7 @@ elicit            引出，诱出
 emit              发出；散发                                             
 empirical         凭经验的                                               
 empower           授权                                                   
+empowering        授权，使能                                             
 encapsulate       压缩；简述；概括                                        
 endeavor          努力                                                   
 endemic           地方病                                                 
@@ -190,6 +191,7 @@ macro             巨大的，极厚的
 mandate           授权，要求，强制执行                                    
 margin            边缘，余地，加备注，保证金                               
 marginally        少量地                                                 
+meta              元【EX：元数据】                                      
 metamorphism      变态，变质                                             
 migration         迁移                                                   
 minimise          降低至最低限度                                          
@@ -229,6 +231,7 @@ package           包，软件包，打包
 packet            数据包，小包裹，做成包裹                                 
 paradigm          范例，范式，模范                                        
 paramount         至高无上的，元首                                        
+parse             解析                                                   
 participant       参与者                                                 
 partition         划分，分割，隔                                          
 patch             补丁，修补                                             
@@ -358,4 +361,3 @@ versus            对，与...相对
 vertex            顶点                                                   
 vindictive        报复性的                                               
 violation         违反                                                   
-prohibitive       高昂的，承担不起的
