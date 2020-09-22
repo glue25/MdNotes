@@ -7,6 +7,8 @@ spurious        虚假的，谬误的，伪造的
 auxiliary       辅助的，辅助人员
 traversal       遍历，障碍物
 fall through    失败
+mutually        相互地
+
 
 
 

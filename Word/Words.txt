@@ -6,7 +6,6 @@ advent            出现，来临
 aforemention      上述                                                   
 aggregate         总数，合计总数的，聚合                                   
 agnostic          不可知论的，不可知论者                                   
-align             校准，对齐                                             
 alignment         对齐，对准，联盟                                        
 alleviate         减轻；缓解；缓和                                        
 ambiguity         歧义，含糊[.æmbɪ'ɡjuəti]                                             
@@ -17,31 +16,23 @@ apprehensive      担心的，忧虑的
 appropriate       恰当的，拨款，非法占有                                   
 arithmetic        算术，四则运算                                          
 artifact          人工制品                                               
-ascertain         确定                                                   
 assailant         攻击者，行凶者，攻击的                                   
 asset             有价值的人/事物，财富                                   
-assurance         保证；担保；                                            
 asynchronous      异步的                                                 
 atomic            原子性，与原子有关的                                    
 authority         权威                                                   
 automation        自动化                                                 
 benevolent        仁慈的，慈善的                                          
-bilayer           双层                                                   
 breach            违反                                                   
 budget            预算，价格低的，谨慎花钱                                 
 buggy             古怪的，有毛病的                                        
 canonical         经典的，规范的，典型                                    
-canonicalization  标准化，规范化                                          
-capitalization    资本化，投资                                            
 cater             迎合，满足，承办酒席                                    
 certificate       证书                                                   
 chaotic           混乱的，杂乱的                                          
-chunk             大块，数据块                                            
 circumvent        回避                                                   
-clause            从句，子句                                             
 coagulate         凝结，使凝固，凝块                                      
 coefficient       系数，共同作用的                                        
-collision         冲突，碰撞                                             
 commit            承诺，提交，自杀，犯罪，犯错，忠于                        
 compensate        补偿，抵消，抵偿                                        
 complement        补充                                                   
@@ -50,9 +41,6 @@ compromise        妥协，折中
 conceivable       可能的，可信的，可想到的                                 
 concise           简明的                                                 
 concolic          #？？                                                 
-concrete          混凝土，使结合，实在的，具体的                           
-concretely        具体地                                                 
-configuration     配置，构造，形状                                        
 conjecture        猜想                                                   
 consensus         一致，共识                                             
 conservation      保护，守恒                                             
@@ -65,7 +53,6 @@ corpus            预料，文集，全集
 correlate         互相关联                                               
 credentials       资格认证                                               
 criteria          标准，尺度                                             
-crude             粗略的，大概的，原油                                    
 cryptocurrency    秘密流                                                 
 declarative       声明式的，陈述性的                                      
 declare           公告                                                   
@@ -79,7 +66,6 @@ demographic       人口统计学的
 demonstrate       演示，说明                                             
 denominator       分母，共同特性                                          
 deontic           道义，义务                                             
-deploy            部署，利用                                             
 derivable         可推论出的，可引申出的                                   
 derivative        导数，派生的，衍生物                                    
 deter             阻止                                                   
@@ -127,7 +113,6 @@ exponentially     呈指数地
 extensible        可延长的，可扩展的                                      
 facto             事实上                                                 
 fetch             拿来，获取，相同物                                      
-folder            文件夹                                                 
 forensic          法医的                                                 
 formalism         形式主义                                               
 formerly          从前地                                                 
@@ -144,7 +129,6 @@ hinge             铰链，合叶
 hoax              骗局，戏弄，恶作剧                                      
 homogeneous       同类的，同质的                                          
 horn              角，号角                                               
-hyperplane        超平面                                                 
 illicit           违法的                                                 
 imperceptible     感觉不到的                                             
 impetus           动力，促进                                             
@@ -162,8 +146,6 @@ indispensable     不可或缺的
 infimum           下界                                                   
 ingrain           本质，根深蒂固的，染制的，染色                           
 inspect           检查；视察；查看；                                      
-inspection        检查，审视                                             
-instrumentation   工具，仪表                                             
 intensive         密集的，彻底的，十分细致的，加强的，加强器                 
 intention         意图，目的                                             
 intercept         拦截，截距                                             
@@ -176,7 +158,6 @@ intrusion         入侵
 intuition         直觉                                                   
 intuitively       直觉地                                                 
 investigate       调查，研究                                             
-invoke            调用                                                   
 isolate           孤立，使分离                                            
 latent            潜在的                                                 
 leakage           泄漏                                                   
@@ -205,13 +186,11 @@ multilingual      多种语言的
 multitude         众多，人群，大众                                        
 mundane           单调的；平凡的；世俗的                                   
 mutate            突变；转变；                                            
-mutation          突变；转变；                                            
 myriad            无数的，大量                                            
 negate            否定，抹杀                                             
 negligeable       无关紧要的                                             
 negligible        微不足道的，不重要的，不值一提的                          
 neuron            神经元                                                 
-nonlinearity      非线性                                                 
 nonnegligible     不可忽视的                                             
 nontrivial        不平凡的，无效的                                        
 noxious           有害的                                                 
@@ -261,7 +240,6 @@ prologue          序幕，成为...开端
 prominent         著名的，杰出的                                          
 prone             易于遭受，有倾向的                                      
 propagate         传播，繁衍                                             
-propagation       传播，宣传，蔓延                                        
 proportion        比例，部分，份额，均衡，分摊                             
 prototype         原型，最初态                                            
 provably          可验证性的                                             
@@ -299,7 +277,6 @@ sift              筛，筛选
 slack             松弛的（地），萧条的，懒散的，无力地，松弛部分，煤末，怠惰  
 sloppy            马虎的，凌乱的                                          
 snippet           片段                                                   
-solidity          固体，坚固性，可靠性                                    
 sound             adj明智的                                            
 spatial           空间的                                                 
 spatio-temporal   时空的                                                 
@@ -314,7 +291,6 @@ subvert           破坏，颠覆，使背叛
 suffice           足够，足以                                             
 superscript       标在上角的，上标                                        
 susceptible       敏感的，易受影响的                                      
-taint             污染，腐坏                                             
 tamper            篡改，干预，干扰，夯实者                                 
 tandem            串联                                                   
 tantalizingly     令人着急地，诱人地                                      
@@ -322,13 +298,11 @@ taxonomy          分类学，分类法
 tedious           冗长的；啰嗦的                                          
 template          模板；样板；                                            
 temporal          时间的                                                 
-temporally        时间地                                                 
 tentatively       初步地，尝试性地                                        
 terminology       术语                                                   
 testrpc           #？？                                                 
 textual           本文的，文章的                                          
 thwart            横放的                                                 
-timestamp         时间戳                                                 
 topology          拓扑                                                   
 tractable         易处理的，温顺的                                        
 trail             跟踪，追踪                                             
@@ -358,4 +332,3 @@ vertex            顶点
 vindictive        报复性的                                               
 violation         违反                                                   
 prohibitive       高昂的，承担不起的
-fall through      
