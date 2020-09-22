@@ -9,7 +9,7 @@ agnostic          不可知论的，不可知论者
 align             校准，对齐                                             
 alignment         对齐，对准，联盟                                        
 alleviate         减轻；缓解；缓和                                        
-ambiguity         歧义，含糊                                             
+ambiguity         歧义，含糊[.æmbɪ'ɡjuəti]                                             
 anneal            退火                                                   
 anomalous         异常的，反常的                                          
 anomaly           不规则，异常现象                                        
@@ -358,3 +358,4 @@ vertex            顶点
 vindictive        报复性的                                               
 violation         违反                                                   
 prohibitive       高昂的，承担不起的
+fall through      
