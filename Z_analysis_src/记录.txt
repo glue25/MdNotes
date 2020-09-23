@@ -1,0 +1,78 @@
+
+//==============================Main.cpp==============================
+对反编译过程的分析
+1 获取的是被反汇编的文件名
+2 从文件创建GTIRB对象
+3 从GTIRB初始化DatalogProgram对象Souffle
+4 利用GTIRB和Souffle进行输出
+5 中间有些其他的处理函数，如computeSCCs
+
+关于输入文件：
+Main.cpp 185处：// Parse and build a GTIRB module from a supported binary object file.
+--追踪输入时涉及到了vm，vm的类型是boost::program_options::variables_map，这应该是种数据类型，
+    里面至少可以存放字符与变量的映射关系。
+----boost是库里的值，这算是CPP官方支持的有很多实用工具的库
+Main.cpp 188：filename是输入文件名
+Main.cpp 189：创建GTIRB对象
+--c11里的auto可以进行自动类型推断、
+Main.cpp 189：大概是给GTIRB添加辅助版本信息，好像不重要
+Main.cpp 206：// Decode and load GTIRB Module into the SouffleProgram context.
+Main.cpp 210：从GTIRB初始化std::optional<DatalogProgram>对象Souffle，DatalogProgram类定义
+    在src\\gtirb-decoder\\DatalogProgram.h
+--std::optional<>是C17里一个特性，可以应用于处理可能没有返回值的函数
+Main.cpp 215：// Remove initial entry point.不太懂为什么这么做,是gtirb自动寻找了入口，现在
+    要消除gtirb找到的入口？
+Main.cpp 222：// Remove placeholder relocation data.不太懂为什么这么做。可能与上一条的原因
+    一致，但是没看代码不能下结论；总之应该是影响不大吧
+Main.cpp 225：开始处理Souffle对象了，一直处理到了345行
+Main.cpp 242：Souffle->run();应该是开始执行了，这里应该是核心代码
+Main.cpp 251：应该是在生成IR，disassembleModule(*GTIRB->Context, Module, Souffle->get(), vm.count("self-diagnose") != 0);
+Main.cpp 254：处理skip-function-analysis，如果设置了这个参数则跳过,
+    这个参数的注释是：Skip additional analyses to compute more precise function boundaries.
+    涉及到的函数是computeSCCs
+    涉及的对象及方法：NoReturn.computeNoReturn；FunctionInference.computeFunctions
+Main.cpp 291：这之后应该就是展示了
+    涉及的函数：
+    IR：setStdoutToBinary()；GTIRB->IR->saveJSON
+    json:GTIRB->IR->saveJSON
+    Pretty-print:gtirb_pprint::PrettyPrinter.symbolPolicy().keep
+    asm：gtirb_pprint::PrettyPrinter.print
+    performSanityChecks
+    Souffle->get()
+
+
+//==============================DatalogProgram.h/DatalogProgram.cpp==============================
+DatalogProgram.h定义了类DatalogProgram
+DatalogProgram
+--load
+--inseat
+--writeFacts
+--writeRelations
+--threads
+--run
+--get
+--map
+
+--构建函数：DatalogProgram(std::shared_ptr<souffle::SouffleProgram> P) : Program{P} {};
+    std::shared_ptr是智能指针
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
