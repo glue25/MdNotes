@@ -22,12 +22,10 @@ benevolent        仁慈的，慈善的
 breach            违反                                                   
 budget            预算，价格低的，谨慎花钱                                 
 canonical         经典的，规范的，典型                                    
-cater             迎合，满足，承办酒席                                    
 certificate       证书                                                   
 chaotic           混乱的，杂乱的                                          
 circumvent        回避                                                   
 coagulate         凝结，使凝固，凝块                                      
-commit            承诺，提交，自杀，犯罪，犯错，忠于                        
 compensate        补偿，抵消，抵偿                                        
 complement        补充                                                   
 complementary     互补的，补充的                                          
@@ -190,7 +188,6 @@ opcode            操作码，指令码
 operand           操作数                                                 
 orthogonal        正交的，不相关的                                        
 overhaul          检修，改造                                             
-overhead          天花板，上方的，开销，开销的                             
 package           包，软件包，打包                                        
 packet            数据包，小包裹，做成包裹                                 
 paradigm          范例，范式，模范                                        
@@ -269,7 +266,6 @@ spatio-temporal   时空的
 specimen          样品，标本                                             
 stance            立场，站姿，姿态                                        
 standout          杰出的，杰出的人/物                                    
-steady            稳固，稳定的，持续地                                    
 stirring          忙碌的，活跃的                                          
 subsample         抽样                                                   
 subtler           精巧的；微妙的；狡猾的；不易察觉的                        
