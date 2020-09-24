@@ -1,11 +1,7 @@
-from apscheduler.schedulers.blocking import BlockingScheduler
-from datetime import datetime
+
 import hashlib
 import shutil
 import os
-import subprocess
-L1 = ['D:\\PAPER', 'D:\\BOOK2', 'C:\\Users\\65132\\Documents\\WeChat Files\\wxid_4ri4cmu08nhl22\\FileStorage\\File\\2020-09']
-L2 = 'D:\ODrive\OneDrive - The Hong Kong Polytechnic University\\'
 
 def pl(L, L_new):
     L_split = [os.path.split(x) for x in L]
@@ -38,53 +34,22 @@ def get_file_md5(filename):
 
     return b
 
-def cpfiles(Dir,path, f) :
+def cpfiles(Dir,path) :
     files = get_all_filenames(Dir,path)
 
     Lx_files = [x.replace(Dir, path) for x in files]
-    
     for file in files :
         Des_file = file.replace(Dir, path)
 
         if os.path.exists(Des_file) :
             if get_file_md5(file) == get_file_md5(Des_file) :
-                f.write(''.join((file,',',' tg','\n')))
-                # print('tg')
+                print('tg')
                 continue
             else :
                 # 
                 if os.path.getmtime(Des_file)>os.path.getmtime(file) :
-                    f.write(''.join((file,',',' on','\n')))
+                    print('on')
                     continue
 
         shutil.copy(file, Des_file)
-        f.write(''.join((file,',',' new copy','\n')))
-    
-
-
-def job():
-    
-    print(datetime.now().strftime("%Y-%m-%d %H:%M:%S"), end = '--')
-    print('Start synchronizing ')
-    L_td=pl(L1,L2)
-    for d in L_td :
-        print(d)
-    f = open('log.txt', 'w', encoding='utf8')
-    for i,t in zip(L1,L_td) :
-        cpfiles(i, t, f)
-    f.close()
-    print('Synchronize over')
-    
-
-# BlockingScheduler
-scheduler = BlockingScheduler()
-scheduler.add_job(job, 'interval', hours=2)#, hours=2
-
-print(datetime.now().strftime("%Y-%m-%d %H:%M:%S"), end = '--')
-print('Begin!!!')
-job()
-scheduler.start()
-
-# print(datetime.now().strftime("%Y-%m-%d %H:%M:%S"), end = '--')
-# print('End')
-
+        print(file)

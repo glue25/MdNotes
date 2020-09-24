@@ -37,21 +37,26 @@ def get_all_filenames(Dir, mkDir=None) :
             #         os.mkdir(s_dir)#.replace('\\','/'))
 
         files.extend([i[0]+'\\'+x for x in i[2]])
-    print('=======================================================')
+    print('====***********************************========================')
     return files
 
 
  
 def get_file_md5(filename):
     md5 = hashlib.md5()
+
     f = open(filename,'rb')
-    while True:
-        b = f.read(8096)
-        if not b:
-          break
-    md5.update(b)
+    b = f.read(20000)
     f.close()
-    return md5.hexdigest()
+    # f = open(filename,'rb')
+    # while True:
+    #     b = f.read(20000)
+    #     if not b:
+    #       break
+    # md5.update(b)
+    # f.close()
+    # print(md5.hexdigest())
+    return b
 
 def cpfiles(Dir,path) :
     
@@ -70,10 +75,18 @@ def cpfiles(Dir,path) :
         # Des_file exists and is same to the origin one
         if os.path.exists(Des_file) :
             if get_file_md5(file) == get_file_md5(Des_file) :
+                print('tg')
                 continue
+            else :
+                # 
+                if os.path.getmtime(Des_file)>os.path.getmtime(file) :
+                    print('on')
+                    continue
+
         # if not os.path.exists(os.path.split(Des_file)[0]):
         #     os.mkdir(os.path.split(Des_file)[0])
         os.system('copy '+file+' '+Des_file)
+        print(file)
 
 
 #os.path.getmtime(file) 
@@ -86,4 +99,12 @@ for i,t in zip(L1,L_td) :
 # files=os.walk(L1[1])
 # for i in files :
 #     print(i)
+# file = 'tt.py'
+# file2 = ''
+# files = next(os.walk('E:\\MDNotes\\U_code'))[2]
+# for file in files :
+#     print(os.path.getmtime(file),'                          ',file)
 
+# with open(file, 'r', encoding = 'utf8') as f:
+#     a=f.read(100000)
+#     print(len(a))

@@ -9,7 +9,6 @@ agnostic          不可知论的，不可知论者
 alignment         对齐，对准，联盟                                        
 alleviate         减轻；缓解；缓和                                        
 ambiguity         歧义，含糊[.æmbɪ'ɡjuəti]                                             
-anneal            退火                                                   
 anomalous         异常的，反常的                                          
 anomaly           不规则，异常现象                                        
 apprehensive      担心的，忧虑的                                          
@@ -17,22 +16,17 @@ appropriate       恰当的，拨款，非法占有
 arithmetic        算术，四则运算                                          
 artifact          人工制品                                               
 assailant         攻击者，行凶者，攻击的                                   
-asset             有价值的人/事物，财富                                   
 asynchronous      异步的                                                 
 atomic            原子性，与原子有关的                                    
-authority         权威                                                   
-automation        自动化                                                 
 benevolent        仁慈的，慈善的                                          
 breach            违反                                                   
 budget            预算，价格低的，谨慎花钱                                 
-buggy             古怪的，有毛病的                                        
 canonical         经典的，规范的，典型                                    
 cater             迎合，满足，承办酒席                                    
 certificate       证书                                                   
 chaotic           混乱的，杂乱的                                          
 circumvent        回避                                                   
 coagulate         凝结，使凝固，凝块                                      
-coefficient       系数，共同作用的                                        
 commit            承诺，提交，自杀，犯罪，犯错，忠于                        
 compensate        补偿，抵消，抵偿                                        
 complement        补充                                                   
@@ -81,7 +75,6 @@ dissect           剖析
 divider           分隔物                                                 
 divulge           泄漏                                                   
 dormant           潜伏的                                                 
-downstream        顺流的，在下游的                                        
 drastically       激烈地，大大地                                          
 eavesdrop         窃听                                                   
 eavesdroppers     窃听者                                                 
@@ -89,9 +82,7 @@ ecosystem         生态系统
 eigen             特征的，自身的                                          
 elementary        初级的，基本的，简单的                                   
 elicit            引出，诱出                                             
-emit              发出；散发                                             
 empirical         凭经验的                                               
-empower           授权                                                   
 encapsulate       压缩；简述；概括                                        
 endeavor          努力                                                   
 endemic           地方病                                                 
@@ -100,7 +91,6 @@ endow             资助，赋予
 entailment        导出                                                   
 envision          想象；展望                                             
 epilogue          尾声                                                   
-erroneous         错误的                                                 
 escalate          不断升级                                               
 escalation        扩大                                                   
 esteem            尊重，认为                                             
@@ -109,7 +99,6 @@ exceptional       杰出的，例外的，特殊的
 excerpt           摘录，节选，片段，引用                                   
 explicitly        明确地，清楚地，直接地                                   
 exploratory       探索的，探测的                                          
-exponentially     呈指数地                                               
 extensible        可延长的，可扩展的                                      
 facto             事实上                                                 
 fetch             拿来，获取，相同物                                      
@@ -128,7 +117,6 @@ hinder            阻碍，妨碍，后面的
 hinge             铰链，合叶                                             
 hoax              骗局，戏弄，恶作剧                                      
 homogeneous       同类的，同质的                                          
-horn              角，号角                                               
 illicit           违法的                                                 
 imperceptible     感觉不到的                                             
 impetus           动力，促进                                             
@@ -217,7 +205,6 @@ pessimistic       悲观主义的
 pitfall           困难；隐患；陷阱                                        
 plethora          过多的                                                 
 plurality         众多；大量；多元的                                      
-pointer           指针，建议                                             
 pointless         无意义的                                               
 poisoning         投毒，中毒                                             
 polymorphism      多态性                                                 
@@ -254,7 +241,6 @@ recurrence        再次发生
 redundant         多余的，冗余的                                          
 reiterate         重申，重复说                                            
 relieve           缓和，解救                                             
-repository        仓库，资源库                                            
 resemblance       相似性                                                 
 residual          残余的                                                 
 resilient         有弹性的，有适应力的，可恢复的                           
@@ -321,14 +307,12 @@ undermine         逐渐削弱，从根基暗中破坏
 underpin          支援                                                   
 undesirable       不想要的                                               
 unveil            推出；为…揭幕；揭露                                    
-unwind            放松，解开                                             
 vendor            小贩，卖主                                             
 veracity          真实性，诚实                                            
 verbose           冗长的；啰嗦的；                                        
 verdict           判决，结论                                             
 versatile         多才多艺的，多用途的，通用的                             
 versus            对，与...相对                                        
-vertex            顶点                                                   
 vindictive        报复性的                                               
 violation         违反                                                   
 prohibitive       高昂的，承担不起的
