@@ -26,6 +26,7 @@ certificate       证书
 chaotic           混乱的，杂乱的                                          
 circumvent        回避                                                   
 coagulate         凝结，使凝固，凝块                                      
+coefficien        系数；(测定某种质量或变化过程的)率,程度;系数
 compensate        补偿，抵消，抵偿                                        
 complement        补充                                                   
 complementary     互补的，补充的                                          
@@ -37,7 +38,6 @@ conjecture        猜想
 consensus         一致，共识                                             
 conservation      保护，守恒                                             
 conservative      保守的，保守的人                                        
-constraint        约束；限制；约束条件                                    
 contingency       偶然性，意外事故                                        
 contrastive       对比的，对比性的                                        
 convention        习惯，常规，大会                                        
@@ -75,7 +75,6 @@ divulge           泄漏
 dormant           潜伏的                                                 
 drastically       激烈地，大大地                                          
 eavesdrop         窃听                                                   
-eavesdroppers     窃听者                                                 
 ecosystem         生态系统                                               
 eigen             特征的，自身的                                          
 elementary        初级的，基本的，简单的                                   
@@ -106,7 +105,7 @@ formerly          从前地
 formulate         制定，准备，规划                                        
 fragment          片段，小片，分割                                        
 frontend          开头的，前端                                            
-futile            徒然的，无效的                                          
+futile            徒然的，无效的                                            
 gadget            小装置                                                 
 generic           一般的，普通的，通用的                                   
 granularity       粒度                                                   
@@ -260,7 +259,6 @@ sift              筛，筛选
 slack             松弛的（地），萧条的，懒散的，无力地，松弛部分，煤末，怠惰  
 sloppy            马虎的，凌乱的                                          
 snippet           片段                                                   
-sound             adj明智的                                            
 spatial           空间的                                                 
 spatio-temporal   时空的                                                 
 specimen          样品，标本                                             
@@ -295,7 +293,6 @@ triad             三位一体（总之就是三个在一起的）
 trivial           不重要的                                               
 trivially         十分地，琐碎地                                          
 trustee           受托人                                                 
-tune              调整，调音，调谐                                        
 tweak             拧，用力扯                                             
 ubiquitous        无处不在的，十分普遍的                                   
 underlying        根本的，潜在的，隐含的，在下面的                          

@@ -141,7 +141,7 @@ def _WriteRawFile(f, TriadGenerator) :
     for i in TriadGeneratorO :
         for j in range(ELEMENTS_NUM-1) :
             if len(i[j])>Length[j] : 
-                Length[j] = len(i[j])
+                Length[j] = len(i[j]) 
 
     Length0 = Length[0] + 2
     Length1 = int(Length[1]*9/5) + 2
