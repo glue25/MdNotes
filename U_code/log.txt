@@ -1,4 +1,5 @@
 D:\PAPER\Jimple笔记.md, tg
+D:\PAPER\paper-reading.md, new copy
 D:\PAPER\paper-reading.pdf, tg
 D:\PAPER\Re_ 对Stack Overflow上android native code的初步调研.zip, tg
 D:\PAPER\Word - 快捷方式.lnk, tg

@@ -1,29 +1,22 @@
-Ethereum          以太坊                                                 
 acquisition       取得，购得                                             
 actionable        可起诉的，可执行的                                      
 adequate          足够，合格                                             
 advent            出现，来临                                             
-aforemention      上述                                                   
 aggregate         总数，合计总数的，聚合                                   
 agnostic          不可知论的，不可知论者                                   
-alignment         对齐，对准，联盟                                        
 alleviate         减轻；缓解；缓和                                        
 ambiguity         歧义，含糊[.æmbɪ'ɡjuəti]                                             
 anomalous         异常的，反常的                                          
-anomaly           不规则，异常现象                                        
 apprehensive      担心的，忧虑的                                          
 appropriate       恰当的，拨款，非法占有                                   
 arithmetic        算术，四则运算                                          
 artifact          人工制品                                               
 assailant         攻击者，行凶者，攻击的                                   
 asynchronous      异步的                                                 
-atomic            原子性，与原子有关的                                    
 benevolent        仁慈的，慈善的                                          
 breach            违反                                                   
 budget            预算，价格低的，谨慎花钱                                 
 canonical         经典的，规范的，典型                                    
-certificate       证书                                                   
-chaotic           混乱的，杂乱的                                          
 circumvent        回避                                                   
 coagulate         凝结，使凝固，凝块                                      
 coefficien        系数；(测定某种质量或变化过程的)率,程度;系数
@@ -33,7 +26,6 @@ complementary     互补的，补充的
 compromise        妥协，折中                                             
 conceivable       可能的，可信的，可想到的                                 
 concise           简明的                                                 
-concolic          #？？                                                 
 conjecture        猜想                                                   
 consensus         一致，共识                                             
 conservation      保护，守恒                                             
@@ -114,7 +106,6 @@ hinder            阻碍，妨碍，后面的
 hinge             铰链，合叶                                             
 hoax              骗局，戏弄，恶作剧                                      
 homogeneous       同类的，同质的                                          
-illicit           违法的                                                 
 imperceptible     感觉不到的                                             
 impetus           动力，促进                                             
 implication       含义，可能                                             
@@ -123,8 +114,6 @@ in light of       按照，根据，鉴于
 in terms of       从...方面                                            
 incentive         激励，刺激                                             
 incorporate       包括，结合                                             
-incremental       增长的                                                 
-incur             招致，惹起，承担                                        
 indicative        表明，暗示【adj】                                    
 indice            质量指标                                               
 indispensable     不可或缺的                                             
@@ -201,14 +190,11 @@ pessimistic       悲观主义的
 pitfall           困难；隐患；陷阱                                        
 plethora          过多的                                                 
 plurality         众多；大量；多元的                                      
-pointless         无意义的                                               
-poisoning         投毒，中毒                                             
 polymorphism      多态性                                                 
 potency           效力，影响力，支配力                                    
 practitioner      实践者，从业者                                          
 pre-requisite     先决条件                                               
 predecessor       原有的事物                                             
-predicate         断言，表明，谓语                                        
 preliminary       预备性的；初步的；开始的                                 
 premium-rate      保险费                                                 
 presumably        大概；很可能；                                          
@@ -218,7 +204,6 @@ privilege         特权
 procedure         步骤，手续，手术                                        
 proficient        专家，老手，熟练的                                      
 profound          巨大的，深远的                                          
-progressive       进步的，先进的                                          
 prologue          序幕，成为...开端                                    
 prominent         著名的，杰出的                                          
 prone             易于遭受，有倾向的                                      
@@ -251,7 +236,6 @@ seamless          无缝的
 self-containment  自我控制                                               
 self-evident      不言而喻的                                             
 semicolon         分号                                                   
-separate          分离，单独的，单行本                                    
 shed              摆脱，去除，脱落，工棚                                   
 showcase          展示，展示场所，橱窗                                    
 side-step         规避                                                   
@@ -280,7 +264,6 @@ template          模板；样板；
 temporal          时间的                                                 
 tentatively       初步地，尝试性地                                        
 terminology       术语                                                   
-testrpc           #？？                                                 
 textual           本文的，文章的                                          
 thwart            横放的                                                 
 topology          拓扑                                                   
