@@ -65,7 +65,6 @@ divider           分隔物
 divulge           泄漏                                                   
 dormant           潜伏的                                                 
 drastically       激烈地，大大地                                          
-eavesdrop         窃听                                                   
 eigen             特征的，自身的                                          
 elementary        初级的，基本的，简单的                                   
 elicit            引出，诱出                                             
@@ -94,7 +93,6 @@ formalism         形式主义
 formerly          从前地                                                 
 formulate         制定，准备，规划                                        
 fragment          片段，小片，分割                                        
-frontend          开头的，前端                                            
 futile            徒然的，无效的                                            
 gadget            小装置                                                 
 generic           一般的，普通的，通用的                                   
@@ -207,10 +205,8 @@ propagate         传播，繁衍
 proportion        比例，部分，份额，均衡，分摊                             
 prototype         原型，最初态                                            
 provably          可验证性的                                             
-proxy             代理人，代表，代理权                                    
 prune             修剪，剪枝                                             
 pseudo            假的                                                   
-pseudocode        伪代码                                                 
 purification      净化，提纯                                             
 quadratic         平方的，二次项                                          
 quartile          四分位数                                               
@@ -221,7 +217,6 @@ relieve           缓和，解救
 resemblance       相似性                                                 
 residual          残余的                                                 
 resilient         有弹性的，有适应力的，可恢复的                           
-restrictive       限制性的；约束的                                        
 retrofit          改进，翻新                                             
 revamp            翻修，改造                                             
 rigorous          谨慎的；彻底的；严格的                                   
@@ -245,7 +240,6 @@ specimen          样品，标本
 stance            立场，站姿，姿态                                        
 standout          杰出的，杰出的人/物                                    
 stirring          忙碌的，活跃的                                          
-subsample         抽样                                                   
 subtler           精巧的；微妙的；狡猾的；不易察觉的                        
 subvert           破坏，颠覆，使背叛                                      
 suffice           足够，足以                                             
@@ -267,13 +261,9 @@ trail             跟踪，追踪
 transductive      转换                                                   
 trapezoidal       梯形                                                   
 traverse          产国，横渡，横断的，遍历，导线，横切，可横越之处           
-triad             三位一体（总之就是三个在一起的）                          
-trivial           不重要的                                               
-trustee           受托人                                                 
 tweak             拧，用力扯                                             
 ubiquitous        无处不在的，十分普遍的                                   
 underlying        根本的，潜在的，隐含的，在下面的                          
-undermine         逐渐削弱，从根基暗中破坏                                 
 underpin          支援                                                   
 unveil            推出；为…揭幕；揭露                                    
 vendor            小贩，卖主                                             

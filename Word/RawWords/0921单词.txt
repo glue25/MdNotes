@@ -17,7 +17,7 @@ acronym         缩写词
 assertion       断言；主张；认定；声名
 repertoire      全部技能
 pinpoint        针尖；确定；精准定位
-
+drown           溺死
 
 
 
