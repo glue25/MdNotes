@@ -2,7 +2,6 @@ acquisition       取得，购得
 actionable        可起诉的，可执行的                                      
 adequate          足够，合格                                             
 advent            出现，来临                                             
-aggregate         总数，合计总数的，聚合                                   
 agnostic          不可知论的，不可知论者                                   
 alleviate         减轻；缓解；缓和                                        
 ambiguity         歧义，含糊[.æmbɪ'ɡjuəti]                                             
@@ -19,7 +18,7 @@ budget            预算，价格低的，谨慎花钱
 canonical         经典的，规范的，典型                                    
 circumvent        回避                                                   
 coagulate         凝结，使凝固，凝块                                      
-coefficien        系数；(测定某种质量或变化过程的)率,程度;系数
+coefficient       系数；(测定某种质量或变化过程的)率,程度;系数；相互作用
 compensate        补偿，抵消，抵偿                                        
 complement        补充                                                   
 complementary     互补的，补充的                                          
@@ -67,7 +66,6 @@ divulge           泄漏
 dormant           潜伏的                                                 
 drastically       激烈地，大大地                                          
 eavesdrop         窃听                                                   
-ecosystem         生态系统                                               
 eigen             特征的，自身的                                          
 elementary        初级的，基本的，简单的                                   
 elicit            引出，诱出                                             
@@ -176,8 +174,6 @@ opcode            操作码，指令码
 operand           操作数                                                 
 orthogonal        正交的，不相关的                                        
 overhaul          检修，改造                                             
-package           包，软件包，打包                                        
-packet            数据包，小包裹，做成包裹                                 
 paradigm          范例，范式，模范                                        
 paramount         至高无上的，元首                                        
 participant       参与者                                                 
@@ -266,7 +262,6 @@ tentatively       初步地，尝试性地
 terminology       术语                                                   
 textual           本文的，文章的                                          
 thwart            横放的                                                 
-topology          拓扑                                                   
 tractable         易处理的，温顺的                                        
 trail             跟踪，追踪                                             
 transductive      转换                                                   
@@ -274,14 +269,12 @@ trapezoidal       梯形
 traverse          产国，横渡，横断的，遍历，导线，横切，可横越之处           
 triad             三位一体（总之就是三个在一起的）                          
 trivial           不重要的                                               
-trivially         十分地，琐碎地                                          
 trustee           受托人                                                 
 tweak             拧，用力扯                                             
 ubiquitous        无处不在的，十分普遍的                                   
 underlying        根本的，潜在的，隐含的，在下面的                          
 undermine         逐渐削弱，从根基暗中破坏                                 
 underpin          支援                                                   
-undesirable       不想要的                                               
 unveil            推出；为…揭幕；揭露                                    
 vendor            小贩，卖主                                             
 veracity          真实性，诚实                                            
