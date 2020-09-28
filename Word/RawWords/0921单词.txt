@@ -27,6 +27,10 @@ daemon          守护进程
 bogus           伪造物
 retrieve        找回，取回，恢复
 scalable        可扩展的，可攀登的，可伸缩的
+implication     暗示，含义
+
+
+
 
 
 

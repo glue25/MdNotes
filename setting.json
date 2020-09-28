@@ -1,0 +1,289 @@
+{
+    "files.autoSave": "afterDelay",
+    "python.pythonPath": "E:\\anaconda\\envs\\adv",
+    "search.followSymlinks": false,
+    "editor.codeLens": false,
+    "merge-conflict.codeLens.enabled": false,
+    "update.enableWindowsBackgroundUpdates": true,
+    "background.enabled": true,
+    "background.customImages": [
+        
+
+
+
+    
+        //"file:///E:/klpk.jpg"//图片地址
+        "file:///E:/background/k32.png"
+    ],
+    "background.style": {
+
+
+        "content":"''",
+        "pointer-events":"none",
+        "position":"absolute",//图片位置
+        "width":"100%",
+        "height":"100%",
+        "z-index":"99999",
+        "background.repeat":"no-repeat",
+        "background-size":"100%,100%",//图片大小
+        "opacity":0.1//透明度
+    },
+    "background.useFront": false,
+    "background.useDefault": false,//是否使用默认图片
+
+    //py setting
+    //"python.linting.flake8Enabled": true,
+    "python.formatting.provider": "yapf",
+   
+    // "latex-workshop.latex.tools": [
+    //     // {
+    //     //     // 编译工具和命令
+    //     //     "name": "xelatex",
+    //     //     "command": "xelatex",
+    //     //     "args": [
+    //     //         "-synctex=1",
+    //     //         "-interaction=nonstopmode",
+    //     //         "-file-line-error",
+    //     //         "-pdf",
+    //     //         "%DOCFILE%"
+    //     //     ]
+    //     // },
+    //     {
+    //         "name": "pdflatex",
+    //         "command": "pdflatex",
+    //         "args": [
+    //             "-synctex=1",
+    //             "-interaction=nonstopmode",
+    //             "-file-line-error",
+    //             "%DOCFILE%"
+    //         ]
+    //     },
+    //     {
+    //         "name": "bibtex",
+    //         "command": "bibtex",
+    //         "args": [
+    //             "%DOCFILE%"
+    //         ]
+    //     }
+    // ],
+
+    // "latex-workshop.latex.recipes": [
+    //     // {
+    //     //           "name": "texify",  //放在最前面为默认编译方案, 适用于MikTex
+    //     //           "tools": [
+    //     //             "texify"
+    //     //           ]
+    //     //         },
+    //     // {
+    //     //     "name": "xelatex",
+    //     //     "tools": [
+    //     //         "xelatex"
+    //     //     ],
+    //     // },
+    //     {
+    //         "name": "pdflatex",
+    //         "tools": [
+    //             "pdflatex"
+    //         ]
+    //     },
+    //     // {
+    //     //     "name": "xe->bib->xe->xe",
+    //     //     "tools": [
+    //     //         "xelatex",
+    //     //         "bibtex",
+    //     //         "xelatex",
+    //     //         "xelatex"
+    //     //     ]
+    //     // },
+    //     {
+    //         "name": "pdf->bib->pdf->pdf",
+    //         "tools": [
+    //             "pdflatex",
+    //             "bibtex",
+    //             "pdflatex",
+    //             "pdflatex"
+    //         ]
+    //     }
+    // ],
+
+    // "latex-workshop.view.pdf.viewer": "external",
+
+    // "latex-workshop.view.pdf.external.viewer.command": "C:/.../SumatraPDF.exe",
+    // "latex-workshop.view.pdf.external.viewer.args": [
+    //     "-forward-search",
+    //     "%TEX%",
+    //     "%LINE%",
+    //     "-reuse-instance",
+    //     "-inverse-search",
+    //     "\"C:/.../Microsoft VS Code/Code.exe\" \"C:/.../Microsoft VS Code/resources/app/out/cli.js\" -gr \"%f\":\"%l\"",
+    //     "%PDF%"
+    // ],
+
+    //================== Old Tex Setting ========================
+    "latex-workshop.latex.recipes": [
+        {
+          "name": "texify",  //放在最前面为默认编译方案, 适用于MikTex
+          "tools": [
+            "texify"
+          ]
+        },
+        {
+            "name": "xelatex",
+            "tools": [
+                "xelatex"
+            ]
+        },
+        {
+            "name": "xe->bib->xe->xe",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        }
+      ],
+      
+      "latex-workshop.latex.tools": [
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+          "name": "texify",
+          "command": "texify",
+          "args": [
+            "--synctex",
+            "--pdf",
+            "--tex-option=\"-interaction=nonstopmode\"",
+            "--tex-option=\"-file-line-error\"",
+            "%DOC%.tex"
+          ]
+        },
+        {
+            // 编译工具和命令
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+       
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+      ], 
+    //=========================================================
+    
+  
+    "workbench.activityBar.visible": true,
+    
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
+    "editor.renderControlCharacters": false,
+    "editor.renderWhitespace": "all",
+    "window.zoomLevel": 2,
+    "python.analysis.cacheFolderPath": "E:\\\\anaconda\\\\python.exe",
+    "pyqt-integration.qtdesigner.path": "E:\\\\anaconda\\\\Lib\\\\site-packages\\\\pyqt5_tools\\\\Qt\\\\bin\\\\designer.exe",
+    "java.home": "E:\\Java\\jdk1.8.0_251",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false,
+    "C_Cpp.default.defines": [],
+    "explorer.confirmDelete": false,
+    "workbench.colorTheme": "Visual Studio Dark",
+    
+    "vim.useSystemClipboard": true,
+    "vim.surround":false,
+    "vim.sneak": true,
+    "vim.sneakUseIgnorecaseAndSmartcase": true,
+    // "vim.useCtrlKeys":true,
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-b>": false,
+        "<C-c>": false,
+        // "<C-d>": false,
+        // "<C-e>": false,
+        "<C-f>": false,
+        // "<C-g>": false,
+        // "<C-h>": false,
+        // "<C-i>": false,
+        // "<C-j>": false,
+        // "<C-k>": false,
+        // "<C-l>": false,
+        // "<C-m>": false,
+        // "<C-n>": false,
+        // "<C-o>": false,
+        // "<C-p>": false,
+        // "<C-q>": false,
+        // "<C-r>": false,
+        // "<C-s>": false,
+        // "<C-t>": false,
+        "<C-u>": false,
+        "<C-v>": false,
+        // "<C-w>": false,
+        "<C-x>": false,
+        // "<C-y>": false,
+        "<C-z>": false
+    },
+    "vim.insertModeKeyBindings": [
+        {
+        "before": ["j", "k"],        
+        "after": [ "<Esc>"]        
+        },
+
+        /* {
+        "before": ["j", "k"],        
+        "after": [ "<Esc>"]        
+        } */
+    ],
+
+    "vim.commandLineModeKeyBindings": [
+
+
+    
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["CR"],
+            "after": ["o", "<Esc>"]
+          },
+        //   <space>
+        {
+            "before": ["<space>"],
+            "after": ["a", " ", "<Esc>"]
+          },
+          {
+              "before": ["<BS>"],
+              "after": ["a", "<BS>", "<Esc>"]
+            },
+          {
+              "before": ["Y"],
+              "after": ["j", "0", "i", "<BS>", "<space>", "<Esc>"]
+            },
+    ],
+    "python.languageServer": "Microsoft",
+    "vim.commandLineModeKeyBindingsNonRecursive": [
+    
+    ],
+    "editor.codeActionsOnSave": null,
+    "vsintellicode.modelDownloadPath": "",
+    "emmet.extensionsPath": "",
+}
+
+
+
