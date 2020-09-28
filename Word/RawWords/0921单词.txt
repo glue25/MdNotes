@@ -1,7 +1,6 @@
 plow            犁，耕种
 saliency        显著性；特色；凸出
 reason about    推断
-Quadratically   二次地【貌似是数学术语】
 disparity       差异
 spurious        虚假的，谬误的，伪造的
 auxiliary       辅助的，辅助人员
@@ -18,6 +17,17 @@ assertion       断言；主张；认定；声名
 repertoire      全部技能
 pinpoint        针尖；确定；精准定位
 drown           溺死
+peripheral      外部设备，周围的
+firmware        固件
+assessment      评估，判定
+primitive       原始的，原始人，原始事物
+shed            工棚，去除
+strip           带子，夺走，被拿走外皮的
+daemon          守护进程
+bogus           伪造物
+retrieve        找回，取回，恢复
+scalable        可扩展的，可攀登的，可伸缩的
+
 
 
 

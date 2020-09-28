@@ -137,7 +137,7 @@ D:\PAPER\看到的比较好的文章\The Evolution of Android Malware and Androi
 D:\PAPER\看到的比较好的文章\VMAttack__Deobfuscating Virtualization-Based Packed Binaries.pdf, tg
 D:\PAPER\看到的比较好的文章\（有点老）A Framework for Call Graph Construction Algorithms.pdf, tg
 D:\PAPER\看到的比较好的文章\（有点老）Interprocedural Data Flow Testing.pdf, tg
-D:\PAPER\腾讯\All You Ever Wanted to Know About x86x64 Binary Disassembly But Were Afraid to Ask.pdf, tg
+D:\PAPER\腾讯\An Empirical Study on ARM Disassembly Tools.md, new copy
 D:\PAPER\腾讯\An Empirical Study on ARM Disassembly Tools.pdf, tg
 D:\PAPER\腾讯\Binary Rewriting without Control Flow Recovery.pdf, tg
 D:\PAPER\腾讯\BinRec_ Dynamic Binary Lifting and Recompilation.md, tg
@@ -153,6 +153,7 @@ D:\PAPER\腾讯\Neutaint_ Efficient Dynamic Taint Analysis with Neural Networks.
 D:\PAPER\腾讯\One Engine To Serve 'em All_ Inferring Taint Rules Without Architectural Semantics.pdf, tg
 D:\PAPER\腾讯\Probabilistic Disassembly.pdf, tg
 D:\PAPER\腾讯\Software Vulnerability Detection Using Deep Neural Networks A Survey.pdf, tg
+D:\PAPER\腾讯\The Industrial Age of Hacking.md, tg
 D:\PAPER\腾讯\The Industrial Age of Hacking.pdf, tg
 D:\PAPER\腾讯\Towards Formalizing the x86-64 Instruction Decoder in K.pdf, tg
 D:\PAPER\腾讯\0903任务\B2R2_ Building an Efficient Front-End for Binary Analysis.md, tg
@@ -195,6 +196,7 @@ D:\PAPER\腾讯\2020-09\Neutaint_ Efficient Dynamic Taint Analysis with Neural N
 D:\PAPER\腾讯\2020-09\One Engine To Serve 'em All_ Inferring Taint Rules Without Architectural Semantics.pdf, tg
 D:\PAPER\腾讯\2020-09\Probabilistic Disassembly.pdf, tg
 D:\PAPER\腾讯\2020-09\Towards Formalizing the x86-64 Instruction Decoder in K.pdf, tg
+D:\PAPER\腾讯\An Empirical Study on ARM Disassembly Tools.assets\image-20200928170120563.png, tg
 D:\PAPER\腾讯\BinRec_ Dynamic Binary Lifting and Recompilation.assets\image-20200916033031092.png, tg
 D:\PAPER\腾讯\Datalog Disassembly.assets\image-20200915153818771.png, tg
 D:\PAPER\腾讯\Datalog Disassembly.assets\image-20200915153842287.png, tg
@@ -313,6 +315,7 @@ C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-
 C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-09\3395363.3397370.pdf, tg
 C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-09\3395363.3397377.pdf, tg
 C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-09\60168ee5a08d110f673238a5e31b5b40_t.gif, tg
+C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-09\6a06e6bbe50648efc1d704f22f0580f4_t.gif, tg
 C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-09\aaai.pdf, tg
 C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-09\ASE19Cova.pdf, tg
 C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-09\boyan hall 生存攻略.pdf, tg
