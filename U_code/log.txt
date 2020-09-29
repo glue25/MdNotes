@@ -137,7 +137,7 @@ D:\PAPER\看到的比较好的文章\The Evolution of Android Malware and Androi
 D:\PAPER\看到的比较好的文章\VMAttack__Deobfuscating Virtualization-Based Packed Binaries.pdf, tg
 D:\PAPER\看到的比较好的文章\（有点老）A Framework for Call Graph Construction Algorithms.pdf, tg
 D:\PAPER\看到的比较好的文章\（有点老）Interprocedural Data Flow Testing.pdf, tg
-D:\PAPER\腾讯\An Empirical Study on ARM Disassembly Tools.md, new copy
+D:\PAPER\腾讯\An Empirical Study on ARM Disassembly Tools.md, tg
 D:\PAPER\腾讯\An Empirical Study on ARM Disassembly Tools.pdf, tg
 D:\PAPER\腾讯\Binary Rewriting without Control Flow Recovery.pdf, tg
 D:\PAPER\腾讯\BinRec_ Dynamic Binary Lifting and Recompilation.md, tg

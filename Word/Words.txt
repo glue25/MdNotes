@@ -14,7 +14,7 @@ benevolent        仁慈的，慈善的
 breach            违反                                                   
 budget            预算，价格低的，谨慎花钱                                 
 canonical         经典的，规范的，典型                                    
-circumvent        回避                                                   
+circumvent        回避                                                  
 coagulate         凝结，使凝固，凝块                                      
 compensate        补偿，抵消，抵偿                                        
 complement        补充                                                   
