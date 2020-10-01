@@ -291,7 +291,7 @@ revamp            翻修，改造
 rigorous          谨慎的；彻底的；严格的                                   
 sanity            理智，精神健全                                          
 saturation        饱和，饱和度                                            
-scalar            标量                                                   
+scalar            标量,数量，数量的                                                   
 seamless          无缝的                                                 
 seamlessly        无缝地，无缝的                                          
 self-containment  自我控制                                               
