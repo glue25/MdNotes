@@ -1,31 +1,46 @@
 import re
 import os
 Dirs = {
-    'Dir' : 'D:\\ddisasm\\src',
-    'gtirb' : 'D:\\gtirb',
-    'souffle' : 'D:\\souffle'
+    'ads' : '/home/zhou/DGit/arm_disasssembler_study',
+    'ddisasm' : '/home/zhou/DGit/ddisasm/src',
+    'gtirb' : '/home/zhou/DGit/gtirb'
 }
-Dir = Dirs['Dir']
-Dir_gtirb = 'D:\\gtirb'
-Dir_souffle = 'D:\\souffle'
+# Dir = Dirs['Dir']
+# Dir_gtirb = 'D:/gtirb'
+# Dir_souffle = 'D:/souffle'
+
 
 def get_all_filenames(Dir) : 
     filenames = os.walk(Dir)
     D_Dir_files = {}
     files = []
     for i in filenames:
-        if len(i[1]) != 0 :
-            files.extend([i[0]+'\\'+x for x in i[2]])
-            D_Dir_files[i[0]] = i[2]
+        files.extend([i[0]+'/'+x for x in i[2]])
+        D_Dir_files[i[0]] = i[2]
     # with open('D_Dir_files.txt', 'w', encoding='utf8') as f :
     #     f.write(repr(D_Dir_files))
+    return files
+
+def get_filtered_filenames(files, str_in=None, str_not_in=None):
+    if str_in is None :
+        pass
+    else :
+        files = [x for x in files if str_in in x]
+    if str_not_in is None :
+        pass
+    else :
+        files = [x for x in files if (str_not_in not in x)]
     return files
 #                                                                             ;
 def find_str_from_file(s, filename, show_row=False, useRE=True):
     # print('===',show_row,useRE)
     pattern = re.compile(s)
     with open(filename, 'r', encoding = 'utf8') as f:
-        lines = f.readlines()
+        try:
+            lines = f.readlines()
+        except :
+            lines = []
+        
         Length = len(lines)
         Locations = []
         if show_row :
@@ -71,7 +86,7 @@ def find_str_from_files(s, filenames=None,**file_search_para) :
         with open('D_Dir_files.txt', 'r', encoding = 'utf8') as f : 
             D_Dir_files = eval(f.read())
             for folder in D_Dir_files.keys() : 
-                sub_files = [folder+'\\'+x for x in D_Dir_files[folder]]
+                sub_files = [folder+'/'+x for x in D_Dir_files[folder]]
                 filenames.extend(sub_files)
     else :
         pass
@@ -111,7 +126,7 @@ def find_str_from_folders(s, folders=None, D_Dir_files=None,
         folders = D_Dir_files.keys()
     files = []
     for folder in folders : 
-        sub_files = [x if (('\\' in x) or ('/' in x)) else folder+'\\'+x \
+        sub_files = [x if (('/' in x) or ('/' in x)) else folder+'/'+x \
             for x in D_Dir_files[folder]]
         files.extend(sub_files)
     # print(len(files))
