@@ -1,5 +1,4 @@
 acquisition       取得，购得                                             
-actionable        可起诉的，可执行的                                      
 adequate          足够，合格                                             
 agnostic          不可知论的，不可知论者                                   
 alleviate         减轻；缓解；缓和                                        
@@ -219,7 +218,6 @@ transductive      转换
 trapezoidal       梯形                                                   
 traverse          产国，横渡，横断的，遍历，导线，横切，可横越之处           
 ubiquitous        无处不在的，十分普遍的                                   
-underlying        根本的，潜在的，隐含的，在下面的                          
 unveil            推出；为…揭幕；揭露                                    
 veracity          真实性，诚实                                            
 verbose           冗长的；啰嗦的；                                        
