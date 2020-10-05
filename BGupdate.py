@@ -8,6 +8,7 @@ def job():
     #subprocess.call('git add --all')
     # subprocess.call('git commit -m "daily update"')
     # subprocess.call('git push MDNotes master')
+    os.system('git pull')
     os.system("git add --all")
     os.system('git commit -m "daily update"')
     os.system("git push")
