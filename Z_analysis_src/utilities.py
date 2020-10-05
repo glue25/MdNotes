@@ -2,7 +2,8 @@ import re
 import os
 Dirs = {
     'ads' : '/home/zhou/DGit/arm_disasssembler_study',
-    'ddisasm' : '/home/zhou/DGit/ddisasm/src',
+    'ddisasms' : '/home/zhou/DGit/ddisasm/src',
+    'ddisasm' : '/home/zhou/DGit/ddisasm',
     'gtirb' : '/home/zhou/DGit/gtirb'
 }
 # Dir = Dirs['Dir']

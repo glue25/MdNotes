@@ -5,7 +5,7 @@ from utilities import Dirs
 
 
 
-L_ads = get_all_filenames(Dirs['gtirb'])
+L_ads = get_all_filenames(Dirs['ddisasms'])
 Lt = get_filtered_filenames(L_ads, str_not_in='.git')
 # for x in L_gtirb+L_souffle+L_dd : 
 #     for filename in file_L :
@@ -14,7 +14,8 @@ Lt = get_filtered_filenames(L_ads, str_not_in='.git')
 # for i in Lt :
 #     print(i)
 # print(len(Lt))
-Lr = find_str_from_files('GtirbBuilder', Lt, show_row=False, useRE=True)
+# Lt = [x for x in Lt if (x.endswith('.cmake')or(x.endswith('.txt')))]
+Lr = find_str_from_files('stdlib', Lt, show_row=False, useRE=True)
 for i in Lr :
     print(i)
 print(len(Lr))
