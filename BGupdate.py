@@ -10,7 +10,7 @@ def job():
     # subprocess.call('git push MDNotes master')
     os.system("git add --all")
     os.system('git commit -m "daily update"')
-    os.system("git push MDNotes master")
+    os.system("git push")
     s = ''.join((datetime.now().strftime("%Y-%m-%d %H:%M:%S"),'--Updated!'))
     print(s)
 
