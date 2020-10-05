@@ -88,7 +88,7 @@
 
 13. 创建远程库
 
-    在GitHub上直接创建
+    在GitHub网站上直接创建
 
 14. 关联远程库
 
@@ -96,7 +96,7 @@
 
     网站上解释：
 
-    添加后，远程库的名字就是`origin`，这是Git默认的叫法，也可以改成别的，但是`origin`这个名字一看就知道是远程库。（<u>我猜是不是这就是本地眼中远程的名字，而GitHub上创建时用的名字没那么重要</u>）
+    添加后，远程库的名字就是`origin`，这是Git默认的叫法，也可以改成别的，但是`origin`这个名字一看就知道是远程库。
 
 15. 把本地库内容推到远程
 
@@ -109,11 +109,87 @@
     在此之后，本地提交可以用如下命令。
     `git push origin master`
 
-16. clone的命令
+16. clone的命令（下载到终端，并建立独立的文件夹）
 
      `git clone git@github.com:githubname/name.git`
 
 17. 
+
+# 分支管理
+1. 创建并切换到`dev`分支
+
+    方法1：
+
+    `$ git checkout -b dev`
+
+    方法2：
+
+    `$ git branch dev`
+`$ git checkout dev`
+    
+
+    方法3：
+  
+    `$ git switch -c dev`
+
+
+2. 查看分支
+
+    `$ git branch`
+
+    会列举所有分支，当前的分支前会有\*
+
+
+  3. 切换分支
+
+     方法1：
+
+     如果想在某个分支工作，像上面那样用`git checkout`切换就行
+
+     方法2：
+
+     `$ git switch master`
+
+
+  4. 合并分支
+
+     例如，把`dev`分支的工作成果合并到`master`分支上：
+
+     `$ git merge dev`
+
+  5. 删除分支
+
+     `git branch -d dev`
+
+  6. 
+
+# 解决冲突
+
+1. 显示冲突的文件
+
+   `git status`
+
+2. 查看分支合并情况
+
+   `git log --graph --pretty=oneline --abbrev-commit`
+
+3. 
+
+# 分支管理策略
+
+如果禁用`Fast forward`模式，Git就会在merge时生成一个新的commit，使用的参数是`--no-ff`。
+
+![image-20201004204424478](E:%5CMDNotes%5CGit%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0.assets%5Cimage-20201004204424478.png)  
+
+这样不用删dev，某种意义上说可以保存`dev`分支的信息
+
+
+
+<u>平时不应该在`master`上干活，都在`dev`上干活。团队协作的时候大家都向`dev`提交</u>
+
+
+
+
 
 
 

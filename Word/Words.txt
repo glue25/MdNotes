@@ -1,11 +1,9 @@
 acquisition       取得，购得                                             
-actionable        可起诉的，可执行的                                      
 adequate          足够，合格                                             
 agnostic          不可知论的，不可知论者                                   
 alleviate         减轻；缓解；缓和                                        
 apprehensive      担心的，忧虑的                                          
 appropriate       恰当的，拨款，非法占有                                   
-artifact          人工制品                                               
 assailant         攻击者，行凶者，攻击的                                   
 asynchronous      异步的                                                 
 benevolent        仁慈的，慈善的                                          
@@ -43,7 +41,6 @@ deviant           不正常的，偏离轨道的
 deviate           背离，脱离常轨的人                                      
 deviation         偏离，偏差                                             
 diagnose          诊断                                                   
-digest            概要，消化，理解                                        
 discretize        使离散，离散化                                          
 discriminative    有区别的，歧视的                                        
 disjunctive       分离的，反意的                                          
@@ -191,7 +188,6 @@ revamp            翻修，改造
 rigorous          谨慎的；彻底的；严格的                                   
 sanity            理智，精神健全                                          
 saturation        饱和，饱和度                                            
-scalar            标量,数量，数量的                                                   
 self-containment  自我控制                                               
 self-evident      不言而喻的                                             
 semicolon         分号                                                   
@@ -199,7 +195,6 @@ shed              摆脱，去除，脱落，工棚
 showcase          展示，展示场所，橱窗                                    
 side-step         规避                                                   
 sift              筛，筛选                                               
-slack             松弛的（地），萧条的，懒散的，无力地，松弛部分，煤末，怠惰  
 sloppy            马虎的，凌乱的                                          
 snippet           片段                                                   
 spatial           空间的                                                 
@@ -218,14 +213,11 @@ template          模板；样板；
 temporal          时间的                                                 
 tentatively       初步地，尝试性地                                        
 terminology       术语                                                   
-textual           本文的，文章的                                          
 thwart            横放的                                                 
-trail             跟踪，追踪                                             
 transductive      转换                                                   
 trapezoidal       梯形                                                   
 traverse          产国，横渡，横断的，遍历，导线，横切，可横越之处           
 ubiquitous        无处不在的，十分普遍的                                   
-underlying        根本的，潜在的，隐含的，在下面的                          
 unveil            推出；为…揭幕；揭露                                    
 veracity          真实性，诚实                                            
 verbose           冗长的；啰嗦的；                                        
