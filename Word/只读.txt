@@ -2,15 +2,11 @@ acquisition       取得，购得
 adequate          足够，合格                                             
 agnostic          不可知论的，不可知论者                                   
 alleviate         减轻；缓解；缓和                                        
-apprehensive      担心的，忧虑的                                          
 assailant         攻击者，行凶者，攻击的                                   
-asynchronous      异步的                                                 
-benevolent        仁慈的，慈善的                                          
 breach            违反                                                   
 circumvent        回避                                                  
 coagulate         凝结，使凝固，凝块                                      
 compensate        补偿，抵消，抵偿                                        
-complement        补充                                                   
 complementary     互补的，补充的                                          
 compromise        妥协，折中                                             
 conceivable       可能的，可信的，可想到的                                 
@@ -26,9 +22,7 @@ criteria          标准，尺度
 declarative       声明式的，陈述性的                                      
 deduce            推导，推论，演绎，溯源                                   
 deem              认为；当成；相信                                        
-delineate         描绘                                                   
 deliver           交付；发表；兑现；传送                                   
-demographic       人口统计学的                                            
 denominator       分母，共同特性                                          
 deontic           道义，义务                                             
 derivable         可推论出的，可引申出的                                   
@@ -47,9 +41,7 @@ divulge           泄漏
 dormant           潜伏的                                                 
 eigen             特征的，自身的                                          
 elicit            引出，诱出                                             
-encapsulate       压缩；简述；概括                                        
 endeavor          努力                                                   
-endemic           地方病                                                 
 endorse           赞同                                                   
 endow             资助，赋予                                             
 entailment        导出                                                   
@@ -59,7 +51,6 @@ esteem            尊重，认为
 exacerbate        加重，加剧                                             
 exceptional       杰出的，例外的，特殊的                                   
 excerpt           摘录，节选，片段，引用                                   
-explicitly        明确地，清楚地，直接地                                   
 exploratory       探索的，探测的                                          
 extensible        可延长的，可扩展的                                      
 facto             事实上                                                 
@@ -102,7 +93,6 @@ legacy            遗产,已停产的
 legitimate        合法的，正当的，使合法                                   
 lexical           词汇的                                                 
 loophole          空子，漏洞                                             
-macro             巨大的，极厚的                                          
 mandate           授权，要求，强制执行                                    
 margin            边缘，余地，加备注，保证金                               
 marginally        少量地                                                 
@@ -168,7 +158,6 @@ provably          可验证性的
 purification      净化，提纯                                             
 quadratic         平方的，二次项                                          
 quartile          四分位数                                               
-recurrence        再次发生                                               
 redundant         多余的，冗余的                                          
 reiterate         重申，重复说                                            
 relieve           缓和，解救                                             
@@ -189,12 +178,10 @@ side-step         规避
 sift              筛，筛选                                               
 sloppy            马虎的，凌乱的                                          
 snippet           片段                                                   
-spatial           空间的                                                 
 stance            立场，站姿，姿态                                        
 stirring          忙碌的，活跃的                                          
 subtler           精巧的；微妙的；狡猾的；不易察觉的                        
 subvert           破坏，颠覆，使背叛                                      
-superscript       标在上角的，上标                                        
 susceptible       敏感的，易受影响的                                      
 tamper            篡改，干预，干扰，夯实者                                 
 tandem            串联                                                   

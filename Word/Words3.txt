@@ -1,15 +1,12 @@
 acquisition
-actionable
 adequate
 agnostic
 alleviate
 apprehensive
-appropriate
 assailant
 asynchronous
 benevolent
 breach
-canonical
 circumvent
 coagulate
 compensate
@@ -17,7 +14,6 @@ complement
 complementary
 compromise
 conceivable
-concise
 conjecture
 consensus
 conservation
@@ -49,7 +45,6 @@ dissect
 divider
 divulge
 dormant
-drastically
 eigen
 elicit
 encapsulate
@@ -60,7 +55,6 @@ endow
 entailment
 envision
 epilogue
-escalate
 esteem
 exacerbate
 exceptional
@@ -70,14 +64,12 @@ exploratory
 extensible
 facto
 fetch
-forensic
 formalism
 formerly
 formulate
 fragment
 futile
 gadget
-generic
 hinge
 hoax
 imperceptible
@@ -170,7 +162,6 @@ procedure
 proficient
 profound
 prologue
-prominent
 proportion
 prototype
 provably
@@ -196,7 +187,6 @@ shed
 showcase
 side-step
 sift
-slack
 sloppy
 snippet
 spatial
@@ -219,8 +209,6 @@ thwart
 transductive
 trapezoidal
 traverse
-ubiquitous
-underlying
 unveil
 veracity
 verbose
@@ -228,3 +216,33 @@ verdict
 versatile
 vindictive
 violation
+plow
+saliency
+reason about
+disparity
+spurious
+auxiliary
+traversal
+fall through
+mutually
+coherent
+gist
+jot
+referee
+thrust
+acronym
+assertion
+repertoire
+pinpoint
+drown
+peripheral
+firmware
+assessment
+primitive
+shed
+strip
+daemon
+bogus
+retrieve
+scalable
+implication
