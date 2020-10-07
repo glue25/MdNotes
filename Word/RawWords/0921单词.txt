@@ -31,7 +31,8 @@ implication     暗示，含义
 endeavor        努力，尽力争取
 plagiarism      剽窃
 scramble        判断，抢占
-
+analogical      相似的；对比的
+comprehend      理解，领悟
 
 
 
