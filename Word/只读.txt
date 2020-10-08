@@ -19,7 +19,6 @@ contrastive       对比的，对比性的
 convention        习惯，常规，大会                                        
 credentials       资格认证                                               
 criteria          标准，尺度                                             
-declarative       声明式的，陈述性的                                      
 deduce            推导，推论，演绎，溯源                                   
 deem              认为；当成；相信                                        
 deliver           交付；发表；兑现；传送                                   
@@ -32,11 +31,9 @@ deviant           不正常的，偏离轨道的
 deviate           背离，脱离常轨的人                                      
 deviation         偏离，偏差                                             
 diagnose          诊断                                                   
-discretize        使离散，离散化                                          
 discriminative    有区别的，歧视的                                        
 disjunctive       分离的，反意的                                          
 dissect           剖析                                                   
-divider           分隔物                                                 
 divulge           泄漏                                                   
 dormant           潜伏的                                                 
 eigen             特征的，自身的                                          
@@ -56,9 +53,7 @@ extensible        可延长的，可扩展的
 facto             事实上                                                 
 fetch             拿来，获取，相同物                                      
 formalism         形式主义                                               
-formerly          从前地                                                 
 formulate         制定，准备，规划                                        
-fragment          片段，小片，分割                                        
 futile            徒然的，无效的                                            
 gadget            小装置                                                 
 hinge             铰链，合叶                                             
@@ -104,7 +99,6 @@ mischievous       顽皮的，恶意的
 misuse            滥用，虐待                                             
 mitigate          减轻；缓解；平息                                        
 mitigation        缓解                                                   
-model-oriented    面向模型的                                             
 modular           分单元的，模块化的                                      
 modulo            取模                                                   
 monotonic         单调性                                                 
@@ -135,7 +129,6 @@ patch             补丁，修补
 perceptions       感知，看法，感受                                        
 pernicious        有害的，恶性的                                          
 pervasiveness     遍布                                                   
-pessimistic       悲观主义的                                             
 pitfall           困难；隐患；陷阱                                        
 plethora          过多的                                                 
 plurality         众多；大量；多元的                                      
@@ -143,19 +136,16 @@ polymorphism      多态性
 potency           效力，影响力，支配力                                    
 practitioner      实践者，从业者                                          
 predecessor       原有的事物                                             
-premium-rate      保险费                                                 
 presumably        大概；很可能；                                          
 prevail           流行；占优势；战胜                                      
 preventive        预防性的，防备的                                        
 privilege         特权                                                   
 procedure         步骤，手续，手术                                        
 proficient        专家，老手，熟练的                                      
-profound          巨大的，深远的                                          
 prologue          序幕，成为...开端                                    
 proportion        比例，部分，份额，均衡，分摊                             
 prototype         原型，最初态                                            
 provably          可验证性的                                             
-purification      净化，提纯                                             
 quadratic         平方的，二次项                                          
 quartile          四分位数                                               
 redundant         多余的，冗余的                                          
@@ -170,7 +160,6 @@ rigorous          谨慎的；彻底的；严格的
 sanity            理智，精神健全                                          
 saturation        饱和，饱和度                                            
 self-containment  自我控制                                               
-self-evident      不言而喻的                                             
 semicolon         分号                                                   
 shed              摆脱，去除，脱落，工棚                                   
 showcase          展示，展示场所，橱窗                                    
