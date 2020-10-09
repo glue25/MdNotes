@@ -155,7 +155,6 @@ prototype         原型，最初态
 provably          可验证性的                                             
 quadratic         平方的，二次项                                          
 quartile          四分位数                                               
-recurrence        再次发生                                               
 redundant         多余的，冗余的                                          
 reiterate         重申，重复说                                            
 relieve           缓和，解救                                             
