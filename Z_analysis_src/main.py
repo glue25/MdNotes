@@ -5,7 +5,7 @@ from utilities import Dirs
 
 
 
-L_ads = get_all_filenames(Dirs['ddisasms'])
+L_ads = get_all_filenames(Dirs['ddisasm'])
 Lt = get_filtered_filenames(L_ads, str_not_in='.git')
 # for x in L_gtirb+L_souffle+L_dd : 
 #     for filename in file_L :
@@ -15,7 +15,7 @@ Lt = get_filtered_filenames(L_ads, str_not_in='.git')
 #     print(i)
 # print(len(Lt))
 # Lt = [x for x in Lt if (x.endswith('.cmake')or(x.endswith('.txt')))]
-Lr = find_str_from_files('stdlib', Lt, show_row=False, useRE=True)
+Lr = find_str_from_files('/home/zhou/DGit/libehp-master/build/include', Lt, show_row=False, useRE=True)
 for i in Lr :
     print(i)
 print(len(Lr))

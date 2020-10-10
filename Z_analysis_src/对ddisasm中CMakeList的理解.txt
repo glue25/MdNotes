@@ -1,0 +1,77 @@
+                                                                              ;
+1. 主目录下的CMakeLists
+前面一直在配置编译器/系统的信息
+
+130行左右开始使用find_package配置第三方库，如gtirb，ehp。 ehp的搜索看起来更复杂
+这一阶段进行配置的库包括gtirb，gtirb-pprinter，ehp，boost，capstone，LIEF
+
+260行左右有个Google Test，我不知道这个是干什么的，不知道这个啥时候用，是否耗时。
+在google test里面有个add_subdirectory，会不会这个先执行？
+
+305行左右有两个add_subdirectory，add_subdirectory(doc)不知道耗时如何
+
+320行附近开始Package generation with cpack
+这部分大量set语句，1个include语句，应该不耗时
+
+总结：
+如果要缩短编译时间，配置文件不去掉为好，这也花不了多少时间。
+Google Test可能花时间，需要验证
+add_subdirectory(src)是耗时大户
+add_subdirectory(doc)我猜可以删掉
+
+# =================================================================
+                                                                              ;
+2. 主目录/src下的CMakeLists
+约15行前的代码在判断运行平台
+
+约15到约80行在设置datalog
+这里面应该有很多可做的空间
+
+约80-88这部分在选编译器？
+
+约90-185定义了两个给MSVC服务的函数
+
+后面三个语句
+add_subdirectory(gtirb-builder)
+add_subdirectory(gtirb-decoder)
+add_subdirectory(passes)
+passes是上面？能删吗？
+前两个直接删还是要改下？如果能生成库应该就有删的可能，要注意链接的语句写在哪
+
+约200行 souffle_disasm（？？？）
+add_library(disasm_main这行没太看明白
+add_library该指令的主要作用就是将指定的源文件生成链接文件，然后添加到工程中去。
+target_include_directories(disas也没看懂
+
+后面大概是链接操作，改动空间很有限
+
+约239，target_link_libraries，里面有几个库文件是不是可以不用反复编译？
+target_link_libraries(
+  disasm_main
+  gtirb
+  gtirb_pprinter
+  gtirb_builder
+  gtirb_decoder
+  ${Boost_LIBRARIES}
+  ${EXPERIMENTAL_LIB}
+  ${LIBCPP_ABI})
+在这之后应该是正经开始编译ddisasm了
+很多编译设置和链接，估计都改不了
+
+再往后是install相关的了吧
+
+总结：
+修改空间：
+- x64的datalog代码不动，看看能不能复用
+- 90行附近约3个add_subdirectory，看看能不能复用
+- 删掉WIN32和MSVC的相关内容试试？这样可能太激进了，而且只是看着舒服了点，再议
+
+3. 主目录/src/gtirb-builder下的CMakeLists
+LINUX下的话注意前5行应该就够了
+没有输出库的样子，感觉要动手改，生成动态库什么的
+
+
+4. 主目录/src/gtirb-decoder下的CMakeLists
+和上一个相比复杂了，但是不知道编译了没（我猜没有）
+
+

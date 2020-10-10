@@ -1,0 +1,1000 @@
+  114  code
+  115  sudo chown 777 /usr/share/code
+  116  code
+  117  cd ..
+  118  cd App
+  119  ls
+  120  cd Apps
+  121  ls
+  122  cd gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf/
+  123  pwd
+  124  vim ~/.bashrc
+  125  cd ..
+  126  cd gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/
+  127  pwd
+  128  vim ~/.bashrc
+  129  source ~/.bashrc
+  130  arm-linux-gnueabihf-gcc -v
+  131  vim ~/.bashrc
+  132  source ~/.bashrc
+  133  arm-linux-gnueabihf-gcc -v
+  134  cd ..
+  135  vim commands.txt
+  136  cd ..
+  137  cd DGit/
+  138  ls
+  139  python --version
+  140  source ~/.bashrc
+  141  conda activate ads
+  142  python tt.py
+  143  python -v
+  144  code
+  145  conda clean -p
+  146  conda clean -t
+  147  conda clean -y -all
+  148  conda clean -y -a
+  149  conda activate ads
+  150  conda clean -p
+  151  Anaconda
+  152  anaconda
+  153  ls
+  154  cd DGit/
+  155  cd ads
+  156  pwd
+  157  cd DGit/
+  158  ls
+  159  cd arm_disasssembler_study/
+  160  ls
+  161  pwd
+  162  conda activate ads
+  163  cd DGit/
+  164  ls
+  165  cd MdNotes/
+  166  ls
+  167  cd Z_analysis_src/
+  168  ls
+  169  python main.py
+  170  conda remove -n ads2 --all
+  171  cd ..
+  172  df -hl
+  173  df -h
+  174  cd anaconda3/
+  175  ld
+  176  ls
+  177  du -sh *
+  178  cd ..
+  179  du -sh *
+  180  cd DGit/
+  181  du -sh *
+  182  cd arm_disasssembler_study/
+  183  du -sh *
+  184  cd .git
+  185  ls
+  186  du -sh *
+  187  cd objects/
+  188  ls
+  189  cd ..
+  190  git verify-pack -v .git/objects/pack/pack-*.idx | sort -k 3 -n | tail -3
+  191  git rev-list --objects --all | grep be751b8f816f328fa4c07c0d85c007b59bab7896
+  192  git filter-branch --index-filter 'git rm --cached --ignore-unmatch  dataset/android/android-lib/android-lib.z09'
+  193  git filter-branch --index-filter 'git rm --cached --ignore-unmatch  dataset/android/android-lib/android-lib.z09
+  194  git for-each-ref --format='delete %(refname)' refs/original | git update-ref --stdin
+  195  git filter-branch --index-filter 'git rm --cached --ignore-unmatch  dataset/android/android-lib/android-lib.z09
+  196  git for-each-ref --foefs/original | git update-ref --stdin
+  197  cd ..
+  198  cd ..
+  199  python tt.py
+  200  conda activate ads
+  201  python tt.py
+  202  pip install elftools
+  203  python tt.py
+  204  pip install elftools --upgrade
+  205  python tt.py
+  206  pip install elftools --upgrade
+  207  pip install elftools
+  208  pip install pyelftools
+  209  python tt.py
+  210  pip install angr
+  211  python tt.py
+  212  pip install Monitor2
+  213  cd adapter/
+  214  python tt.py
+  215  pip install idaapi
+  216  python tt.py
+  217  pip install idc
+  218  python tt.py
+  219  pip install r2pipe
+  220  python tt.py
+  221  pip install thread
+  222  conda create -n ads2 python=3.5.0
+  223  conda create -n ads2 python=3.5
+  224  conda activate ads2
+  225  conda install thread
+  226  pip install thread
+  227  pip install threading
+  228  conda activate ads
+  229  python tt.py
+  230  ddisasm
+  231  cd ..
+  232  cd DGit/
+  233  cd Md
+  234  cd MdNotes/
+  235  cd Z_analysis_src/
+  236  python main.py
+  237  python getSamples.py 
+  238  pip install shutil
+  239  conda activate ads
+  240  pip install shutil
+  241  python tt.py
+  242  python getSamples.py 
+  243  vim output 
+  244  gcc p1.c
+  245  gcc p2.c
+  246  gcc p4.c
+  247  gcc p1.c -o p1.o
+  248  gcc p2.c -o p2.o
+  249  gcc p3.c -o p3.o
+  250  gcc p4.c -o p4.o
+  251  pi.o
+  252  ./pi.o
+  253  .pi.o
+  254  ./pi.o
+  255  ./p1.o
+  256  ./p2.o
+  257  ./p3.o
+  258  ./p4.o
+  259  cmake --build .
+  260  ls
+  261  cmake --build .
+  262  sudo cmake --build .
+  263  cmake ~/DGit/gtirb
+  264  boost
+  265  find / boost
+  266  find boost /
+  267  pwd
+  268  cmake /home/zhou/DGit/gtirb
+  269  whereis libgtirb.so
+  270  whereis libgtirb
+  271  cd ..
+  272  cd Apps
+  273  ls
+  274  cd boost_1_65_0/
+  275  ./bootstrap.sh --with-libraries=all --with-toolset=gcc
+  276  ./b2 toolset=gcc
+  277  ./b2 install --prefix=/usr
+  278  sudo ./b2 install --prefix=/usr
+  279  ldconfig
+  280  sud0 ldconfig
+  281  sudo ldconfig
+  282  cd dataset/
+  283  ls
+  284  cd android
+  285  ls
+  286  cd android lib
+  287  cd android-lib
+  288  ls
+  289  cd ..
+  290  ls
+  291  cd deamon
+  292  cd daemon
+  293  ls
+  294  cd ..
+  295  ls
+  296  cd openwrt/
+  297  ls
+  298  cd target-arm_arm1176jzf-s+vfp_musl_eabi_bin/
+  299  ls
+  300  cd ..
+  301  cd target-arm_xscale_musl_eabi_bin/
+  302  ls
+  303  cd ..
+  304  cd target-arm_mpcore+vfp_musl_eabi_bin/
+  305  ls
+  306  cd ..
+  307  cd target-arm_cortex-a9+neon_musl_eabi_bin/
+  308  ls
+  309  cd ..
+  310  sudo apt-get install ddisasm
+  311  sudo add-apt-repository ppa:mhier/libboost-latest
+  312  echo "deb [trusted=yes] https://grammatech.github.io/gtirb/pkgs/bionic ./" | sudo tee -a /etc/apt/sources.list.d/gtirb.list
+  313  sudo apt-get update
+  314  sudo apt-get install ddisasm
+  315  ddisasm
+  316  cd ..
+  317  cd DGit/
+  318  ls
+  319  cd arm_disasssembler_study/
+  320  ls
+  321  cd Samples/
+  322  pwd
+  323  ls
+  324  ddisasm --arm target-arm_arm1176jzf-s+vfp_musl_eabi_bin_mtd 
+  325  ddisasm --help
+  326  ddisasm --asm target-arm_arm1176jzf-s+vfp_musl_eabi_bin_mtd 
+  327  ddisasm target-arm_arm1176jzf-s+vfp_musl_eabi_bin_mtd --asm
+  328  ls
+  329  ddisasm target-arm_arm1176jzf-s+vfp_musl_eabi_bin_mtd --asm output
+  330  cd ..
+  331  ls
+  332  cd gtirb
+  333  pwd
+  334  gtirb
+  335  sudo apt-get install software-properties-common
+  336  sudo apt-get install libgtirb gtirb-pprinter
+  337  gtirb
+  338  whereis libgtirb
+  339  libgtirb 
+  340  libgtirb.so
+  341  mkdir build
+  342  cd build 
+  343  cmake
+  344  sudo apt install cmake
+  345  cd ..
+  346  pwd
+  347  cd build/
+  348  cmake /home/zhou/DGit/gtirb
+  349  cmake --build
+  350  cmake --build .
+  351  gtirb-pprinter
+  352  echo "deb [trusted=yes] https://grammatech.github.io/gtirb/pkgs/bionic ./" | sudo tee -a /etc/apt/sources.list.d/gtirb.list
+  353  sudo apt-get update
+  354  sudo apt-get gtirb
+  355  sudo apt-get install gtirb
+  356  sudo apt-get install protobuf-compiler
+  357  sudo apt-get install libboost
+  358  sudo apt-get install libboost-all-dev
+  359  whereis gcc
+  360  readelf
+  361  readelf -a p1.o
+  362  cd ..
+  363  cd dataset/S_Samples/arm64/
+  364  readelf -a p1.o
+  365  ls
+  366  whereis lift
+  367  whereis lift-all
+  368  find lift-all
+  369  whereis libgtirb.so
+  370  gtirb-pprinter
+  371  whereis gtirb-pprinter
+  372  cd /usr/lib
+  373  ls
+  374  cd libgtirb.1.8.7
+  375  cd libgtirb.so.1.8.7
+  376  mv libgtirb.so gtirb
+  377  suduo mv libgtirb.so gtirb.so
+  378  sudo mv libgtirb.so gtirb.so
+  379  rm gtirb.so 
+  380  sudo rm gtirb.so 
+  381  sudo vim /etc/ld.so.conf
+  382  sudo /sbin/ldconfig
+  383  libgtirb
+  384  whereis libgtirb
+  385  cd ..
+  386  ls
+  387  conda activate  ads
+  388  pip install gtirb
+  389  cd MdNotes/
+  390  git push
+  391  git pull
+  392  git push
+  393  git clone git@github.com:erxiaozhou/EN.git
+  394  code 备忘.txt
+  395  cd /usr/bin/
+  396  ls
+  397  find LIFT
+  398  find LIEF
+  399  whereis LIEF
+  400  cd /home/zhou/Apps/LIEF-0.10.1-Linux/
+  401  pwd
+  402  sudo apt-get install libgtirb gtirb-pprinter ddisasm
+  403  whereis libgtirb
+  404  cd /usr/lib/
+  405  ls
+  406  sudo apt-get install libgtirb
+  407  sudo apt-get uninstall libgtirb
+  408  sudo apt-get remove libgtirb
+  409  sudo apt-get install libgtirb gtirb-pprinter ddisasm
+  410  whereis libgtirb
+  411  cd /home/zhou/DGit/
+  412  git clone git@github.com:GrammaTech/gtirb-pprinter.git
+  413  cd gtirb-pprinter/
+  414  pwd
+  415  wps
+  416  cd ..
+  417  cd gtirb
+  418  ls
+  419  cd build
+  420  cmake --build .
+  421  cd ..
+  422  rf -r build
+  423  rm -r build
+  424  rm -f build
+  425  rm -rf build
+  426  mkdir build
+  427  cd build/
+  428  pwd
+  429  cmake /home/zhou/DGit/gtirb
+  430  sudo apt remove boost
+  431  cd /
+  432  cd usr
+  433  ls
+  434  find boost
+  435  whereis boost
+  436  cd bin
+  437  ls
+  438  cd ..
+  439  ls
+  440  cd home
+  441  whereis boost
+  442  cd /usr/include
+  443  ls
+  444  cd boost
+  445  ls
+  446  cd ..
+  447  rm -rf boost
+  448  sudo rm -rf boost
+  449  python tt.py
+  450  readelf
+  451  readelf arm64/p1.o
+  452  readelf -a arm64/p1.o -w t
+  453  readelf -a arm64/p1.o -w t.txt
+  454  readelf
+  455  readelf -a arm64/p1.o --debug-dump
+  456  readelf
+  457  readelf -s arm64/p1.o 
+  458  readelf -s arm64/p1.o @t
+  459  readelf
+  460  readelf -s arm64/p1.o >t
+  461  readelf -s arm64/p1.o >ddisasm
+  462  ddisasm
+  463  ddisasm --help
+  464  ddisasm --help> dhelp
+  465  python tt.py
+  466  cd ..
+  467  cd gtirb
+  468  ls
+  469  cd ..
+  470  ls
+  471  cd arm_disasssembler_study/
+  472  ls
+  473  cd ..
+  474  cd ddisasm/
+  475  ls
+  476  pwd
+  477  cd ..
+  478  cd MdNotes/
+  479  ls
+  480  cd Z_analysis_src/
+  481  ls
+  482  python main.py
+  483  conda activate ads
+  484  python main.py
+  485  cmake
+  486  find Protocol
+  487  cd /
+  488  find Protocol
+  489  find protocol
+  490  where is protocol
+  491  whereis protocol
+  492  sudo apt-get install autoconf automake libtool curl make g++ unzip
+  493  sudo dpkg --configure -a
+  494  sudo apt-get install autoconf automake libtool curl make g++ unzip
+  495  cd DGit/
+  496  ls
+  497  git clone https://github.com/protocolbuffers/protobuf.git
+  498  cd protobuf/
+  499  git submodule update --init --recursive
+  500  ./autogen.sh
+  501  make
+  502  make check
+  503  cd src
+  504  vim test-suite.log
+  505  cd
+  506  ls
+  507  rm -rf dataset/
+  508  cd Apps
+  509  cd protobuf-3.13.0/
+  510  ./configure
+  511  make
+  512  cd Apps
+  513  cd boost_1_68_0/
+  514  ./bootstrap.sh --with-libraries=all --with-toolset=gcc
+  515  sudo ./b2 toolset=gcc
+  516  sudo ./b2 install --prefix=/usr
+  517  ldconfig
+  518  sudo ldconfig
+  519  cd ..
+  520  cd DGit/
+  521  ls
+  522  cd gtirb
+  523  ls
+  524  rm -rf build
+  525  sudo mkdir build
+  526  pwd
+  527  cd build
+  528  cmake /home/zhou/DGit/gtirb
+  529  sudo cmake /home/zhou/DGit/gtirb
+  530  sudo apt-get install autoconf automake libtool curl make g++ unzip
+  531  whereis gtirb-pprinter
+  532  whereis libgtirb.so
+  533  cd /
+  534  find gtirbConfig.cmake
+  535  whereis gtirbConfig.cmake
+  536  whereis gtirb-Config.cmake
+  537  cd DGit/
+  538  cd MdNotes/
+  539  git push
+  540  cd ..
+  541  cd EN
+  542  git push
+  543  git pull
+  544  cd ..
+  545  cd MdNotes/
+  546  git pull
+  547  git add --all
+  548  git commit -m b
+  549  cd Z_analysis_src/
+  550  cd __pycache__/
+  551  ls
+  552  cd ..
+  553  rm -rf __pycache__/
+  554  git add --all
+  555  git commit -m b
+  556  git push
+  557  tr
+  558  cd ..
+  559  history -t
+  560  history >t
+  561  vim t
+  562  whereis protobuf
+  563  cd /usr
+  564  ls
+  565  history 
+  566  ls
+  567  find protobuf
+  568  cd local
+  569  ls
+  570  cd Dgf
+  571  cd DGit/
+  572  cd gtirb
+  573  cd build
+  574  cmake --build
+  575  cmake --build .
+  576  sudo cmake --build .
+  577  cd ..
+  578  rm -rf build
+  579  sudo rm -rf build
+  580  mkdir build
+  581  cd build
+  582  cmake sudo cmake /home/zhou/DGit/gtirb
+  583  whereis Protobuf
+  584  cd ..
+  585  cd protobuf/
+  586  protobuf
+  587  ./configure
+  588  make
+  589  make check
+  590  cd ..
+  591  cd Appfile/
+  592  ls
+  593  cd ,,
+  594  cd ..
+  595  cd Apps
+  596  ls
+  597  cd protobuf-3.0.0/
+  598  ls
+  599  ./configure
+  600  make
+  601  make check
+  602  sudo make install
+  603  sudo ldconfig
+  604  protobuf
+  605  make clean
+  606  make
+  607  make check
+  608  make install
+  609  sudo make install
+  610  vim /etc/profile
+  611  sudo vim /etc/profile
+  612  cd usr
+  613  cd /usr
+  614  ls
+  615  cd local
+  616  ls
+  617  cd ..
+  618  cd lib
+  619  ls
+  620  vim /etc/profile
+  621  sudo vim /etc/profile
+  622  cd ..
+  623  cd bin
+  624  ls
+  625  sudo vim /etc/profile
+  626  cd ..
+  627  cd lib
+  628  cd pkgconfig/
+  629  ls
+  630  sudo vim /etc/profile
+  631  lprotobuf
+  632  echo $LIBRARY_PATH
+  633  ./etc/profile
+  634  sudo ./etc/profile
+  635  sudo /etc/profile
+  636  source /etc/profile
+  637  echo $LIBRARY_PATH
+  638  sudo vim /etc/profile
+  639  sudo source /etc/profile
+  640  sudo . /etc/profile
+  641  . /etc/profile
+  642  cd /etc
+  643  ls
+  644  ls -a
+  645  vim .profile
+  646  source profile
+  647  echo $LIBRARY_PATH
+  648  cd /usr/include
+  649  ls
+  650  find stdlib.h
+  651  cd/home
+  652  cd /home/zhou/
+  653  cd Apps
+  654  ls
+  655  cd protobuf-3.0.0/
+  656  ls
+  657  make install >i.log
+  658  sudo make install >i.log
+  659  cat i.log
+  660  cd ..
+  661  ls
+  662  cd /usr/bin
+  663  find . -maxdepth 1 -newermt "2016-12-06"
+  664  find . -maxdepth 1 -newermt "2020-10-02"
+  665  vim .
+  666  vim ./rotoc
+  667  rm ./protoc
+  668  find . -maxdepth 1 -newermt "2020-10-02"
+  669  rm -f ./protoc
+  670  sudo rm -f ./protoc
+  671  find . -maxdepth 1 -newermt "2020-10-02"
+  672  cd ..
+  673  cd include
+  674  find . -maxdepth 1 -newermt "2020-10-02"
+  675  find . -maxdepth 1 -newermt "2020-10-01"
+  676  ls -t
+  677  ls -l
+  678  ls -lsh
+  679  ls -lrsh
+  680  ls -lt
+  681  ls -lrt
+  682  cd ..
+  683  cd lib
+  684  ls -lrt
+  685  vim tt
+  686  sudo vim tt
+  687  sudo source tt
+  688  source tt
+  689  sudo vim tt
+  690  source tt
+  691  ls -lrt
+  692  vim libprotoc.so -> libprotoc.so.10.0.0
+  693  sudo vim libprotoc.so -> libprotoc.so.10.0.0
+  694  sudo vim libprotoc.so.10.0.0
+  695  ls
+  696  su
+  697  sudo passwd root
+  698  su
+  699  echo CPLUS_INCLUDE_PATH
+  700  whereis libgtirb.so
+  701  vim /etc/profile
+  702  sudo vim /etc/profile
+  703  . /etc/profile
+  704  echo CPLUS_INCLUDE_PATH
+  705  echo $CPLUS_INCLUDE_PATH
+  706  sudo vim /etc/profile
+  707  . /etc/profile
+  708  echo $CPLUS_INCLUDE_PATH
+  709  sudo vim /etc/profile
+  710  cd DGit/
+  711  ls
+  712  cd gtirb
+  713  ls
+  714  rm -rf build
+  715  mkdir build
+  716  cd build
+  717  pwd
+  718  cmake /home/zhou/DGit/gtirb
+  719  cmake --build .
+  720  cmake
+  721  cmake -v
+  722  cmake --version
+  723  cmake -DENABLE_PRECOMPILED_HEADERS=OFF --build .
+  724  ctest
+  725  cd ..
+  726  rm -rf build
+  727  mkdir build
+  728  cd build
+  729  cmake /home/zhou/DGit/gtirb
+  730  cmake -DENABLE_PRECOMPILED_HEADERS=OFF --build .
+  731  ctest
+  732  whereis protobuf-compiler
+  733  vim hw.c
+  734  gcc hw.c 
+  735  gcc -DENABLE_PRECOMPILED_HEADERS=OFF hw.c 
+  736  cd ..
+  737  cd DGit/
+  738  cd ddisasm/
+  739  cmake -D ENABLE_PRECOMPILED_HEADERS=OFF ./ -Bbuild
+  740  cd build
+  741  make
+  742  cd ..
+  743  rm -rf build
+  744  cmake -D ENABLE_PRECOMPILED_HEADERS=OFF -Bbuild ./
+  745  make
+  746  cd build
+  747  python
+  748  python tt.py
+  749  sudo python tt.py
+  750  python tt.py
+  751  python tt.py >cmakelog
+  752  cat /home/zhou/DGit/gtirb/build/gtirbConfig.cmake
+  753  whereis libgtirb.so
+  754  vim /usr/lib/libgtirb.so
+  755  vim /usr/lib/gtirbConfig.cmake 
+  756  sudo vim /usr/lib/gtirbConfig.cmake 
+  757  whereis souffle
+  758  souffle
+  759  echo "deb https://dl.bintray.com/souffle-lang/deb-unstable bionic main" | sudo tee -a /etc/apt/sources.list
+  760  sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 379CE192D401AB61
+  761  sudo apt-get update
+  762  sudo apt-get install souffle
+  763  cd build
+  764  make 
+  765  cd ..
+  766  rm -rf build
+  767  cmake -DENABLE_PRECOMPILED_HEADERS=OFF ./ -Bbuild
+  768  cd build
+  769  cmake help
+  770  cmake --help
+  771  build
+  772  make
+  773  cmake --help
+  774  make
+  775  cd ..
+  776  rm -rf build
+  777  cmake -D ENABLE_PRECOMPILED_HEADERS=OFF ./ -Bbuild
+  778  make
+  779  cmake -DENABLE_PRECOMPILED_HEADERS=OFF
+  780  cd ..
+  781  rm -rf build
+  782  cmake -DENABLE_PRECOMPILED_HEADERS=OFF ./ -Bbuild
+  783  cd build
+  784  make
+  785  cd ..
+  786  rm -rf build
+  787  cmake -D ENABLE_PRECOMPILED_HEADERS=OFF -D CMAKE_NO_SYSTEM_FROM_IMPORTED=ON ./ -Bbuild
+  788  cd build
+  789  make
+  790  cd ..
+  791  rm -rf build
+  792  cmake --help
+  793  python ads
+  794  conda activate ads
+  795  python main.py
+  796  python tt.py
+  797  python main.py
+  798  cmake ./ -Bbuild
+  799  cd build
+  800  make
+  801  make
+  802  sudo find / -name "gcc-base.conf"
+  803  cd /usr/bin/ld
+  804  cd /usr/bin
+  805  ls
+  806  cd ..
+  807  cd lib
+  808  ls
+  809  cd ~/DGit/
+  810  cd ddisasm/
+  811  cmake ./ -Bbuild
+  812  cd build
+  813  make
+  814  cd ..
+  815  cmake -DENABLE_PRECOMPILED_HEADERS=OFF ./ -Bbuild
+  816  cd build
+  817  make
+  818  cd ..
+  819  rm -rf build
+  820  cmake -DENABLE_PRECOMPILED_HEADERS=OFF ./ -Bbuild
+  821  cd build
+  822  make
+  823  make -DENABLE_PRECOMPILED_HEADERS=OFF
+  824  ls
+  825  vim Makefile 
+  826  MAKE
+  827  make
+  828  gcc -DENABLE_PRECOMPILED_HEADERS=OFF
+  829  git clone git@github.com:erxiaozhou/ddisasm.git
+  830  cd ddisasm/
+  831  cmake -DENABLE_PRECOMPILED_HEADERS=OFF  ./ -Bbuild
+  832  cd build
+  833  make
+  834  cd ..
+  835  cmake ./ -Bbuild
+  836  cd build
+  837  make
+  838  su
+  839  python tt.py
+  840  cmake ./ -Bbuild
+  841  cd build
+  842  make
+  843  echo $CPLUS_INCLUDE_PATH
+  844  pwd
+  845  cd usr
+  846  cd include
+  847  ls
+  848  cd /usr
+  849  cd include
+  850  ls
+  851  cd ..
+  852  cd local
+  853  cd include
+  854  ls
+  855  cd ..
+  856  cd lib
+  857  cd gcc
+  858  ls
+  859  cd x86_64-linux-gnu/
+  860  ls
+  861  cd 7.5.0
+  862  ls
+  863  gcc --version
+  864  echo $PATH
+  865  vim 基础.txt
+  866  wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+  867  sudo add-apt-repository 'deb https://typora.io/linux ./'
+  868  sudo apt-get update
+  869  sudo apt-get install typora
+  870  cd ..
+  871  cd src
+  872  ls
+  873  cd learn_gcc/
+  874  cd src/
+  875  gcc hello_world.c 
+  876  ls
+  877  ./a.out
+  878  gcc *.c -o m.out
+  879  gcc *.c *.h -o m.out
+  880  gcc *.c -o m.out 
+  881  ./m.out
+  882  gcc *.c -o m.out 
+  883  ./m.out
+  884  gcc -c *.c
+  885  ls
+  886  rm -f hello_world.o
+  887  ls
+  888  ar rcs libari2.a *.o
+  889  ls
+  890  gcc-c hello_world.c 
+  891  gcc -c hello_world.c 
+  892  ls
+  893  gcc -static main.o libari2.a 
+  894  gcc -static hello_world..o libari2.a 
+  895  gcc -static hello_world.o libari2.a 
+  896  ./a.out 
+  897  gcc -c hello_world.c 
+  898  gcc -static hello_world.o libari2.a 
+  899  ./a.out 
+  900  rm -f a.out 
+  901  rm -f libari2.a 
+  902  gcc -fpic -share add.c sub.c -o libmathz.so
+  903  gcc -fpic -shared add.c sub.c -o libmathz.so
+  904  ls
+  905  rm -f hello_world.o
+  906  gcc hello_world.c -o main.o
+  907  gcc hello_world.c libmathz.so -o main.o
+  908  ./main.o 
+  909  ldd main.o 
+  910  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/home/zhou/dataset/learn_gcc/src
+  911  ./main.o 
+  912  echo $LD_LIBRARY_PATH
+  913  cd /usr/include/capstone
+  914  cd /usr/local/include
+  915  ls
+  916  cd ~/DGit/
+  917  ls
+  918  cd ddisasm/
+  919  ls
+  920  vim CMakeLists.txt 
+  921  cd ..
+  922  cd MdNotes/
+  923  python BGupdate.py 
+  924  pip install apscheduler
+  925  python BGupdate.py 
+  926  vim build_ddisasm_command
+  927  cd DGit/
+  928  cd ddisasm/
+  929  cd build/
+  930  make
+  931  cd ..
+  932  rm -rf build
+  933  cmake ./ -Bbuild
+  934  cd build
+  935  make
+  936  cd ..
+  937  rm -rf build
+  938  cmake ./ -Bbuild
+  939  cd ..
+  940  rm -rf build
+  941  cmake ./ -Bbuild
+  942  cd ddisasm/
+  943  rm -rf build
+  944  cmake ./ -Bbuild
+  945  cd build 
+  946  make
+  947  cd ..
+  948  cmake ./ -Bbuild
+  949  cd ~/DGit/ddisasm/
+  950  cmake ./ -Bbuild
+  951  cd build
+  952  make
+  953  cd /etc/ld.so.conf/
+  954  sudo vim /etc/ld.so.conf
+  955  ldconfig
+  956  sudo ldconfig
+  957  sudo vim /etc/ld.so.conf
+  958  make
+  959  cd ..
+  960  ls
+  961  git clone git@github.com:erxiaozhou/capstone.git
+  962  cd capstone/
+  963  ls
+  964  ./make.sh
+  965  ls
+  966  pwd
+  967  cd ..
+  968  ls
+  969  cd gtirb-pprinter/
+  970  ls
+  971  rm -rf build
+  972  sudo rm -rf build
+  973  ls
+  974  cmake ./ -Bbuild -Dgtirb_DIR=/home/zhou/DGit/gtirb2/build/
+  975  cd build
+  976  make
+  977  ls
+  978  pwd
+  979  sudo apt-get remove souffle
+  980  sudo apt-get install souffle=1.7.0
+  981  sudo apt-get install souffle=1.7.1
+  982  cd /usr/local/souffle/
+  983  ls
+  984  vim ~/.bashrc
+  985  sudo vim ~/.bashrc
+  986  sudo vim /etc/profile
+  987  sudo source /etc/profile
+  988  source /etc/profile
+  989  souffle
+  990  souffle --version
+  991  vim /usr/include/souffle/SouffleInterface.h
+  992  sudo apt-get install autoconf automake bison build-essential clang doxygen flex g++ git libncurses5-dev libtool libsqlite3-dev make mcpp 
+  993  git clone git@github.com:erxiaozhou/souffle.git
+  994  cd souffle
+  995  rm -rf souffle
+  996  git clone git@github.com:souffle-lang/souffle.git
+  997  ls
+  998  cd ..
+  999  rm -rf souffle
+ 1000  ls
+ 1001  cd souffle-1.7.1/
+ 1002  pwd
+ 1003  git clone git@github.com:souffle-lang/souffle.git
+ 1004  ls
+ 1005  sh ./bootstrap
+ 1006  ./configure
+ 1007  ls
+ 1008  vim Makefile
+ 1009  make
+ 1010  cd ..
+ 1011  souffle
+ 1012  cd ..
+ 1013  cd /usr
+ 1014  cd share
+ 1015  ls
+ 1016  cd ~/DGit/souffle-1.7.1/
+ 1017  ls
+ 1018  cd souffle/
+ 1019  ls
+ 1020  cd ..
+ 1021  souffle --version
+ 1022  cd include
+ 1023  ls
+ 1024  souffle --version
+ 1025  cd souffle/
+ 1026  ls
+ 1027  cd ..
+ 1028  ls
+ 1029  vim install-sh
+ 1030  sh ./bootstrap
+ 1031  ./configure --PREFIX=/usr/local/souffle
+ 1032  ./configure --prefix=/usr/local/souffle
+ 1033  make
+ 1034  make install
+ 1035  sudo make install
+ 1036  cd /usr/local/souffle/
+ 1037  ls
+ 1038  cd bin
+ 1039  ls
+ 1040  cd souffle
+ 1041  cd ..
+ 1042  cd share/
+ 1043  ls
+ 1044  cd bash-completion/
+ 1045  ls
+ 1046  cd completions/
+ 1047  ls
+ 1048  cd ..
+ 1049  cd man
+ 1050  ls
+ 1051  cd man1/
+ 1052  ls
+ 1053  python main.py
+ 1054  where is gtirbConfig.cmake
+ 1055  whereis gtirbConfig.cmake
+ 1056  whereis libgtirb,so
+ 1057  whereis libgtirb.so
+ 1058  python tt.py
+ 1059  history >tt
+ 1060  python tt.py
+ 1061  python tt2.py
+ 1062  python tt.py
+ 1063  cmake . -Bbuild
+ 1064  cd build
+ 1065  cmake --build .
+ 1066  ls
+ 1067  cd ..
+ 1068  ls
+ 1069  cmake . -Bbuild
+ 1070  cd build
+ 1071  cmake --build .
+ 1072  python main.py
+ 1073  cmake --build .
+ 1074  sudo cmake --build .
+ 1075  whereis libehp.so
+ 1076  cd lib
+ 1077  ls
+ 1078  vim /etc/profile
+ 1079  sudo vim /etc/profile
+ 1080  echo $CPLUS_INCLUDE_PATH
+ 1081  echo $C_INCLUDE_PATH
+ 1082  echo $PATH
+ 1083  echo $CPLUS_INCLUDE_PATH
+ 1084  source /etc/profile
+ 1085  echo $CPLUS_INCLUDE_PATH
+ 1086  pwd
+ 1087  cd lib
+ 1088  ls
+ 1089  pwd
+ 1090  cd ..
+ 1091  cd build
+ 1092  ls
+ 1093  cd include
+ 1094  ls
+ 1095  sudo /etc/profile
+ 1096  sudo vim  /etc/profile
+ 1097  python tt.py
+ 1098  python main.py
+ 1099  cmake --build .
+ 1100  cmake install
+ 1101  cd /usr/lib
+ 1102  ls
+ 1103  cd lib
+ 1104  cp libehp.so /usr/lib
+ 1105  sudo cp libehp.so /usr/lib
+ 1106  cd ..
+ 1107  pwd
+ 1108  git pull
+ 1109  python tt.py > tt
+ 1110  pwd
+ 1111  python tt.py > tt
+ 1112  cd history > tt
+ 1113  history > tt

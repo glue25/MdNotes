@@ -1,18 +1,24 @@
+import os
+from utilities import *
+#LIEF_ROOT
+ts = 'castone'
+for i in os.walk('/home/zhou/ddisasm_m/test_ddisasm/ddisasm') :
+    # if '/home/zhou/DGit/souffle-1.7.1' in i[0] :
+    #     continue
+    for j in i[2] :
 
-def func(c=0,a=3,b=4):
-    print(c)
-    print(a)
-    print(b)
-    print('======')
-def f(s, **s1):
-    print(s1)
-    func(s,s1)
+        file = i[0]+'/'+j
+        if 'CMakeLists' in file:
+            print(file)
+        # if ts in file :
+        #     print(file)
+print('='*80)
 
-d = {'a':1,'b':2}
-d2 = {'a':12}
-d3 = {}
-# func(**d)
-# func(**d2)
-# func(**d3)
-f(100,a=3,b=4)
+for i in os.walk('/home/zhou/ddisasm_m/test_ddisasm/cmakelists') :
+    # if '/home/zhou/DGit/souffle-1.7.1' in i[0] :
+    #     continue
+    for j in i[2] :
 
+        file = i[0]+'/'+j
+        # if 'CMakeLists' in file:
+        print(file)

@@ -1,0 +1,19 @@
+Registration.h里的registerAuxDataTypes有什么用？数据怎么传的？
+
+
+Registration.h里的registerDatalogLoaders有什么用？数据怎么传的？
+
+
+# ================================================================================================
+using 可以实现typedef的功能，给类型重新命名
+
+
+
+
+
+
+
+
+
+
+
