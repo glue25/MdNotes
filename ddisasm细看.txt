@@ -6,12 +6,21 @@ Registration.h里的registerDatalogLoaders有什么用？数据怎么传的？
 
 # ================================================================================================
 using 可以实现typedef的功能，给类型重新命名
+cpp中 若一个struct只供本类使用，那么可以将struct直接定义在类内部
 
-
-
-
-
-
+在下面这行代码二进制输入与datalog开始交汇
+std::optional<DatalogProgram> Souffle = DatalogProgram::load(Module);
+load定义如下
+std::optional<DatalogProgram> DatalogProgram::load(const gtirb::Module &Module)
+{
+    auto Target = std::make_tuple(Module.getFileFormat(), Module.getISA());
+    auto Loader = loaders().at(Target)();
+    return Loader.load(Module);
+}
+问题在于Module.getFileFormat(), Module.getISA()能不能识别出格式是不是ARM64
+应该是可以的，因为看到Module.hpp中有FileFormat与ISA的枚举类型
+loaders()里面返回了我之前看不懂的语句里定义的static的Loaders，
+至于为什么不一开始用赋值语句定义？大概是保持gtirb-builder的灵活性，避免过深层次是硬编码，我觉得是个很好的思路，值得以后借鉴
 
 
 
