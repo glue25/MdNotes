@@ -5,7 +5,6 @@ alleviate
 apprehensive
 assailant
 asynchronous
-benevolent
 breach
 circumvent
 coagulate
@@ -38,11 +37,9 @@ deviant
 deviate
 deviation
 diagnose
-discretize
 discriminative
 disjunctive
 dissect
-divider
 divulge
 dormant
 eigen
@@ -65,9 +62,7 @@ extensible
 facto
 fetch
 formalism
-formerly
 formulate
-fragment
 futile
 gadget
 hinge
@@ -83,7 +78,6 @@ incorporate
 indicative
 indice
 indispensable
-inspect
 intensive
 intention
 intercept
@@ -97,12 +91,10 @@ intuition
 intuitively
 investigate
 latent
-leakage
 legacy
 legitimate
 lexical
 loophole
-macro
 mandate
 margin
 marginally
@@ -114,7 +106,6 @@ mischievous
 misuse
 mitigate
 mitigation
-model-oriented
 modular
 modulo
 monotonic
@@ -153,22 +144,17 @@ polymorphism
 potency
 practitioner
 predecessor
-premium-rate
 presumably
-prevail
 preventive
 privilege
 procedure
 proficient
-profound
 prologue
 proportion
 prototype
 provably
-purification
 quadratic
 quartile
-recurrence
 redundant
 reiterate
 relieve
@@ -209,7 +195,6 @@ thwart
 transductive
 trapezoidal
 traverse
-unveil
 veracity
 verbose
 verdict
@@ -223,13 +208,11 @@ disparity
 spurious
 auxiliary
 traversal
-fall through
 mutually
 coherent
 gist
 jot
 referee
-thrust
 acronym
 assertion
 repertoire
@@ -244,5 +227,4 @@ strip
 daemon
 bogus
 retrieve
-scalable
 implication
