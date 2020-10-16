@@ -137,7 +137,6 @@ D:\PAPER\看到的比较好的文章\The Evolution of Android Malware and Androi
 D:\PAPER\看到的比较好的文章\VMAttack__Deobfuscating Virtualization-Based Packed Binaries.pdf, tg
 D:\PAPER\看到的比较好的文章\（有点老）A Framework for Call Graph Construction Algorithms.pdf, tg
 D:\PAPER\看到的比较好的文章\（有点老）Interprocedural Data Flow Testing.pdf, tg
-D:\PAPER\腾讯\1708.06525.pdf, tg
 D:\PAPER\腾讯\An Empirical Study on ARM Disassembly Tools.md, tg
 D:\PAPER\腾讯\An Empirical Study on ARM Disassembly Tools.pdf, tg
 D:\PAPER\腾讯\Binary Rewriting without Control Flow Recovery.pdf, tg
@@ -146,19 +145,28 @@ D:\PAPER\腾讯\BinRec_ Dynamic Binary Lifting and Recompilation.pdf, tg
 D:\PAPER\腾讯\CRYLOGGER_ Detecting Crypto Misuses Dynamically.pdf, tg
 D:\PAPER\腾讯\Datalog Disassembly.md, tg
 D:\PAPER\腾讯\Datalog Disassembly.pdf, tg
+D:\PAPER\腾讯\Finding Cracks in Shields_ On the Security of Control Flow Integrity Mechanisms.pdf, tg
 D:\PAPER\腾讯\Finding Cracks in Shields_On the Security of Control Flow Integrity Mechanisms.pdf, tg
+D:\PAPER\腾讯\Fuzzing_ A Survey.pdf, tg
 D:\PAPER\腾讯\IDAPro for IoT Malware analysis.pdf, tg
 D:\PAPER\腾讯\Java decompiler diversity and its application to meta-decompilation.pdf, tg
+D:\PAPER\腾讯\LinuxProbe-CH23.pdf, tg
+D:\PAPER\腾讯\Neural Machine Translation Inspired Binary Code Similarity Comparison beyond Function Pairs-复制.pdf, tg
+D:\PAPER\腾讯\Neural Machine Translation Inspired Binary Code Similarity Comparison beyond Function Pairs-复制2.pdf, tg
 D:\PAPER\腾讯\Neural Machine Translation Inspired Binary Code Similarity Comparison beyond Function Pairs.md, tg
 D:\PAPER\腾讯\Neural Machine Translation Inspired Binary Code Similarity Comparison beyond Function Pairs.pdf, tg
 D:\PAPER\腾讯\Neutaint_ Efficient Dynamic Taint Analysis with Neural Networks.md, tg
 D:\PAPER\腾讯\Neutaint_ Efficient Dynamic Taint Analysis with Neural Networks.pdf, tg
+D:\PAPER\腾讯\NEUZZ_ Efficient Fuzzing with Neural Program Smoothing.pdf, tg
 D:\PAPER\腾讯\One Engine To Serve 'em All_ Inferring Taint Rules Without Architectural Semantics.pdf, tg
 D:\PAPER\腾讯\Probabilistic Disassembly.pdf, tg
+D:\PAPER\腾讯\Saliency Detection_ A Spectral Residual Approach.pdf, tg
 D:\PAPER\腾讯\Software Vulnerability Detection Using Deep Neural Networks A Survey.pdf, tg
 D:\PAPER\腾讯\The Industrial Age of Hacking.md, tg
 D:\PAPER\腾讯\The Industrial Age of Hacking.pdf, tg
 D:\PAPER\腾讯\Towards Formalizing the x86-64 Instruction Decoder in K.pdf, tg
+D:\PAPER\腾讯\XGNN_ Towards Model-Level Explanations of Graph Neural Networks(自动保).pdf, tg
+D:\PAPER\腾讯\XGNN_ Towards Model-Level Explanations of Graph Neural Networks(自动保存).pdf, tg
 D:\PAPER\腾讯\XGNN_ Towards Model-Level Explanations of Graph Neural Networks.md, tg
 D:\PAPER\腾讯\XGNN_ Towards Model-Level Explanations of Graph Neural Networks.pdf, tg
 D:\PAPER\腾讯\0903任务\B2R2_ Building an Efficient Front-End for Binary Analysis.md, tg
@@ -316,4 +324,12 @@ D:\BOOK2\阿城精选集-阿城.pdf, tg
 D:\BOOK2\高级C_C++编译技术_13780859.pdf, tg
 D:\BOOK2\【PDF】《三体》\[三体1：疯狂年代].刘慈欣.pdf, tg
 D:\BOOK2\【PDF】《三体》\[三体3：死神永生].刘慈欣.pdf, tg
-C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-10\main.pdf, new copy
+C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-10\22ccbe1442bc2e977485c8706d075fc7_t.gif, tg
+C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-10\2739030a4ac12cde11925d8babcdd0bb_t.gif, tg
+C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-10\3e28b58d05c635882473a51766401fa8_t.gif, tg
+C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-10\4aebcf03b98d3d6b5b689625d19d8bfa_t.gif, tg
+C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-10\bfac89010fa542841677fec423ecaac7_t.gif, tg
+C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-10\Byte2Vec.pdf, tg
+C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-10\ed9728298136d58c06ab161a69f8efdb_t.gif, tg
+C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-10\main.pdf, tg
+C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-10\电信学院硕士研究生中期筛选实施细则——2019年12月颁布.rar, tg
