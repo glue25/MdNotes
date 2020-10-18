@@ -23,6 +23,16 @@ loaders()里面返回了我之前看不懂的语句里定义的static的Loaders�
 至于为什么不一开始用赋值语句定义？大概是保持gtirb-builder的灵活性，避免过深层次是硬编码，我觉得是个很好的思路，值得以后借鉴
 
 
+如果反复调用一个只返回static的程序，返回的static会不一样？应该是不会的
 
 
+std::optional<DatalogProgram> DatalogProgram::load(const gtirb::Module &Module)
+{
+    auto Target = std::make_tuple(Module.getFileFormat(), Module.getISA());
+    auto Loader = loaders().at(Target)(); //Loader是被取出的值
+    return Loader.load(Module);
+}
 
+
+# ===================================================
+分析datalog与程序的结合过程
