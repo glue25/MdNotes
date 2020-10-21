@@ -1,0 +1,59 @@
+cyberspace              网络空间
+silver bullet           好主意
+usher                   引座员；引导
+scatter                 撒；四散；驱散；撒播；散落
+sanitize                净化，消毒
+tactic                  策略，战术
+in terms of             依…；从…方面；
+stake                   股份；桩；赌注；用...冒险
+oracle                  预言；先知；
+instantiate             用具体例证说明
+render                  提供；给予；
+pave                    铺设
+succinct                简明的；言简意赅的
+wildcard                通配符
+forecast                预报，预测
+reduction               还原；降低；减少
+paradigm                范例；〈正式〉模型；
+provable                可以证明的；能证实的
+cryptographic           密码；密码的
+primitive               原始的；远古的；原始人；原始作品
+protocol                条约草案；礼仪；外交礼节；协定；加入协定
+flip                    浏览；空翻；迅速翻动；摁开关
+bound to                一定会，必然
+convex                  凸面,凹凸的
+polytope                多胞形；多面体；
+bound                   跳跃，形成边界，限制，约束，很可能会
+morpher                 变形器
+intersection            交叉；相交；十字路口；
+monotonic               单调性；单调的
+brevity                 简洁；短暂；
+summation               总结；概括；综合体
+fallacy                 错误，谬误
+augment                 增加，扩大，填充
+disastrous              极糟糕的；灾难性的
+piecewise               分段地
+partition               划分；隔墙；部分；分割
+solver                  解决者；求解器
+mimicry                 模仿；模仿技巧
+lexical                 词汇的
+intake                  进气，摄入
+cohort                  同伙；支持者；队列
+mitigate                减轻；缓解；平息；镇静
+custom                  自定义；海关；风俗习惯；定做的
+inverse                 反向的,相反的事物
+intrigue                密谋
+
+
+
+
+
+
+
+
+
+
+
+
+
+
