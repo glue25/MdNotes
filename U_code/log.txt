@@ -91,6 +91,20 @@ D:\PAPER\Fingerprinting\Mockingbird Defending Against Deep-Learing-Based Website
 D:\PAPER\Fingerprinting\POSTER_ Adversarial Traces for Website Fingerprinting Defense.pdf, tg
 D:\PAPER\Fingerprinting\Tor网络分析.pdf, tg
 D:\PAPER\Fingerprinting\Website Fingerprinting at Internet Scale.pdf, tg
+D:\PAPER\Graph_SoftwareAE\A framework for validating models of evasion attacks on machine learning（据说是SOTA）.pdf, new copy
+D:\PAPER\Graph_SoftwareAE\Backdoor Attacks to Graph Neural Networks.pdf, new copy
+D:\PAPER\Graph_SoftwareAE\Digital investigation of PDF files_ Unveiling traces of embedded malware（一种攻击算法）.pdf, new copy
+D:\PAPER\Graph_SoftwareAE\Efficient Formal Safety Analysis of Neural Networks（技术，非核心）.pdf, new copy
+D:\PAPER\Graph_SoftwareAE\Evasion and hardening of tree ensemble classifiers（非核心，技术）.pdf, new copy
+D:\PAPER\Graph_SoftwareAE\Formal security analysis of neural networks using symbolic intervals（非重点，技术）.pdf, new copy
+D:\PAPER\Graph_SoftwareAE\Graph Backdoor.pdf, new copy
+D:\PAPER\Graph_SoftwareAE\Intriguing Properties of Adversarial ML Attacks in the Problem Space.pdf, new copy
+D:\PAPER\Graph_SoftwareAE\Looking at the bag is not enough to find the bomb（一种非对抗样本pdf攻击方法）.pdf, new copy
+D:\PAPER\Graph_SoftwareAE\On Training Robust PDF Malware Classifiers.pdf, new copy
+D:\PAPER\Graph_SoftwareAE\PDF Malware相关论文列表.md, new copy
+D:\PAPER\Graph_SoftwareAE\Safe-pdf_ Robust detection of javascript pdf malware using abstract interpretation（据说是SOTA的PDF防御）.pdf, new copy
+D:\PAPER\Graph_SoftwareAE\SoK_ Arms Race in Adversarial Malware Detection.pdf, new copy
+D:\PAPER\Graph_SoftwareAE\Towards Adversarial Malware Detection_ Lessons Learned from PDF-based Attacks（综述）.pdf, new copy
 D:\PAPER\ImageAE\Elastic-Net Attacks to Deep Neural Networks via Adversarial Examples.pdf, tg
 D:\PAPER\Link Prediction&Graph\A!acking Similarity-Based Link Prediction in Social Networks.pdf, tg
 D:\PAPER\Link Prediction&Graph\Adversarial Robustness of Similarity-Based.pdf, tg
@@ -157,6 +171,7 @@ D:\PAPER\腾讯\Neural Machine Translation Inspired Binary Code Similarity Compa
 D:\PAPER\腾讯\Neural Machine Translation Inspired Binary Code Similarity Comparison beyond Function Pairs.pdf, tg
 D:\PAPER\腾讯\Neutaint_ Efficient Dynamic Taint Analysis with Neural Networks.md, tg
 D:\PAPER\腾讯\Neutaint_ Efficient Dynamic Taint Analysis with Neural Networks.pdf, tg
+D:\PAPER\腾讯\NEUZZ_ Efficient Fuzzing with Neural Program Smoothing(自动保存).pdf, new copy
 D:\PAPER\腾讯\NEUZZ_ Efficient Fuzzing with Neural Program Smoothing.pdf, tg
 D:\PAPER\腾讯\One Engine To Serve 'em All_ Inferring Taint Rules Without Architectural Semantics.pdf, tg
 D:\PAPER\腾讯\Probabilistic Disassembly.pdf, tg
@@ -238,10 +253,10 @@ D:\PAPER\腾讯\Neutaint_ Efficient Dynamic Taint Analysis with Neural Networks.
 D:\PAPER\腾讯\Neutaint_ Efficient Dynamic Taint Analysis with Neural Networks.assets\image-20200922160235370.png, tg
 D:\PAPER\腾讯\Neutaint_ Efficient Dynamic Taint Analysis with Neural Networks.assets\image-20200922165935212.png, tg
 D:\PAPER\腾讯\Neutaint_ Efficient Dynamic Taint Analysis with Neural Networks.assets\image-20200923204858742.png, tg
-D:\PAPER\自主调研\哥大某实验室\部分论文概述.md, new copy
-D:\PAPER\自主调研\哥大某实验室\部分论文概述.assets\image-20201016140827084.png, new copy
-D:\PAPER\自主调研\哥大某实验室\部分论文概述.assets\image-20201016154727525.png, new copy
-D:\PAPER\自主调研\哥大某实验室\部分论文概述.assets\image-20201016161356415.png, new copy
+D:\PAPER\自主调研\哥大某实验室\部分论文概述.md, tg
+D:\PAPER\自主调研\哥大某实验室\部分论文概述.assets\image-20201016140827084.png, tg
+D:\PAPER\自主调研\哥大某实验室\部分论文概述.assets\image-20201016154727525.png, tg
+D:\PAPER\自主调研\哥大某实验室\部分论文概述.assets\image-20201016161356415.png, tg
 D:\PAPER\资源性文档\AI+Decompiler_+论文预研.pdf, tg
 D:\PAPER\资源性文档\PAPERS-KEEN.pdf, tg
 D:\PAPER\资源性文档\Usenix Security 技术成果分析推荐（上篇）.pdf, tg
@@ -328,6 +343,8 @@ D:\BOOK2\阿城精选集-阿城.pdf, tg
 D:\BOOK2\高级C_C++编译技术_13780859.pdf, tg
 D:\BOOK2\【PDF】《三体》\[三体1：疯狂年代].刘慈欣.pdf, tg
 D:\BOOK2\【PDF】《三体》\[三体3：死神永生].刘慈欣.pdf, tg
+C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-10\09108283.pdf, new copy
+C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-10\2005.11671.pdf, new copy
 C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-10\22ccbe1442bc2e977485c8706d075fc7_t.gif, tg
 C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-10\2739030a4ac12cde11925d8babcdd0bb_t.gif, tg
 C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-10\3e28b58d05c635882473a51766401fa8_t.gif, tg
