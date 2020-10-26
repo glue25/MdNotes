@@ -19,7 +19,6 @@ def ProcessParas2() :
         SortMode = 'character'
     else :
         SortMode = 'ignore'
-    # print(SortMode)
 
     # get input/output dir
 
