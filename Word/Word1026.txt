@@ -1,6 +1,7 @@
 acquisition        取得，购得                                    
 acronym            缩写词                                        
 adequate           足够，合格                                    
+aerodynamic        空气动力学的                                   
 affix              附上；粘上；词缀                               
 affixing           签署；盖(章)；词缀                           
 agnostic           不可知论的，不可知论者                          
@@ -45,6 +46,7 @@ credentials        资格认证
 criteria           标准，尺度                                    
 cryptographic      密码；密码的                                   
 custom             自定义；海关；风俗习惯；定做的                  
+cyberspace         网络空间                                      
 daemon             守护进程                                      
 de facto           事实上；                                      
 declarative        声明式的，陈述性的                             
@@ -109,6 +111,7 @@ hoax               骗局，戏弄，恶作剧
 imperceptible      感觉不到的                                    
 impetus            动力，促进                                    
 implication        含义，可能，暗示，                             
+implication        暗示，含义                                    
 implicit           隐式的，含蓄的，暗示的，不直接言明的             
 improper           不诚实的；不正当的；不道德的；不合适的           
 in light of        按照，根据，鉴于                               
@@ -211,6 +214,7 @@ practitioner       实践者，从业者
 predecessor        原有的事物                                    
 presumably         大概；很可能；                                 
 preventive         预防性的，防备的                               
+primitive          原始的，原始人，原始事物                        
 primitive          原始的；远古的；原始人；原始作品，原始事物       
 privilege          特权                                          
 procedure          步骤，手续，手术                               
@@ -229,7 +233,7 @@ redundant          多余的，冗余的
 referee            裁判员，裁定，担任裁判                          
 reiterate          重申，重复说                                   
 relieve            缓和，解救                                    
-render             提供；给予                                    
+render             提供；给予；                                   
 repertoire         全部技能                                      
 resemblance        相似性                                        
 residual           残余的                                        
@@ -237,6 +241,7 @@ resilient          有弹性的，有适应力的，可恢复的
 retrieve           找回，取回，恢复                               
 retrofit           改进，翻新                                    
 revamp             翻修，改造                                    
+rigorous           谨慎的；彻底的；严格的                          
 saliency           显著性；特色；凸出                             
 sanitize           净化，消毒                                    
 sanity             理智；明智；精神健全；                          
@@ -250,6 +255,7 @@ shifter            变速箱，移位器，移相器
 showcase           展示，展示场所，橱窗                           
 side-step          规避                                          
 sift               筛，筛选                                      
+silver bullet      好主意                                        
 sloppy             马虎的，凌乱的                                 
 snippet            片段                                          
 solver             解决者；求解器                                 
