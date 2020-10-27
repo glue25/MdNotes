@@ -6,7 +6,6 @@ affixing           签署；盖(章)；词缀
 agnostic           不可知论的，不可知论者                          
 alleviate          减轻；缓解；缓和                               
 apprehensive       担心的，忧虑的                                 
-approximation      近似值；粗略估算；                             
 assailant          攻击者，行凶者，攻击的                          
 assertion          断言；主张；认定；声名                          
 assessment         评估，判定                                    
@@ -51,9 +50,7 @@ declarative        声明式的，陈述性的
 deduce             推导，推论，演绎，溯源                          
 deem               认为；当成；相信                               
 deficiency         缺乏；不足；缺陷；                             
-delineate          描绘                                          
 deliver            交付；发表；兑现；传送                          
-demographic        人口统计学的                                   
 denominator        分母，共同特性                                 
 deontic            道义，义务                                    
 derivable          可推论出的，可引申出的                          
@@ -247,7 +244,6 @@ self-evident       不言而喻的
 semicolon          分号                                          
 shed               摆脱，去除，脱落，工棚                          
 shifter            变速箱，移位器，移相器                          
-showcase           展示，展示场所，橱窗                           
 side-step          规避                                          
 sift               筛，筛选                                      
 sloppy             马虎的，凌乱的                                 
