@@ -1,6 +1,7 @@
 stall               停顿；抛锚；摊位；牲畜棚
 expert              专家，熟练的，内行的
-
+reckon              认为，估计，估算，数
+departure           离开；出发
 
 
 
