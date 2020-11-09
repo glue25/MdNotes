@@ -1,13 +1,11 @@
 acquisition        取得，购得                                    
 acronym            缩写词                                        
 adequate           足够，合格                                    
-aerodynamic        空气动力学的                                   
 affix              附上；粘上；词缀                               
 affixing           签署；盖(章)；词缀                           
 agnostic           不可知论的，不可知论者                          
 alleviate          减轻；缓解；缓和                               
 apprehensive       担心的，忧虑的                                 
-approximation      近似值；粗略估算；                             
 assailant          攻击者，行凶者，攻击的                          
 assertion          断言；主张；认定；声名                          
 assessment         评估，判定                                    
@@ -47,8 +45,6 @@ criteria           标准，尺度
 cryptographic      密码；密码的                                   
 custom             自定义；海关；风俗习惯；定做的                  
 cyberspace         网络空间                                      
-daemon             守护进程                                      
-de facto           事实上；                                      
 declarative        声明式的，陈述性的                             
 deduce             推导，推论，演绎，溯源                          
 deem               认为；当成；相信                               
@@ -111,7 +107,6 @@ hoax               骗局，戏弄，恶作剧
 imperceptible      感觉不到的                                    
 impetus            动力，促进                                    
 implication        含义，可能，暗示，                             
-implication        暗示，含义                                    
 implicit           隐式的，含蓄的，暗示的，不直接言明的             
 improper           不诚实的；不正当的；不道德的；不合适的           
 in light of        按照，根据，鉴于                               
