@@ -3,16 +3,13 @@ acronym
 adequate
 affix
 affixing
-agnostic
 alleviate
 apprehensive
 assailant
 assertion
 assessment
-asynchronous
 augment
 auxiliary
-barrel
 bogus
 boot up
 bound
@@ -25,11 +22,9 @@ coagulate
 coherent
 cohort
 compensate
-complement
 complementary
 compromise
 conceivable
-condense
 conjecture
 consensus
 conservation
@@ -42,7 +37,6 @@ convexity
 credentials
 criteria
 cryptographic
-custom
 declarative
 deduce
 deem
@@ -56,7 +50,6 @@ deter
 deviant
 deviate
 deviation
-diagnose
 disastrous
 discriminative
 disjunctive
@@ -64,7 +57,6 @@ disparity
 dissect
 divulge
 dormant
-drown
 eigen
 elaborate
 elicit
@@ -84,17 +76,13 @@ excerpt
 explicit
 exploratory
 extensible
-facto
 fallacy
 fetch
-firmware
 flip
 formalism
 formulate
 futile
 gadget
-get stuck in
-gist
 hinge
 hoax
 imperceptible
@@ -112,7 +100,6 @@ indicator
 indice
 indispensable
 instantiate
-intake
 intensive
 intention
 intercept
@@ -125,9 +112,7 @@ intimidation
 intricate
 intrigue
 intrusion
-intuition
 intuitively
-investigate
 jot
 legacy
 legitimate
@@ -164,10 +149,8 @@ nonnegligible
 nontrivial
 notorious
 noxious
-obscure
 obscurity
 opaque
-oracle
 orthogonal
 overhaul
 paradigm
@@ -192,7 +175,6 @@ practitioner
 predecessor
 presumably
 preventive
-primitive
 privilege
 procedure
 proficient
@@ -231,8 +213,6 @@ side-step
 sift
 sloppy
 snippet
-solver
-spatial
 spectacular
 spurious
 stake
@@ -243,7 +223,6 @@ subtler
 subvert
 succinct
 summation
-superscript
 susceptible
 tactic
 tamper

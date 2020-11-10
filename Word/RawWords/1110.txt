@@ -1,0 +1,8 @@
+directive               指示，指令，指导，伪指令
+dedicate                致力于，献身，把...奉献给
+intact                  完整的；完好无损的
+luxury                  奢华的，奢侈品
+relocatable             重新定址的
+conform                 顺从，使一致，遵从
+at will                 任意地，随意地
+

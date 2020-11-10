@@ -13,7 +13,6 @@ auxiliary          辅助的，辅助人员
 bogus              伪造物                                       
 boot up            启动                                         
 bound              跳跃，形成边界，限制，约束，很可能会               
-bound to           一定会，必然                                   
 bracket            支架；方括号；等级；用括弧括上；把…等同考虑         
 breach             违反                                          
 brevity            简洁；短暂；                                   
@@ -190,7 +189,6 @@ reason about       推断
 reduction          还原；降低；减少                               
 redundant          多余的，冗余的                                 
 referee            裁判员，裁定，担任裁判                          
-reiterate          重申，重复说                                   
 relieve            缓和，解救                                    
 render             提供；给予                                    
 repertoire         全部技能                                      
@@ -215,7 +213,6 @@ sloppy             马虎的，凌乱的
 snippet            片段                                          
 spectacular        壮观的；壮丽的                                 
 spurious           虚假的，谬误的，伪造的                          
-stake              股份；桩；赌注；用...冒险                    
 stance             立场，站姿，姿态                               
 stirring           忙碌的，活跃的                                 
 strip              带子，夺走，被拿走外皮的                        
@@ -231,7 +228,6 @@ tantalizingly      令人着急地，诱人地
 taxonomy           分类学，分类法                                 
 tedious            冗长的；啰嗦的                                 
 template           模板；样板；                                   
-temporal           时间的                                        
 tentatively        初步地，尝试性地                               
 terminology        术语                                          
 thwart             横放的                                        
@@ -245,4 +241,3 @@ verbose            冗长的；啰嗦的；
 verdict            判决，结论                                    
 versatile          多才多艺的，多用途的，通用的                    
 vindictive         报复性的                                      
-wildcard           通配符                                        
