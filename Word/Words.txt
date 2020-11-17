@@ -4,17 +4,9 @@ adequate           足够，合格
 affix              附上；粘上；词缀                               
 affixing           签署；盖(章)；词缀                             
 alleviate          减轻；缓解；缓和                               
-apprehensive       担心的，忧虑的                                 
 assailant          攻击者，行凶者，攻击的                          
 assertion          断言；主张；认定；声名                          
-assessment         评估，判定                                    
-augment            增加，扩大，填充                               
-auxiliary          辅助的，辅助人员                               
 bogus              伪造物                                       
-boot up            启动                                         
-bound              跳跃，形成边界，限制，约束，很可能会               
-bracket            支架；方括号；等级；用括弧括上；把…等同考虑         
-breach             违反                                          
 brevity            简洁；短暂；                                   
 circumvent         回避                                          
 coagulate          凝结，使凝固，凝块                             
@@ -24,18 +16,13 @@ compensate         补偿，抵消，抵偿
 complementary      互补的，补充的                                 
 compromise         妥协，折中                                    
 conceivable        可能的，可信的，可想到的                        
-conjecture         猜想                                          
 consensus          一致，共识                                    
-conservation       保护，守恒                                    
 conservative       保守的，保守的人                               
 contingency        偶然性，意外事故                               
 contrastive        对比的，对比性的                               
 convention         习惯，常规，大会                               
-convex             凸面,凹凸的                                   
-convexity          凸度                                          
 credentials        资格认证                                      
 criteria           标准，尺度                                    
-cryptographic      密码；密码的                                   
 declarative        声明式的，陈述性的                             
 deduce             推导，推论，演绎，溯源                          
 deem               认为；当成；相信                               
@@ -45,7 +32,6 @@ denominator        分母，共同特性
 deontic            道义，义务                                    
 derivable          可推论出的，可引申出的                          
 derivative         导数，派生的，衍生物                           
-deter              阻止                                          
 deviant            不正常的，偏离轨道的                           
 deviate            背离，脱离常轨的人                             
 deviation          偏离，偏差                                    
@@ -61,7 +47,6 @@ elaborate          精心制作；详尽阐述；复杂的
 elicit             引出，诱出                                    
 encapsulate        压缩；简述；概括                               
 endeavor           努力                                          
-endemic            地方病                                        
 endorse            赞同                                          
 endow              资助，赋予                                    
 entailment         导出                                          
@@ -88,12 +73,9 @@ imperceptible      感觉不到的
 impetus            动力，促进                                    
 implication        含义，可能，暗示，                             
 implicit           隐式的，含蓄的，暗示的，不直接言明的             
-improper           不诚实的；不正当的；不道德的；不合适的           
 in light of        按照，根据，鉴于                               
-in terms of        从...方面                                   
 incentive          激励，刺激                                    
 incorporate        包括，结合                                    
-increment          增量；定期的加薪；增加                          
 indicative         表明，暗示【adj】                           
 indicator          指示器；标志；指针；                           
 indice             质量指标                                      
@@ -106,12 +88,10 @@ interchangeably    互换，互换地
 interpretation     解释，说明，演绎                               
 intersection       交叉；相交；十字路口；                          
 intervention       介入，干涉                                    
-intimidate         威胁，恐吓                                    
 intimidation       恐吓                                          
 intricate          复杂的                                        
 intrigue           密谋                                          
 intrusion          入侵                                          
-intuitively        直觉地                                        
 jot                匆匆记下，一点                                 
 legacy             遗产,已停产的                                 
 legitimate         合法的，正当的，使合法                          
@@ -122,8 +102,6 @@ margin             边缘，余地，加备注，保证金
 marginally         少量地                                        
 metamorphism       变态，变质                                    
 migration          迁移                                          
-mimicry            模仿；模仿技巧                                 
-minimise           降低至最低限度                                 
 miscellaneous      混合的                                        
 mischievous        顽皮的，恶意的                                 
 misuse             滥用，虐待                                    
@@ -134,8 +112,6 @@ modular            分单元的，模块化的
 modulo             取模                                          
 monotonic          单调性；单调的                                 
 morpher            变形器                                        
-multicollinearity  多重共线性；多元共线性；多重假设检验             
-multilingual       多种语言的                                    
 multitude          众多，人群，大众                               
 mundane            单调的；平凡的；世俗的                          
 mutate             突变；转变；                                   
@@ -145,15 +121,12 @@ negate             否定，抹杀
 negligeable        无关紧要的                                    
 negligible         微不足道的，不重要的，不值一提的                 
 nonnegligible      不可忽视的                                    
-nontrivial         不平凡的，无效的                               
 notorious          声名狼藉的                                    
 noxious            有害的                                        
-obscurity          晦涩，含糊                                    
 opaque             不透明的，浑浊的                               
 orthogonal         正交的，不相关的                               
 overhaul           检修，改造                                    
 paradigm           范例，范式，模范，〈正式〉模型                  
-paramount          至高无上的，元首                               
 participant        参与者                                        
 partition          划分；隔墙；部分；分割                          
 pave               铺设                                          
@@ -162,27 +135,21 @@ peripheral         外部设备，周围的
 pernicious         有害的，恶性的                                 
 pervasiveness      遍布                                          
 piecewise          分段地                                        
-pinpoint           针尖；确定；精准定位                           
 pitfall            困难；隐患；陷阱                               
 plethora           过多的                                        
-plow               犁，耕种                                      
 plurality          众多；大量；多元的                             
 polymorphism       多态性                                        
 polytope           多胞形；多面体；                               
 potency            效力，影响力，支配力                           
 practitioner       实践者，从业者                                 
 predecessor        原有的事物                                    
-presumably         大概；很可能；                                 
 preventive         预防性的，防备的                              
 privilege          特权                                          
 procedure          步骤，手续，手术                               
 proficient         专家，老手，熟练的                             
 prologue           序幕，成为...开端                           
-proportion         比例，部分，份额，均衡，分摊                    
 protocol           条约草案；礼仪；外交礼节；协定；加入协定         
 prototype          原型，最初态                                   
-provable           可以证明的；能证实的                           
-provably           可验证性的                                    
 quadratic          平方的，二次项                                 
 quartile           四分位数                                      
 reason about       推断                                          
@@ -202,16 +169,12 @@ saliency           显著性；特色；凸出
 sanitize           净化，消毒                                    
 sanity             理智；明智；精神健全；                          
 saturation         饱和，饱和度                                   
-scatter            撒；四散；驱散；撒播；散落                      
-self-containment   自我控制                                      
 semicolon          分号                                          
 shed               摆脱，去除，脱落，工棚                          
 shifter            变速箱，移位器，移相器                          
 side-step          规避                                          
 sift               筛，筛选                                      
 sloppy             马虎的，凌乱的                                 
-snippet            片段                                          
-spectacular        壮观的；壮丽的                                 
 spurious           虚假的，谬误的，伪造的                          
 stance             立场，站姿，姿态                               
 stirring           忙碌的，活跃的                                 
@@ -241,3 +204,12 @@ verbose            冗长的；啰嗦的；
 verdict            判决，结论                                    
 versatile          多才多艺的，多用途的，通用的                    
 vindictive         报复性的                                      
+directive               指示，指令，指导，伪指令
+dedicate                致力于，献身，把...奉献给
+intact                  完整的；完好无损的
+luxury                  奢华的，奢侈品
+conform                 顺从，使一致，遵从
+at will                 任意地，随意地
+gloss                   光亮，光泽，注释
+innards                 内脏，内部结构
+stub                    存根，树桩

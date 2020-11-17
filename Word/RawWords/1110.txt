@@ -5,4 +5,17 @@ luxury                  奢华的，奢侈品
 relocatable             重新定址的
 conform                 顺从，使一致，遵从
 at will                 任意地，随意地
+gloss                   光亮，光泽，注释
+innards                 内脏，内部结构
+stub                    存根，树桩
+overwhelm               压倒，淹没，击败
+misnomer                用词不当
+blob                    污染，一点（液体），（鱼）跳水
+hydrologist             水文工作者
+indicate                指示；表明；显示；象征
+protocol                协议，礼节，条约草案
+exfiltration            偷偷越过，渗出
+strive                  努力，奋斗，斗争
+dedicated               专注的，专用的，有奉献精神的
+allocate                分配，配给，划拨
 
