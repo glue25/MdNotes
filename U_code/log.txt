@@ -10,11 +10,11 @@ D:\PAPER\paper-reading.pdf, tg
 D:\PAPER\PAPERS-v382-20201205_181937.pdf, tg
 D:\PAPER\Re_ 对Stack Overflow上android native code的初步调研.zip, tg
 D:\PAPER\Stanford-科学写作课件.zip, tg
-D:\PAPER\TreeCaps_ Tree-Based Capsule Networks for Source Code Processing.md, new copy
+D:\PAPER\TreeCaps_ Tree-Based Capsule Networks for Source Code Processing.md, tg
 D:\PAPER\TreeCaps_ Tree-Based Capsule Networks for Source Code Processing.pdf, tg
 D:\PAPER\Word - 快捷方式.lnk, tg
 D:\PAPER\Words.pdf, tg
-D:\PAPER\XGNN_ Towards Model-Level Explanations of Graph Neural Networks(自动保存).pdf, new copy
+D:\PAPER\XGNN_ Towards Model-Level Explanations of Graph Neural Networks(自动保存).pdf, tg
 D:\PAPER\中国科学 信息科学.pdf, tg
 D:\PAPER\姜总论文.md, tg
 D:\PAPER\姜总论文.pdf, tg
@@ -157,7 +157,7 @@ D:\PAPER\Graph_SoftwareAE\Safe-pdf_ Robust detection of javascript pdf malware u
 D:\PAPER\Graph_SoftwareAE\SoK_ Arms Race in Adversarial Malware Detection.pdf, tg
 D:\PAPER\Graph_SoftwareAE\Towards Adversarial Malware Detection_ Lessons Learned from PDF-based Attacks（综述）.pdf, tg
 D:\PAPER\ImageAE\Elastic-Net Attacks to Deep Neural Networks via Adversarial Examples.pdf, tg
-D:\PAPER\InferCode_ Self-Supervised Learning of Code Representations.assets\image-20201220213136243.png, new copy
+D:\PAPER\InferCode_ Self-Supervised Learning of Code Representations.assets\image-20201220213136243.png, tg
 D:\PAPER\Keen_Vehicles\Vehicle_12-17.pdf, tg
 D:\PAPER\Keen_Vehicles\keen_vehicles\Experimental_Security_Research_of_Tesla_Autopilot.pdf, tg
 D:\PAPER\Keen_Vehicles\keen_vehicles\Lexus_Security_Assessment_Report_from_Tencent_Keen_Security_Lab-[final].pdf, tg
@@ -178,9 +178,9 @@ D:\PAPER\Link Prediction&Graph\How to Hide One’s Relationships .pdf, tg
 D:\PAPER\Link Prediction&Graph\NetHide_Secure and Practical Network.pdf, tg
 D:\PAPER\Link Prediction&Graph\Towards Plausible Graph Anonymization.pdf, tg
 D:\PAPER\Obfuscation\材料1.pdf, tg
-D:\PAPER\TreeCaps_ Tree-Based Capsule Networks for Source Code Processing.assets\image-20201220191224639.png, new copy
-D:\PAPER\TreeCaps_ Tree-Based Capsule Networks for Source Code Processing.assets\image-20201220202437630.png, new copy
-D:\PAPER\TreeCaps_ Tree-Based Capsule Networks for Source Code Processing.assets\image-20201220204453194.png, new copy
+D:\PAPER\TreeCaps_ Tree-Based Capsule Networks for Source Code Processing.assets\image-20201220191224639.png, tg
+D:\PAPER\TreeCaps_ Tree-Based Capsule Networks for Source Code Processing.assets\image-20201220202437630.png, tg
+D:\PAPER\TreeCaps_ Tree-Based Capsule Networks for Source Code Processing.assets\image-20201220204453194.png, tg
 D:\PAPER\其他论文\Adversarial Neural Networks Based Privacy Preservation in Mobile Crowd Sensing.pdf, tg
 D:\PAPER\其他论文\Android Malware Detection Robust to Adversarial Example Attacks.pdf, tg
 D:\PAPER\其他论文\陈文潇infocom2019.pdf, tg
