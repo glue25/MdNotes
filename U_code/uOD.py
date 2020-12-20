@@ -5,6 +5,8 @@ import shutil
 import os
 import subprocess
 L1 = ['D:\\PAPER', 'D:\\BOOK2', 'C:\\Users\\65132\\Documents\\WeChat Files\\wxid_4ri4cmu08nhl22\\FileStorage\\File\\2020-10']
+L1.append('C:\\Users\\65132\\Documents\\WeChat Files\\wxid_4ri4cmu08nhl22\\FileStorage\\File\\2020-11')
+L1.append('C:\\Users\\65132\\Documents\\WeChat Files\\wxid_4ri4cmu08nhl22\\FileStorage\\File\\2020-12')
 L2 = 'D:\ODrive\OneDrive - The Hong Kong Polytechnic University\\'
 
 def pl(L, L_new):
