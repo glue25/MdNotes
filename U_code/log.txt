@@ -1,6 +1,6 @@
 D:\PAPER\.paper-reading.md.un~, tg
 D:\PAPER\icse2021-paper108.pdf, tg
-D:\PAPER\InferCode_ Self-Supervised Learning of Code Representations.md, new copy
+D:\PAPER\InferCode_ Self-Supervised Learning of Code Representations.md, tg
 D:\PAPER\InferCode_ Self-Supervised Learning of Code Representations.pdf, tg
 D:\PAPER\Jimple笔记.md, tg
 D:\PAPER\PAPER - 快捷方式.lnk, tg
@@ -158,6 +158,7 @@ D:\PAPER\Graph_SoftwareAE\SoK_ Arms Race in Adversarial Malware Detection.pdf, t
 D:\PAPER\Graph_SoftwareAE\Towards Adversarial Malware Detection_ Lessons Learned from PDF-based Attacks（综述）.pdf, tg
 D:\PAPER\ImageAE\Elastic-Net Attacks to Deep Neural Networks via Adversarial Examples.pdf, tg
 D:\PAPER\InferCode_ Self-Supervised Learning of Code Representations.assets\image-20201220213136243.png, tg
+D:\PAPER\Keen_Vehicles\Vchicle_Jing.md, new copy
 D:\PAPER\Keen_Vehicles\Vehicle_12-17.pdf, tg
 D:\PAPER\Keen_Vehicles\keen_vehicles\Experimental_Security_Research_of_Tesla_Autopilot.pdf, tg
 D:\PAPER\Keen_Vehicles\keen_vehicles\Lexus_Security_Assessment_Report_from_Tencent_Keen_Security_Lab-[final].pdf, tg
