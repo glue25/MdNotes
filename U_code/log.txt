@@ -341,10 +341,19 @@ D:\PAPER\资源性文档\Usenix Security 技术成果分析推荐（下篇）.pd
 D:\PAPER\资源性文档\Usenix Security 技术成果分析推荐（中篇）.pdf, tg
 D:\BOOK2\03-40天分手-By璟.pdf, tg
 D:\BOOK2\0719四.pdf, tg
+D:\BOOK2\12009913_逻辑的引擎_p293.pdf, new copy
+D:\BOOK2\12024424_算法概论_pg345.pdf, new copy
 D:\BOOK2\12115938_《额尔古纳河右岸》.pdf, tg
+D:\BOOK2\12248419_Orange'S_一个操作系统的实现_p474.pdf, new copy
+D:\BOOK2\12764389_LINUX内核设计与实现英文版第3版经典图书新版_pg440.pdf, new copy
+D:\BOOK2\12786079_LINUX内核设计与实现原书第3版_pg335.pdf, new copy
 D:\BOOK2\12952120_大唐西域记.pdf, tg
 D:\BOOK2\13178235_纪念珍藏版  乡村教师  刘慈欣科幻自选集_fenleiID=0I2040_p407.pdf, tg
+D:\BOOK2\13234228_算法导论（原书第3版）_pg780(4).pdf, new copy
+D:\BOOK2\13974463_机器学习_p425(4)_20201209_115254.pdf, new copy
 D:\BOOK2\14341879_Android应用安全防护和逆向分析.pdf, tg
+D:\BOOK2\14559543_统计学习方法  第2版_p464.pdf, new copy
+D:\BOOK2\14665903_编程珠玑  续＝MORE  PROGRAMMING  PEARLS_p210.pdf, new copy
 D:\BOOK2\7小时搞定托福听力词汇_14486659.pdf, tg
 D:\BOOK2\Advanced C and C++ Compiling by Milan Stevanovic (z-lib.org).pdf, tg
 D:\BOOK2\Android软件安全与逆向分析_13291552.pdf, tg
@@ -369,6 +378,7 @@ D:\BOOK2\Optimum_Array_Processing_（第二部分）.pdf, tg
 D:\BOOK2\OReilly.Hands-On.Machine.Learning.with.Scikit-Learn.and.TensorFlow.2017.3.pdf, tg
 D:\BOOK2\Practical Binary Analysis. Build Your Own Linux Tools for Binary Instrumentation, Analysis, and Disassembly by Dennis Andriesse (z-lib.org).pdf, tg
 D:\BOOK2\Practical reverse engineering x86, x64, ARM, Windows Kernel, reversing tools, and obfuscation by Bruce Dang, Alexandre Gazet, Elias Bachaalany, Sébastien Josse (z-lib.org).pdf, tg
+D:\BOOK2\Sanjoy Dasgupta, Christos Papadimitriou, Umesh Vazirani - Algorithms-McGraw-Hill Science_Engineering_Math.pdf, new copy
 D:\BOOK2\sicp.pdf, tg
 D:\BOOK2\TOEFL词汇词根+联想记忆法  乱序版_13922701.pdf, tg
 D:\BOOK2\user_manual-2.3.0.pdf, tg
@@ -416,6 +426,7 @@ D:\BOOK2\纳尼亚传奇1-7全集中文版+英文版.rar, tg
 D:\BOOK2\纳尼亚传奇Z.docx, tg
 D:\BOOK2\纳尼亚传奇全集.pdf, tg
 D:\BOOK2\纳尼亚传奇（套装共7册）.pdf, tg
+D:\BOOK2\编程珠玑 by 本特利 .pdf, new copy
 D:\BOOK2\软件加密与解密.pdf, tg
 D:\BOOK2\软件加密与解密_Note.pdf, tg
 D:\BOOK2\阵列信号处理的理论和应用(张小飞).pdf, tg
