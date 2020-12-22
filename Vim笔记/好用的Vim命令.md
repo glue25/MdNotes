@@ -23,11 +23,12 @@ https://vimhelp.org/usr_toc.txt.html
 - 上一个单词开头：b =====
 - 非空格符的下一行：+ =====
 - 非空格符的上一行：- =====
-- ![image-20200918171345962](E:%5CMDNotes%5C%E5%A5%BD%E7%94%A8%E7%9A%84Vim%E5%91%BD%E4%BB%A4.assets%5Cimage-20200918171345962.png) 
+- ![image-20200918171345962](E:%5CMDNotes%5CVim%E7%AC%94%E8%AE%B0%5C%E5%A5%BD%E7%94%A8%E7%9A%84Vim%E5%91%BD%E4%BB%A4.assets%5Cimage-20200918171345962.png) 
 - 我认为不会常用的：
-  - ![image-20200918155853575](E:%5CMDNotes%5C%E5%A5%BD%E7%94%A8%E7%9A%84Vim%E5%91%BD%E4%BB%A4.assets%5Cimage-20200918155853575.png) 
-  - ![image-20200918155925662](E:%5CMDNotes%5C%E5%A5%BD%E7%94%A8%E7%9A%84Vim%E5%91%BD%E4%BB%A4.assets%5Cimage-20200918155925662.png) 
-- 
+  - ![image-20200918155853575](E:%5CMDNotes%5CVim%E7%AC%94%E8%AE%B0%5C%E5%A5%BD%E7%94%A8%E7%9A%84Vim%E5%91%BD%E4%BB%A4.assets%5Cimage-20200918155853575.png) 
+  - ![image-20200918155925662](E:%5CMDNotes%5CVim%E7%AC%94%E8%AE%B0%5C%E5%A5%BD%E7%94%A8%E7%9A%84Vim%E5%91%BD%E4%BB%A4.assets%5Cimage-20200918155925662.png) 
+
+
 
 # 命令模式下操作
 
@@ -120,13 +121,13 @@ https://vimhelp.org/usr_toc.txt.html
 
 
 
-![image-20200919193848589](E:%5CMDNotes%5C%E5%A5%BD%E7%94%A8%E7%9A%84Vim%E5%91%BD%E4%BB%A4.assets%5Cimage-20200919193848589.png) 
+![image-20200919193848589](E:%5CMDNotes%5CVim%E7%AC%94%E8%AE%B0%5C%E5%A5%BD%E7%94%A8%E7%9A%84Vim%E5%91%BD%E4%BB%A4.assets%5Cimage-20200919193848589.png) 
 
 
 
 ？？？？？？？？
 
-![image-20200918173237589](E:%5CMDNotes%5C%E5%A5%BD%E7%94%A8%E7%9A%84Vim%E5%91%BD%E4%BB%A4.assets%5Cimage-20200918173237589.png) 
+![image-20200918173237589](E:%5CMDNotes%5CVim%E7%AC%94%E8%AE%B0%5C%E5%A5%BD%E7%94%A8%E7%9A%84Vim%E5%91%BD%E4%BB%A4.assets%5Cimage-20200918173237589.png) 
 
 
 
@@ -170,15 +171,15 @@ https://vimhelp.org/usr_toc.txt.html
 - 替换光标所在行的旧字符：:s/旧字符/新字符/gc
 
 
-- s/old/new/ 用old替换new，替换当前行的第一个匹配
-- s/old/new/g 用old替换new，替换当前行的所有匹配
-- %s/old/new/ 用old替换new，替换所有行的第一个匹配
-- %s/old/new/g 用old替换new，替换整个文件的所有匹配
+- :s/old/new/ 用old替换new，替换当前行的第一个匹配
+- :s/old/new/g 用old替换new，替换当前行的所有匹配
+- :%s/old/new/ 用old替换new，替换所有行的第一个匹配
+- :%s/old/new/g 用old替换new，替换整个文件的所有匹配
 - :10,20 s/^/     /g 在第10行知第20行每行前面加四个空格，用于缩进。 ===？最后两个/之间是4个空格==
 
 
 
-**其中**：g: 替换范围内所有的旧字符；c: 替换范围内所有的旧字符并在替换时添加提示信息；
+**其中**：g: 替换范围内所有的旧字符；c: 替换范围内旧字符并在替换时添加提示信息；
 
 
 
@@ -200,13 +201,13 @@ https://vimhelp.org/usr_toc.txt.html
 
 
 
-![image-20200918170704083](E:%5CMDNotes%5C%E5%A5%BD%E7%94%A8%E7%9A%84Vim%E5%91%BD%E4%BB%A4.assets%5Cimage-20200918170704083.png) 
+![image-20200918170704083](E:%5CMDNotes%5CVim%E7%AC%94%E8%AE%B0%5C%E5%A5%BD%E7%94%A8%E7%9A%84Vim%E5%91%BD%E4%BB%A4.assets%5Cimage-20200918170704083.png) 
 
 # 行号
 
 设置行号
 
-![image-20200918204732605](E:%5CMDNotes%5C%E5%A5%BD%E7%94%A8%E7%9A%84Vim%E5%91%BD%E4%BB%A4.assets%5Cimage-20200918204732605.png) 
+![image-20200918204732605](E:%5CMDNotes%5CVim%E7%AC%94%E8%AE%B0%5C%E5%A5%BD%E7%94%A8%E7%9A%84Vim%E5%91%BD%E4%BB%A4.assets%5Cimage-20200918204732605.png) 
 
 
 
@@ -216,7 +217,7 @@ https://vimhelp.org/usr_toc.txt.html
 
 # 批量注释
 
-![image-20200918214527960](E:%5CMDNotes%5C%E5%A5%BD%E7%94%A8%E7%9A%84Vim%E5%91%BD%E4%BB%A4.assets%5Cimage-20200918214527960.png) 
+![image-20200918214527960](E:%5CMDNotes%5CVim%E7%AC%94%E8%AE%B0%5C%E5%A5%BD%E7%94%A8%E7%9A%84Vim%E5%91%BD%E4%BB%A4.assets%5Cimage-20200918214527960.png) 
 
 ## 注意两件事：
 
@@ -231,7 +232,7 @@ https://vimhelp.org/usr_toc.txt.html
 
 # Vim处理多件事
 
-![image-20200918174106070](E:%5CMDNotes%5C%E5%A5%BD%E7%94%A8%E7%9A%84Vim%E5%91%BD%E4%BB%A4.assets%5Cimage-20200918174106070.png) 
+![image-20200918174106070](E:%5CMDNotes%5CVim%E7%AC%94%E8%AE%B0%5C%E5%A5%BD%E7%94%A8%E7%9A%84Vim%E5%91%BD%E4%BB%A4.assets%5Cimage-20200918174106070.png) 
 
 vscode的插件下也能用，不过Linux下可能看着更流畅。
 
@@ -239,7 +240,7 @@ vscode的插件下也能用，不过Linux下可能看着更流畅。
 
 https://www.yiibai.com/vim/vim_working_with_multiple_things.html
 
-![image-20200919195645478](E:%5CMDNotes%5C%E5%A5%BD%E7%94%A8%E7%9A%84Vim%E5%91%BD%E4%BB%A4.assets%5Cimage-20200919195645478.png) 
+![image-20200919195645478](E:%5CMDNotes%5CVim%E7%AC%94%E8%AE%B0%5C%E5%A5%BD%E7%94%A8%E7%9A%84Vim%E5%91%BD%E4%BB%A4.assets%5Cimage-20200919195645478.png) 
 
 # 书签
 

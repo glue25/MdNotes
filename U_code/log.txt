@@ -494,6 +494,7 @@ C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-
 C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-11\时间安排.txt, tg
 C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-11\英文v3.docx, tg
 C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-11\英文v4.docx, tg
+C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-12\amasbt15.pdf, new copy
 C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-12\binaries_Byte2Vec_ISSTA.zip, tg
 C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-12\Byte2Vec_12-21.zip, tg
 C:\Users\65132\Documents\WeChat Files\wxid_4ri4cmu08nhl22\FileStorage\File\2020-12\f9a2527975f92a151998de7394ea0286_t.gif, tg
