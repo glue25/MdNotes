@@ -18,5 +18,25 @@ https://zhuanlan.zhihu.com/p/52874931
 收藏了个find教程，有空学习下
 
 
-111
-222sdlf jisdolfadfha dasvdsf dsfa yk
+
+CC = .../.../gcc
+CXX .../.../g++可以指定编译器使用的路径
+有空总结下configure
+
+
+因为测试afl,所有的scaling_governor都改了，原来的是powersave
+
+
+改后gcc位置
+file:///home/zhou/DGit/x86-sok/gt/gcc/gcc-8.1.0/html/files.html
+armgcc位置
+file:///home/zhou/gcc_source_learn/gcc-7.5-arm/doxy/html/files.html
+
+
+matplotlib.use('Agg')这个命令简直开启了新世界的大门，保存画图方便太多了
+https://matplotlib.org/api/matplotlib_configuration_api.html?highlight=use#matplotlib.use
+
+看到这个代码：
+import capstone
+help(capstone)
+感觉还挺有用的
