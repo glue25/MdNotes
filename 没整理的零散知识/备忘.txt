@@ -40,3 +40,6 @@ https://matplotlib.org/api/matplotlib_configuration_api.html?highlight=use#matpl
 import capstone
 help(capstone)
 感觉还挺有用的
+
+研究下
+$ egrep 'ˆ=> 0x[0-9a-f]+:' gdb.txt | head -n 20
