@@ -18,4 +18,38 @@ exfiltration            偷偷越过，渗出
 strive                  努力，奋斗，斗争
 dedicated               专注的，专用的，有奉献精神的
 allocate                分配，配给，划拨
+malform                 使畸形
+penetration             渗透；穿透；进入
+prominent               重要的；著名的；杰出的；显眼的
+gauge                   厚度；标准；估计
+vibrant                 充满生机的
+blogosphere             博客世界
+gem                     精华；宝物
+warrant                 依据；许可证；执行令；使正当
+surge                   浪涌；激增
+consolidate             合并；使加强；使巩固
+protrude                突出；伸出
+dub                     刺，撞
+chronological           按发生时间顺序排列的
+miscellaneous           混杂的，各种各样的
+triage                  验伤，分诊
+lineage                 世系；血统；宗系
+spawn                   产生，引起
+snapshot                简介；简要说明快拍；快照复制
+fork off                派生
+deterministic           确定性；决定性的；必然
+race condition          竞态条件（一种bug术语）
+instrumentation         插装
+innovation              采用新方法的；革新的；创新的
+forerun                 预示，先驱
+forgo                   放弃
+round robin             循环
+concurrent              同时的，并发的
+hamper                  阻碍，限制
+seminal                 影响深远的
+permute                 交换；取代；置换
+stitch                  缝；针脚；缝法
+
+
+
 

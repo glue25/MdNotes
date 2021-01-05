@@ -8,7 +8,6 @@ assailant          攻击者，行凶者，攻击的
 assertion          断言；主张；认定；声名                          
 bogus              伪造物                                       
 brevity            简洁；短暂；                                   
-circumvent         回避                                          
 coagulate          凝结，使凝固，凝块                             
 coherent           合乎逻辑的；有条理的；连贯的                    
 cohort             同伙；支持者；队列                             
@@ -36,7 +35,6 @@ deviant            不正常的，偏离轨道的
 deviate            背离，脱离常轨的人                             
 deviation          偏离，偏差                                    
 disastrous         极糟糕的；灾难性的                             
-discriminative     有区别的，歧视的                               
 disjunctive        分离的，反意的                                 
 disparity          差异                                          
 dissect            剖析                                          
@@ -69,7 +67,6 @@ futile             徒然的，无效的
 gadget             小装置                                        
 hinge              铰链，合叶                                    
 hoax               骗局，戏弄，恶作剧                             
-imperceptible      感觉不到的                                    
 impetus            动力，促进                                    
 implication        含义，可能，暗示，                             
 implicit           隐式的，含蓄的，暗示的，不直接言明的             
@@ -88,7 +85,6 @@ interchangeably    互换，互换地
 interpretation     解释，说明，演绎                               
 intersection       交叉；相交；十字路口；                          
 intervention       介入，干涉                                    
-intimidation       恐吓                                          
 intricate          复杂的                                        
 intrigue           密谋                                          
 intrusion          入侵                                          
@@ -138,7 +134,6 @@ piecewise          分段地
 pitfall            困难；隐患；陷阱                               
 plethora           过多的                                        
 plurality          众多；大量；多元的                             
-polymorphism       多态性                                        
 polytope           多胞形；多面体；                               
 potency            效力，影响力，支配力                           
 practitioner       实践者，从业者                                 
@@ -148,7 +143,6 @@ privilege          特权
 procedure          步骤，手续，手术                               
 proficient         专家，老手，熟练的                             
 prologue           序幕，成为...开端                           
-protocol           条约草案；礼仪；外交礼节；协定；加入协定         
 prototype          原型，最初态                                   
 quadratic          平方的，二次项                                 
 quartile           四分位数                                      

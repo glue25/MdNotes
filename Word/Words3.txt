@@ -8,14 +8,8 @@ apprehensive
 assailant
 assertion
 assessment
-augment
-auxiliary
 bogus
-boot up
-bound
-bound to
 bracket
-breach
 brevity
 circumvent
 coagulate
@@ -27,16 +21,13 @@ compromise
 conceivable
 conjecture
 consensus
-conservation
 conservative
 contingency
 contrastive
 convention
-convex
 convexity
 credentials
 criteria
-cryptographic
 declarative
 deduce
 deem
@@ -46,7 +37,6 @@ denominator
 deontic
 derivable
 derivative
-deter
 deviant
 deviate
 deviation
@@ -62,7 +52,6 @@ elaborate
 elicit
 encapsulate
 endeavor
-endemic
 endorse
 endow
 entailment
@@ -89,12 +78,10 @@ imperceptible
 impetus
 implication
 implicit
-improper
 in light of
 in terms of
 incentive
 incorporate
-increment
 indicative
 indicator
 indice
@@ -107,7 +94,6 @@ interchangeably
 interpretation
 intersection
 intervention
-intimidate
 intimidation
 intricate
 intrigue
@@ -123,7 +109,6 @@ margin
 marginally
 metamorphism
 migration
-mimicry
 minimise
 miscellaneous
 mischievous
@@ -146,15 +131,12 @@ negate
 negligeable
 negligible
 nonnegligible
-nontrivial
 notorious
 noxious
-obscurity
 opaque
 orthogonal
 overhaul
 paradigm
-paramount
 participant
 partition
 pave
@@ -163,10 +145,8 @@ peripheral
 pernicious
 pervasiveness
 piecewise
-pinpoint
 pitfall
 plethora
-plow
 plurality
 polymorphism
 polytope
@@ -179,18 +159,14 @@ privilege
 procedure
 proficient
 prologue
-proportion
 protocol
 prototype
-provable
-provably
 quadratic
 quartile
 reason about
 reduction
 redundant
 referee
-reiterate
 relieve
 render
 repertoire
@@ -204,18 +180,13 @@ saliency
 sanitize
 sanity
 saturation
-scatter
-self-containment
 semicolon
 shed
 shifter
 side-step
 sift
 sloppy
-snippet
-spectacular
 spurious
-stake
 stance
 stirring
 strip
@@ -231,7 +202,6 @@ tantalizingly
 taxonomy
 tedious
 template
-temporal
 tentatively
 terminology
 thwart
@@ -245,4 +215,12 @@ verbose
 verdict
 versatile
 vindictive
-wildcard
+directive
+dedicate
+intact
+luxury
+conform
+at will
+gloss
+innards
+stub
