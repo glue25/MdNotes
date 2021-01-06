@@ -43,3 +43,12 @@ help(capstone)
 
 研究下
 $ egrep 'ˆ=> 0x[0-9a-f]+:' gdb.txt | head -n 20
+
+
+
+对gcc，如果不添加-g是不会产生调试符号的
+可以在cmake中加上-g选项 https://blog.csdn.net/qinglongzhan/article/details/80743731
+# Use C++17
+set(CMAKE_CXX_FLAGS
+    -g
+)
