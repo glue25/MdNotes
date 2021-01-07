@@ -52,3 +52,7 @@ $ egrep 'ˆ=> 0x[0-9a-f]+:' gdb.txt | head -n 20
 set(CMAKE_CXX_FLAGS
     -g
 )
+
+
+https://blog.csdn.net/wdz306ling/article/details/87930133
+fuser看起来很好用，干掉与文件相关的所有进程
