@@ -53,6 +53,26 @@ ctrl+k ctrl+0
 ctrl+k ctrl+j
 ```
 
+
+
+折叠侧边
+
+```
+ctrl+b
+```
+
+折叠终端
+
+```
+ctrl+`
+```
+
+
+
+
+
+
+
 kite是个好插件，但是太卡了
 https://www.kite.com/，可以氪金，但没必要（买不起）
 
