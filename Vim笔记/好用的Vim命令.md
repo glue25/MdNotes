@@ -26,9 +26,10 @@ https://vimhelp.org/usr_toc.txt.html
 - ![image-20200918171345962](E:%5CMDNotes%5CVim%E7%AC%94%E8%AE%B0%5C%E5%A5%BD%E7%94%A8%E7%9A%84Vim%E5%91%BD%E4%BB%A4.assets%5Cimage-20200918171345962.png) 
 - 我认为不会常用的：
   - ![image-20200918155853575](E:%5CMDNotes%5CVim%E7%AC%94%E8%AE%B0%5C%E5%A5%BD%E7%94%A8%E7%9A%84Vim%E5%91%BD%E4%BB%A4.assets%5Cimage-20200918155853575.png) 
+  
   - ![image-20200918155925662](E:%5CMDNotes%5CVim%E7%AC%94%E8%AE%B0%5C%E5%A5%BD%E7%94%A8%E7%9A%84Vim%E5%91%BD%E4%BB%A4.assets%5Cimage-20200918155925662.png) 
-
-
+  
+    
 
 # 命令模式下操作
 
