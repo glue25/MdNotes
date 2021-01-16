@@ -1,3 +1,4 @@
+#!/home/zhou/anaconda3/bin/python
 from apscheduler.schedulers.blocking import BlockingScheduler
 from datetime import datetime
 import subprocess
