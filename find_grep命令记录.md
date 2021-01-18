@@ -160,7 +160,31 @@ https://www.runoob.com/linux/linux-comm-grep.html
 
 
 
+## 实例
 
+https://www.runoob.com/linux/linux-comm-grep.html
+
+1. 在当前目录中，查找后缀有 file 字样的文件中包含 test 字符串的文件，并打印出该字符串的行。此时，可以使用如下命令：
+
+   ```
+   grep test *file 
+   ```
+
+2. 找指定目录/etc/acpi 及其子目录（如果存在子目录的话）下所有文件中包含字符串"update"的文件（==**这个比较实用，字符串和路径的顺序是要记住的**==）
+
+   ```
+   grep -r update /etc/acpi
+   ```
+
+    
+
+3. 通过"-v"参数可以打印出不符合条件行的内容。查找文件名中包含 test 的文件中不包含test 的行
+
+   ```
+   grep -v test *test*
+   ```
+
+   
 
 
 

@@ -19,12 +19,37 @@ ctrl+alt+1
 ctrl+shift+`
 ```
 
-在编辑标签切换
+在编辑器页标签切换
 ```
 ctrl+pageup
 ctrl+pagedown
 ```
+保持打开状态
+
+```
+ctrl+k enter
+```
+
+固定标签页
+
+```
+ctrl+k shift+enter
+```
+
+关闭标签页
+
+```
+ctrl+w
+```
+
+
+
+
+
+
+
 单个折叠
+
 ```
 ctrl+shift+[
 ```
@@ -67,6 +92,14 @@ ctrl+b
 ctrl+`
 ```
 
+资源管理器
+
+```
+ctrl+shift+e
+```
+
+
+
 
 
 
@@ -76,5 +109,5 @@ ctrl+`
 kite是个好插件，但是太卡了
 https://www.kite.com/，可以氪金，但没必要（买不起）
 
-
+python snippets是个好插件
 
