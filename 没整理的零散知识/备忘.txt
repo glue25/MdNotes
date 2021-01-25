@@ -56,3 +56,24 @@ set(CMAKE_CXX_FLAGS
 
 https://blog.csdn.net/wdz306ling/article/details/87930133
 fuser看起来很好用，干掉与文件相关的所有进程
+
+ghidra被拿来处理特征，它能处理什么特征？（不管是用来处理什么的，总之是sota的那种吧）
+
+将write_cmds抽象成通用函数
+
+data_manage里（包括最近写的很多）函数已经堪用了
+比如data_manage里的execute_cmd
+通用化的generate cmd还是没有解决，但是可以快速做下
+get_argvs()可以进一步整理
+
+
+python格式化对齐https://zhuanlan.zhihu.com/p/232127248
+
+比较中文字符Unicode
+def isCN(ch):
+    if '\u4e00' <= ch <= '\u9fff':
+            return True
+    return False
+
+
+np.random.seed(0)的作用范围有多大？好像就一直定住了？

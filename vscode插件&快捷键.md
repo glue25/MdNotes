@@ -14,7 +14,20 @@ ctrl+1 (打开第二个编辑区就是ctrl+2)
 ctrl+alt+1
 ```
 
+下一终端
+
+```
+ctrl+alt+pageup
+```
+
+上一终端
+
+```
+ctrl+alt+pagedown
+```
+
 开新终端
+
 ```
 ctrl+shift+`
 ```
@@ -94,15 +107,33 @@ ctrl+`
 
 资源管理器
 
+好像是
+
 ```
 ctrl+shift+e
 ```
 
+但实际上
+
+```
+ctrl+0
+```
+
+可以发挥作用
 
 
 
+向上调整终端
 
+```
+ctrl+alt+home
+```
 
+向下调整终端
+
+```
+ctrl+alt+end
+```
 
 
 
@@ -111,3 +142,10 @@ https://www.kite.com/，可以氪金，但没必要（买不起）
 
 python snippets是个好插件
 
+
+
+临时：
+
+ft agent -p Byte2Vec_12-21/
+
+ft syncd ./function_detection_code/
